@@ -36,6 +36,8 @@ export default {
 
 <style lang="scss">
 @import "../../assets/sass/variables.scss";
+@import "../../assets/sass/bounce-to-right.scss";
+
 .header-main {
   display: flex;
   justify-content: center;
@@ -68,16 +70,22 @@ export default {
 }
 .header-left-btn {
   a {
+    @include hvr-bounce-to-right;
     @include button-style;
     color: $colour-uni;
     background-color: $colour-sec;
     margin-right: $gutter-1;
+    text-decoration: none;
   }
   button {
+    @include hvr-bounce-to-right;
     @include button-style;
     color: #fff;
     background-color: $colour-pri;
     border: none;
+    //   &:hover {
+    //   background-color: $colour-pri-hover;
+    // }
   }
 }
 .header-right {

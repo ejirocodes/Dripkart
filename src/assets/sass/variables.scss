@@ -4,7 +4,7 @@ $colour-sec:#F1F1F1;
 $colour-ter:#323232;
 $colour-uni:#222;
 
-$colour-pri-hover:#FFB667;
+$colour-pri-hover: darken($colour-pri, 100%);
 
 // space
 $gutter-0: 10px;
