@@ -5,19 +5,19 @@
 </template>
 
 <script>
-import HeroMain from './components/header/HeroMain.vue'
+import HeroMain from "./components/header/HeroMain.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     HeroMain
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
