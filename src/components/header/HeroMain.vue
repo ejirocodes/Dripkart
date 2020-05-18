@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "Navbar"
+  name: "HeroMain"
 };
 </script>
 
