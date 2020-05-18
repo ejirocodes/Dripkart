@@ -56,9 +56,28 @@ export default {
     width: 70%;
     line-height: 1.5;
     &.price {
-      color: #222222;
+      color: $colour-uni;
       font-size: 1.8rem;
+      margin-bottom: $gutter-2;
     }
+  }
+}
+@mixin button-style {
+  font-size: 1rem;
+  padding: 0.8rem 2.2rem;
+}
+.header-left-btn {
+  a {
+    @include button-style;
+    color: $colour-uni;
+    background-color: $colour-sec;
+    margin-right: $gutter-1;
+  }
+  button {
+    @include button-style;
+    color: #fff;
+    background-color: $colour-pri;
+    border: none;
   }
 }
 .header-right {
