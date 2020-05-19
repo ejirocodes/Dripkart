@@ -34,7 +34,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import "../../assets/sass/variables.scss";
 @import "../../assets/sass/bounce-to-right.scss";
 
@@ -42,7 +42,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  height: 96vh;
 }
 .header-left {
   h1 {
@@ -72,6 +72,7 @@ export default {
   a {
     @include hvr-bounce-to-right;
     @include button-style;
+    padding: 0.9rem 2.62rem;
     color: $colour-uni;
     background-color: $colour-sec;
     margin-right: $gutter-1;
@@ -91,6 +92,72 @@ export default {
     width: 35rem;
     max-width: 100%;
     padding: 1rem 3rem 7rem 3rem;
+  }
+}
+// Media Queries
+@media screen and (max-width: 768px) {
+  .header-main {
+    align-items: flex-start;
+  }
+  .header-left {
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: $gutter-1;
+    }
+    p {
+      width: 85%;
+    }
+  }
+  .header-right {
+    .hero-img {
+      padding: 1.5rem;
+    }
+  }
+}
+@media screen and (max-width: 670px) {
+  .header-main {
+    flex-direction: column;
+    height: 100%;
+  }
+  .header-left {
+    margin-bottom: $gutter-3;
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      margin-bottom: $gutter-1;
+      &.price {
+        margin-bottom: $gutter-1;
+      }
+    }
+  }
+  .header-right {
+    .hero-img {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  .header-left {
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: $gutter-1;
+    }
+    p {
+      width: 100%;
+      &.price {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  .header-left-btn {
+    a {
+      padding: 0.9rem 2.02rem;
+      margin-right: $gutter-0;
+    }
+    button {
+      padding: 0.8rem 1.6rem;
+    }
   }
 }
 </style>
