@@ -1,7 +1,7 @@
 <template>
   <header>
-  <Navbar />
-    <!-- <div class="header-main">
+    <Navbar />
+    <div class="header-main">
       <div class="header-left">
         <h1>
           New Shoes
@@ -18,7 +18,7 @@
       <div class="header-right">
         <img class="hero-img" :src="HeroImage" alt="Nike shoe" />
       </div>
-    </div> -->
+    </div>
   </header>
 </template>
 

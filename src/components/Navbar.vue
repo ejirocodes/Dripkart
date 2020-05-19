@@ -13,7 +13,7 @@ export default {
         mobileBreakpoint: 992,
         brandImagePath: "./",
         // brandImage: require('../src/assets/images/lockup-color.png'),
-        brandImageAltText: "brand-image",
+        brandImageAltText: "Dripkart",
         // collapseButtonImageOpen: require('../src/assets/images/collapse-menu-dark.png'),
         // collapseButtonImageClose: require('../src/assets/images/times.png'),
         showBrandImageInMobilePopup: true,
@@ -22,7 +22,7 @@ export default {
         menuOptionsLeft: [
           {
             type: "link",
-            text: "Why Dunder Mifflin",
+            text: "Home",
             subMenuOptions: [
               {
                 isLinkAction: true,
@@ -56,7 +56,7 @@ export default {
           },
           {
             type: "link",
-            text: "Contact",
+            text: "Shop",
             subMenuOptions: [
               {
                 type: "link",
@@ -82,7 +82,7 @@ export default {
           },
           {
             type: "link",
-            text: "Pricing",
+            text: "About",
             path: "./pricing",
             iconRight: '<i class="fa fa-long-arrow-right fa-fw"></i>'
           }
@@ -92,7 +92,7 @@ export default {
             type: "button",
             text: "Signup",
             path: "./signup",
-            class: "button-red"
+            class: "signup-btn"
           },
           {
             type: "button",
@@ -110,12 +110,16 @@ import "vue-navigation-bar/dist/vue-navigation-bar.css";
 </script>
 
 <style lang="scss">
+@import "../assets/sass/variables.scss";
+@import "../assets/sass/bounce-to-right.scss";
+
 .vnb {
-  .button-red {
-    background: #ff3b30;
+  .signup-btn {
+    @include hvr-bounce-to-right;
+    background: $colour-pri;
 
     &:hover {
-      background: darken(#ff3b30, 10%);
+      background: $colour-pri-hover;
     }
   }
 }
