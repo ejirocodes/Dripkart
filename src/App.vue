@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import HeroMain from "./components/header/HeroMain.vue";
+import HeroMain from "./components/HeroMain.vue";
 
 export default {
   name: "App",

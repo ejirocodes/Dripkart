@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import HeroImage from "../../assets/images/nike-red.png";
+import HeroImage from "../assets/images/nike-red.png";
 export default {
   name: "HeroMain",
   data() {
@@ -35,8 +35,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../../assets/sass/variables.scss";
-@import "../../assets/sass/bounce-to-right.scss";
+@import "../assets/sass/variables.scss";
+@import "../assets/sass/bounce-to-right.scss";
 
 .header-main {
   display: flex;
