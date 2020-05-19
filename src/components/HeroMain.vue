@@ -1,28 +1,35 @@
 <template>
-  <header class="header-main">
-    <div class="header-left">
-      <h1>
-        New Shoes
-        <br />
-        collection {{new Date().getFullYear()}}
-      </h1>
-      <p>Dripkart brings you to a new collection of shoes. A new advanced breed of shoes</p>
-      <p class="price">&#36;899</p>
-      <div class="header-left-btn">
-        <a href="#">Discover</a>
-        <button @click="addToCart()">Add to cart</button>
+  <header>
+  <Navbar />
+    <!-- <div class="header-main">
+      <div class="header-left">
+        <h1>
+          New Shoes
+          <br />
+          collection {{new Date().getFullYear()}}
+        </h1>
+        <p>Dripkart brings you to a new collection of shoes. A new advanced breed of shoes</p>
+        <p class="price">&#36;899</p>
+        <div class="header-left-btn">
+          <a href="#">Discover</a>
+          <button @click="addToCart()">Add to cart</button>
+        </div>
       </div>
-    </div>
-    <div class="header-right">
-      <img class="hero-img" :src="HeroImage" alt="Nike shoe" />
-    </div>
+      <div class="header-right">
+        <img class="hero-img" :src="HeroImage" alt="Nike shoe" />
+      </div>
+    </div> -->
   </header>
 </template>
 
 <script>
+import Navbar from "./Navbar.vue";
 import HeroImage from "../assets/images/nike-red.png";
 export default {
   name: "HeroMain",
+  components: {
+    Navbar
+  },
   data() {
     return {
       HeroImage
