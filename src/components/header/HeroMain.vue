@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="header-right">
-      <img :src="HeroImage" alt />
+      <img class="hero-img" :src="HeroImage" alt="Nike shoe" />
     </div>
   </header>
 </template>
@@ -42,9 +42,9 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 .header-left {
-  // width: 50vw;
   h1 {
     font-size: 3rem;
     text-transform: uppercase;
@@ -83,15 +83,14 @@ export default {
     color: #fff;
     background-color: $colour-pri;
     border: none;
-    //   &:hover {
-    //   background-color: $colour-pri-hover;
-    // }
   }
 }
 .header-right {
-  // width: 50vw;
-  img {
+  background-color: $colour-sec;
+  .hero-img {
     width: 35rem;
+    max-width: 100%;
+    padding: 1rem 3rem 7rem 3rem;
   }
 }
 </style>
