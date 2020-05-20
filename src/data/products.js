@@ -1,10 +1,10 @@
-const images = require.context('./', true, /\.png$/)
+const images = require.context('./images', true, /\.png$/)
 
 const heroImg = {
   image: [
     { src: images('./LeBron-15.png') },
     {
-      src: images('./Airmax-270.png'),
+      src: images('./nike-red.png'),
     }
   ]
 }

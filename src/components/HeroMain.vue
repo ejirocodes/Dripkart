@@ -16,6 +16,7 @@
       </div>
       <div class="hero-main-right">
         <img class="hero-img" :src="selectedImage.src" alt="Nike shoe" />
+        <i class="fas fa-chevron-circle-right"></i>
         <button @click="prevHero()">Select Previous</button>
         <button @click="nextHero()">Select Next</button>
       </div>
@@ -24,10 +25,7 @@
 </template>
 
 <script>
-import HeroImage from "../assets/images/nike-red.png";
-import HeroImage2 from "../assets/images/nike-blue.png";
-
-import heroImg from "../data/products";
+import heroImg from "../data/HeaderImages";
 const img = heroImg.image;
 
 function getPreviousValidIndex(index, length) {
@@ -43,8 +41,6 @@ export default {
   name: "HeroMain",
   data() {
     return {
-      HeroImage,
-      HeroImage2,
       selectedHeroIndex: 0
     };
   },
