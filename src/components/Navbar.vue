@@ -12,7 +12,7 @@ export default {
         isUsingVueRouter: true,
         mobileBreakpoint: 992,
         brandImagePath: "./",
-        brandImage: require('../assets/logo.png'),
+        brandImage: require("../assets/logo.png"),
         brandImageAltText: "Dripkart",
         // collapseButtonImageOpen: require('../src/assets/images/collapse-menu-dark.png'),
         // collapseButtonImageClose: require('../src/assets/images/times.png'),
@@ -22,63 +22,73 @@ export default {
         menuOptionsLeft: [
           {
             type: "link",
-            text: "Home",
+            text: "New Releases",
+            path: "/new-releases",
             subMenuOptions: [
               {
                 isLinkAction: true,
                 type: "link",
-                text: "About",
+                text: "SHOP ALL NEW ARRIVALS",
                 subText:
-                  "Stupid corporate wet blankets. Like booze ever killed anyone.",
-                path: "./about",
-                iconLeft: '<i class="fa fa-star fa-fw"></i>'
+                  "All the lastest sneaker from the top brands at your feet.",
+                path: "./new-arrivals"
               },
               {
                 type: "hr"
               },
               {
                 type: "link",
-                text: "Locations",
-                subText: "You're a presentation tool!",
-                path: "./locations"
+                text: "NIKELAB",
+                subText: "The latest sneakers from addidas at your feet",
+                path: "./nike-lab"
               },
               {
                 type: "hr"
               },
               {
                 type: "link",
-                text: "Blog",
-                subText:
-                  "I enjoy having breakfast in bed. I like waking up to the smell of bacon. Sue me.",
-                path: "./blog"
+                text: "ADDIDASLAB",
+                subText: "The latest sneakers from addidas at your feet",
+                path: "./addidas-lab"
               }
             ]
           },
           {
             type: "link",
             text: "Shop",
-            subMenuOptions: [
-              {
-                type: "link",
-                text: "Customer Service",
-                path: "./customer-service"
-              },
-              {
-                type: "link",
-                text: "Accounting",
-                path: "./accounting"
-              },
-              {
-                type: "hr"
-              },
-              {
-                type: "link",
-                text: "Reception",
-                path: "./reception",
-                iconLeft:
-                  '<svg id="i-telephone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"> <path d="M3 12 C3 5 10 5 16 5 22 5 29 5 29 12 29 20 22 11 22 11 L10 11 C10 11 3 20 3 12 Z M11 14 C11 14 6 19 6 28 L26 28 C26 19 21 14 21 14 L11 14 Z" /> <circle cx="16" cy="21" r="4" /> </svg>'
-              }
-            ]
+            path: "/shop"
+            // subMenuOptions: [
+            //   {
+            //     type: "link",
+            //     text: "Customer Service",
+            //     path: "./customer-service"
+            //   },
+            //   {
+            //     type: "link",
+            //     text: "Accounting",
+            //     path: "./accounting"
+            //   },
+            //   {
+            //     type: "hr"
+            //   },
+            //   {
+            //     type: "link",
+            //     text: "Reception",
+            //     path: "./reception",
+            //     iconLeft:
+            //       '<svg id="i-telephone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"> <path d="M3 12 C3 5 10 5 16 5 22 5 29 5 29 12 29 20 22 11 22 11 L10 11 C10 11 3 20 3 12 Z M11 14 C11 14 6 19 6 28 L26 28 C26 19 21 14 21 14 L11 14 Z" /> <circle cx="16" cy="21" r="4" /> </svg>'
+            //   }
+            // ]
+          },
+          {
+            type: "link",
+            text: "Men",
+            path: "/men-sneakers"
+          },
+          {
+            type: "link",
+            text: "Women",
+            path: "/women-sneakers"
           },
           {
             type: "link",
@@ -116,14 +126,40 @@ import "vue-navigation-bar/dist/vue-navigation-bar.css";
 
 .vnb {
   .signup-custom {
-    padding: .6rem 1.6rem;
-     .login-btn:hover {
+    padding: 0.6rem 1.6rem;
+    .login-btn:hover {
       background: $colour-pri-hover;
     }
   }
   .login-btn {
     @include hvr-bounce-to-right;
     background: $colour-pri;
+  }
+}
+.vnb__sub-menu-options__option__link:hover {
+  border-left: 2px solid $colour-pri;
+  background-color: $colour-pri;
+}
+.vnb__sub-menu-options__option__link__text-wrapper__text {
+  color: $colour-uni;
+  font-size: 1rem;
+}
+.vnb__sub-menu-options__option__link__text-wrapper__sub-text {
+  color: $colour-uni;
+}
+.vnb__menu-options__option__link {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $colour-uni;
+}
+@media screen and (max-width: 991px) {
+  .vnb__popup__bottom__menu-options__option__link--no-highlight {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: $colour-uni;
+  }
+  .vnb__popup__bottom__sub-menu-options__option__link {
+    border-left: 2px solid $colour-pri;
   }
 }
 </style>

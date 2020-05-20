@@ -10,8 +10,9 @@
         <p>Dripkart brings you to a new collection of shoes. A new advanced breed of shoes</p>
         <p class="price">&#36;899</p>
         <div class="hero-main-left-btn">
-          <a href="#">Discover</a>
-          <button @click="addToCart()">Add to cart</button>
+          <a href="#">Shop</a>
+          <a href="#">Explore</a>
+          <!-- <button @click="addToCart()">Add to Bag</button> -->
         </div>
       </div>
       <div class="hero-main-right">
@@ -79,13 +80,13 @@ export default {
     background-color: $colour-sec;
     margin-right: $gutter-1;
     text-decoration: none;
-  }
-  button {
-    @include hvr-bounce-to-right;
-    @include button-style;
-    color: #fff;
-    background-color: $colour-pri;
-    border: none;
+    &:nth-child(2) {
+      @include hvr-bounce-to-right;
+      @include button-style;
+      color: #fff;
+      background-color: $colour-pri;
+      border: none;
+    }
   }
 }
 .hero-main-right {
