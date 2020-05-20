@@ -12,11 +12,12 @@
         <div class="hero-main-left-btn">
           <a href="#">Shop</a>
           <a href="#">Explore</a>
-          <!-- <button @click="addToCart()">Add to Bag</button> -->
         </div>
       </div>
       <div class="hero-main-right">
-        <img class="hero-img" :src="HeroImage" alt="Nike shoe" />
+        <img class="hero-img" :src="selectedImage.src" alt="Nike shoe" />
+        <button @click="prevHero()">Select Previous</button>
+        <button @click="nextHero()">Select Next</button>
       </div>
     </div>
   </header>
@@ -24,15 +25,50 @@
 
 <script>
 import HeroImage from "../assets/images/nike-red.png";
+import HeroImage2 from "../assets/images/nike-blue.png";
+
+import heroImg from "../data/products";
+const img = heroImg.image;
+
+function getPreviousValidIndex(index, length) {
+  const deprecatedIndex = index - 1;
+  return deprecatedIndex < 0 ? length - 1 : deprecatedIndex;
+}
+function getNextValidIndex(index, length) {
+  const incrementedIndex = index + 1;
+  return incrementedIndex > length - 1 ? 0 : incrementedIndex;
+}
+
 export default {
   name: "HeroMain",
   data() {
     return {
-      HeroImage
+      HeroImage,
+      HeroImage2,
+      selectedHeroIndex: 0
     };
   },
+  created() {
+    console.log(img);
+  },
+  computed: {
+    selectedImage() {
+      return img[this.selectedHeroIndex];
+    }
+  },
   methods: {
-    addToCart() {}
+    nextHero() {
+      this.selectedHeroIndex = getNextValidIndex(
+        this.selectedHeroIndex,
+        img.length
+      );
+    },
+    prevHero() {
+      this.selectedHeroIndex = getPreviousValidIndex(
+        this.selectedHeroIndex,
+        img.length
+      );
+    }
   }
 };
 </script>
@@ -80,12 +116,10 @@ export default {
     background-color: $colour-sec;
     margin-right: $gutter-1;
     text-decoration: none;
+    user-select: none;
     &:nth-child(2) {
-      @include hvr-bounce-to-right;
-      @include button-style;
       color: #fff;
       background-color: $colour-pri;
-      border: none;
     }
   }
 }
