@@ -12,7 +12,7 @@ export default {
         isUsingVueRouter: true,
         mobileBreakpoint: 992,
         brandImagePath: "./",
-        // brandImage: require('../src/assets/images/lockup-color.png'),
+        brandImage: require('../assets/logo.png'),
         brandImageAltText: "Dripkart",
         // collapseButtonImageOpen: require('../src/assets/images/collapse-menu-dark.png'),
         // collapseButtonImageClose: require('../src/assets/images/times.png'),
@@ -92,12 +92,13 @@ export default {
             type: "button",
             text: "Signup",
             path: "./signup",
-            class: "signup-btn"
+            class: "login-btn signup-custom"
           },
           {
             type: "button",
             text: "Login",
             path: "./login",
+            class: "login-btn",
             iconRight:
               '<svg id="i-arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"> <path d="M22 6 L30 16 22 26 M30 16 L2 16" /> </svg>'
           }
@@ -114,13 +115,15 @@ import "vue-navigation-bar/dist/vue-navigation-bar.css";
 @import "../assets/sass/bounce-to-right.scss";
 
 .vnb {
-  .signup-btn {
-    @include hvr-bounce-to-right;
-    background: $colour-pri;
-
-    &:hover {
+  .signup-custom {
+    padding: .6rem 1.6rem;
+     .login-btn:hover {
       background: $colour-pri-hover;
     }
+  }
+  .login-btn {
+    @include hvr-bounce-to-right;
+    background: $colour-pri;
   }
 }
 </style>
