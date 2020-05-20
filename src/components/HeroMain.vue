@@ -16,7 +16,7 @@
       </div>
       <div class="hero-main-right">
         <img class="hero-img" :src="selectedImage.src" alt="Nike shoe" />
-        <i class="fas fa-chevron-circle-right"></i>
+        <font-awesome-icon :icon="['fas', 'spinner']" />
         <button @click="prevHero()">Select Previous</button>
         <button @click="nextHero()">Select Next</button>
       </div>

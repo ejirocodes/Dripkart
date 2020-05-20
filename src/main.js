@@ -1,12 +1,18 @@
 import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';
-import './assets/css/reset.css';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VueNavigationBar from "vue-navigation-bar";
+import './assets/css/reset.css';
 
 Vue.config.productionTip = false
 
 Vue.use(VueRouter);
+
+library.add(faSpinner)
+Vue.component('font-awesome-icon', FontAwesomeIcon);  
 
 const router = new VueRouter({
   mode: "history",
