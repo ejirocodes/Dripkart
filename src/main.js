@@ -2,7 +2,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import { faChevronCircleRight, faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VueNavigationBar from "vue-navigation-bar";
 import './assets/css/reset.css';
@@ -11,7 +11,7 @@ Vue.config.productionTip = false
 
 Vue.use(VueRouter);
 
-library.add(faSpinner)
+library.add(faChevronCircleRight, faChevronCircleLeft)
 Vue.component('font-awesome-icon', FontAwesomeIcon);  
 
 const router = new VueRouter({

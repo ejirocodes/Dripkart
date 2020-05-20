@@ -16,9 +16,12 @@
       </div>
       <div class="hero-main-right">
         <img class="hero-img" :src="selectedImage.src" alt="Nike shoe" />
-        <font-awesome-icon :icon="['fas', 'spinner']" />
-        <button @click="prevHero()">Select Previous</button>
-        <button @click="nextHero()">Select Next</button>
+        <button @click="prevHero()">
+          <font-awesome-icon class="hero-icon" :icon="['fas', 'chevron-circle-left']" />
+        </button>
+        <button @click="nextHero()">
+          <font-awesome-icon class="hero-icon" :icon="['fas', 'chevron-circle-right']" />
+        </button>
       </div>
     </div>
   </header>
@@ -121,10 +124,29 @@ export default {
 }
 .hero-main-right {
   background-color: $colour-sec;
+  position: relative;
   .hero-img {
     width: 35rem;
     max-width: 100%;
     padding: 1rem 3rem 7rem 3rem;
+  }
+  @mixin hero-btn {
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+  }
+  button:first-of-type {
+    @include hero-btn;
+    left: 0;
+  }
+  button:last-of-type {
+    @include hero-btn;
+        right: 0;
+  }
+  .hero-icon {
+    font-size: 1.2rem;
+    color: $colour-uni;
   }
 }
 // Media Queries
