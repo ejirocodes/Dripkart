@@ -153,13 +153,21 @@ import "vue-navigation-bar/dist/vue-navigation-bar.css";
   color: $colour-uni;
 }
 @media screen and (max-width: 991px) {
-  .vnb__popup__bottom__menu-options__option__link--no-highlight {
+  .vnb__popup__bottom__menu-options__option__link--no-highlight,
+  .vnb__popup__bottom__sub-menu-options__option__link {
     text-transform: uppercase;
     font-size: 1.2rem;
     color: $colour-uni;
+    line-height: 1.4;
+    padding: 10px 24px;
+    border-left: none;
   }
-  .vnb__popup__bottom__sub-menu-options__option__link {
+  .vnb__popup__bottom__menu-options {
     border-left: 2px solid $colour-pri;
+    border-right: 2px solid $colour-pri;
+  }
+  .vnb__popup__bottom__menu-options__option__link {
+    font-size: 1.2rem;
   }
 }
 </style>
