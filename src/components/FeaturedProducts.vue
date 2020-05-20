@@ -1,6 +1,6 @@
 <template>
    <main>
-       
+
    </main>
 </template>
 
@@ -11,6 +11,7 @@ export default {
         return {
             title: 'Featured'
         }
+        
     },
 }
 </script>

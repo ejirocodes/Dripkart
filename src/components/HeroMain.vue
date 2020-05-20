@@ -1,8 +1,8 @@
 <template>
   <header>
     <Navbar />
-    <div class="header-main">
-      <div class="header-left">
+    <div class="hero-main">
+      <div class="hero-main-left">
         <h1>
           New Shoes
           <br />
@@ -10,12 +10,12 @@
         </h1>
         <p>Dripkart brings you to a new collection of shoes. A new advanced breed of shoes</p>
         <p class="price">&#36;899</p>
-        <div class="header-left-btn">
+        <div class="hero-main-left-btn">
           <a href="#">Discover</a>
           <button @click="addToCart()">Add to cart</button>
         </div>
       </div>
-      <div class="header-right">
+      <div class="hero-main-right">
         <img class="hero-img" :src="HeroImage" alt="Nike shoe" />
       </div>
     </div>
@@ -45,13 +45,13 @@ export default {
 @import "../assets/sass/variables.scss";
 @import "../assets/sass/bounce-to-right.scss";
 
-.header-main {
+.hero-main {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 96vh;
 }
-.header-left {
+.hero-main-left {
   h1 {
     font-size: 3rem;
     text-transform: uppercase;
@@ -75,7 +75,7 @@ export default {
   font-size: 1rem;
   padding: 0.8rem 2.2rem;
 }
-.header-left-btn {
+.hero-main-left-btn {
   a {
     @include hvr-bounce-to-right;
     @include button-style;
@@ -93,7 +93,7 @@ export default {
     border: none;
   }
 }
-.header-right {
+.hero-main-right {
   background-color: $colour-sec;
   .hero-img {
     width: 35rem;
@@ -103,10 +103,10 @@ export default {
 }
 // Media Queries
 @media screen and (max-width: 768px) {
-  .header-main {
+  .hero-main {
     align-items: flex-start;
   }
-  .header-left {
+  .hero-main-left {
     h1 {
       font-size: 2.2rem;
       margin-bottom: $gutter-1;
@@ -115,18 +115,18 @@ export default {
       width: 85%;
     }
   }
-  .header-right {
+  .hero-main-right {
     .hero-img {
       padding: 1.5rem;
     }
   }
 }
 @media screen and (max-width: 670px) {
-  .header-main {
+  .hero-main {
     flex-direction: column;
     height: 100%;
   }
-  .header-left {
+  .hero-main-left {
     margin-bottom: $gutter-3;
     h1 {
       font-size: 3rem;
@@ -138,14 +138,14 @@ export default {
       }
     }
   }
-  .header-right {
+  .hero-main-right {
     .hero-img {
       width: 100%;
     }
   }
 }
 @media screen and (max-width: 375px) {
-  .header-left {
+  .hero-main-left {
     h1 {
       font-size: 2.2rem;
       margin-bottom: $gutter-1;
@@ -157,7 +157,7 @@ export default {
       }
     }
   }
-  .header-left-btn {
+  .hero-main-left-btn {
     a {
       padding: 0.9rem 2.02rem;
       margin-right: $gutter-0;
