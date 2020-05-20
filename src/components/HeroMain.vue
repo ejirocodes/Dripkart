@@ -1,6 +1,5 @@
 <template>
   <header>
-    <Navbar />
     <div class="hero-main">
       <div class="hero-main-left">
         <h1>
@@ -23,13 +22,9 @@
 </template>
 
 <script>
-import Navbar from "./Navbar.vue";
 import HeroImage from "../assets/images/nike-red.png";
 export default {
   name: "HeroMain",
-  components: {
-    Navbar
-  },
   data() {
     return {
       HeroImage

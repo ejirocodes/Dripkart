@@ -1,15 +1,15 @@
 const images = require.context('./images', true, /\.png$/)
 
-const parts = {
-  heads: [
+const products = {
+  featured: [
     {
       id: 1,
       description:
-        'A robot head with an unusually large eye and teloscpic neck -- excellent for exploring high spaces.',
-      title: 'Large Cyclops',
-      src: images('./head-big-eye.png'),
-      type: 'heads',
-      cost: 1225.5
+        'Rise from the ashes with the new LeBron 15, engineered with next-generation BattleKnit technology for an unrivaled combination of flexibility and strength.',
+      title: 'LeBron 15',
+      src: images('./LeBron-15.png'),
+      type: 'Athletic Sneakers',
+      cost: 699
     },
     {
       id: 2,
@@ -48,7 +48,7 @@ const parts = {
       cost: 1255.5
     }
   ],
-  arms: [
+  newArrivals: [
     {
       id: 1,
       description: 'An articulated arm with a claw -- great for reaching around corners or working in tight spaces.',
@@ -161,4 +161,4 @@ const parts = {
     }
   ]
 }
-export default parts
+export default products

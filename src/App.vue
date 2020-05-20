@@ -1,16 +1,24 @@
 <template>
   <div id="app">
+    <Navbar />
     <HeroMain />
+    <main>
+      <FeaturedProducts />
+    </main>
   </div>
 </template>
 
 <script>
 import HeroMain from "./components/HeroMain.vue";
+import Navbar from "./components/Navbar.vue";
+import FeaturedProducts from "./components/FeaturedProducts.vue";
 
 export default {
   name: "App",
   components: {
-    HeroMain
+    Navbar,
+    HeroMain,
+    FeaturedProducts
   }
 };
 </script>
