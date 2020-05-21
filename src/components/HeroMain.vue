@@ -124,20 +124,25 @@ export default {
     }
   }
 }
+@mixin hover-trans-1 {
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+}
 .hero-main-right {
+  @include hover-trans-1;
   display: flex;
   position: relative;
   height: 31rem;
   max-height: 100%;
   background-color: $colour-sec;
-  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+    user-select: none;  
   cursor: pointer;
   .hero-img {
-    transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+  @include hover-trans-1;
     width: 35rem;
     max-width: 100%;
     padding: 3rem;
     margin: auto;
+    user-select: none;  
     &:hover {
       transform: scale(1.07);
     }
@@ -159,6 +164,10 @@ export default {
   .hero-icon {
     font-size: 1.5rem;
     color: $colour-uni;
+    transition: colour;
+    &:hover {
+    color: $colour-pri;
+    }
   }
 }
 // Media Queries
