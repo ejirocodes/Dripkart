@@ -1,16 +1,22 @@
 <template>
   <section class="prod-feature prod-showcase">
     <div class="prod-showcase-heading">
-      <!-- <span class="stroke"></span> -->
       <h1>{{title}}</h1>
     </div>
     <section class="products-container">
-      <figure v-for="(product, index) in featuredProducts" :key="index">
+      <figure class="imghvr-push-right" v-for="(product, index) in featuredProducts" :key="index">
         <img class="product" :src="product.src" :alt="product.title" :title="product.title" />
-        <figcaption>{{product.title}}</figcaption>
-        <p>{{product.category}}</p>
-        <p>&#36;{{product.cost}}</p>
-        <CartButton />
+        <figcaption>
+          <h3>{{product.title}}</h3>
+          <p>{{product.category}}</p>
+          <p>&#36;{{product.cost}}</p>
+        </figcaption>
+        <div class="product-title">
+          <p>{{product.category}}</p>
+          <h3>{{product.title}}</h3>
+          <p>&#36;{{product.cost}}</p>
+          <CartButton />
+        </div>
       </figure>
     </section>
   </section>
@@ -60,11 +66,14 @@ export default {
 }
 .products-container {
   display: flex;
+  figure:not(:last-of-type) {
+    margin-right: 0.8rem;
+  }
   figure {
     width: 18rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
     padding: 1rem;
     background: #fff;
@@ -80,7 +89,37 @@ export default {
     }
   }
   figcaption {
-    font-size: 1.4rem;
+    color: #222;
+    h3 {
+      color: #222;
+      font-size: 1.8rem;
+      margin-bottom: 0.8rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    p:first-of-type {
+      margin-bottom: 0.5rem;
+    }
+  }
+  .product-title {
+    margin-top: 1rem;
+    h3 {
+      font-size: 1.2rem;
+    }
+    color: $colour-uni;
+    p:first-of-type {
+      font-size: 0.8rem;
+      margin-bottom: 0.6rem;
+    }
+    p:last-of-type {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+  }
+  [class^="imghvr-"] figcaption {
+    background-color: $colour-pri;
+    padding: 1rem;
   }
 }
 </style>

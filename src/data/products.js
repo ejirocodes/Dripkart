@@ -3,15 +3,6 @@ const images = require.context('./images', true, /\.png$/)
 const products = {
   featured: [
     {
-      id: 1,
-      description:
-        'Rise from the ashes with the new LeBron 15, engineered with next-generation BattleKnit technology for an unrivaled combination of flexibility and strength.',
-      title: 'LeBron 17',
-      src: images('./lebron-17-big-kids-shoe.png'),
-      category: 'Men\'s Shoe',
-      cost: 199
-    },
-    {
       id: 2,
       description: 'Go for gold in the Nike Air Max 270 React. The design draws inspiration from the Air Max pantheon, showcasing Nike\'s big innovation with its large window and fresh array of colors.',
       title: 'Nike Air Max 270 React',
@@ -20,42 +11,51 @@ const products = {
       category: 'Men\'s Shoe',
       onSale: true
     },
-    // {
-    //   id: 3,
-    //   description:
-    //     'Featuring a full-length foam midsole and VaporMax Air unit, the Nike Air VaporMax 360 gives you a cushy ride with bold \'90s style. Iridescent accents on the upper combine with small Air Pod details for a fresh look with just enough flash.',
-    //   title: 'Nike Air VaporMax 360',
-    //   src: images('./air-vapormax-360-mens-shoe.png'),
-    //   category: 'Men\'s Shoe',
-    //   cost: 194
-    // },
-    // {
-    //   id: 4,
-    //   description:
-    //     'Designed specifically for a woman\'s foot, the Nike Air Max Dia delivers a lifted look, an airy aesthetic and a sleek shape. The minimal upper modernizes the look, while the Max Air unit, surrounded by clear TPU, is amplified even further by an exaggerated midsole for a boost of style.',
-    //   title: 'Nike Air Max Dia',
-    //   src: images('./air-max-dia-womens-shoe.png'),
-    //   category: 'Women\'s Shoe',
-    //   cost: 111
-    // },
-    // {
-    //   id: 5,
-    //   description:
-    //     'Featuring the original ripple design inspired by Japanese bullet trains, the Nike Air Max 97 Tortoise Shell lets you push your style full-speed ahead. With its revolutionary full-length Nike Air unit that shook up the running world and new tortoise shell print details, it lets you ride in first-class comfort.',
-    //   title: 'Nike Air Max 97 Tortoise Shell',
-    //   src: images('./air-max-97-tortoise-shell-womens-shoe.png'),
-    //   category: 'Women\'s Shoe',
-    //   cost: 159
-    // },
-    // {
-    //   id: 6,
-    //   description:
-    //     'The Nike Vista Lite SE brings you to a bold new place both rebellious and refined. Using recycled foam from the Nike Zoom X family, it takes Nike DNA and fuses it to elements of fashion and technology. Lightweight mesh, exaggerated stitching and the transparent window on the upper add a modern look while the thick stack of foam adds unreal comfort and response.',
-    //   title: 'Nike Vista Lite SE',
-    //   src: images('./vista-lite-se-womens.png'),
-    //   category: 'Women\'s Shoe',
-    //   cost: 99
-    // }
+    {
+      id: 3,
+      description:
+        'Featuring a full-length foam midsole and VaporMax Air unit, the Nike Air VaporMax 360 gives you a cushy ride with bold \'90s style. Iridescent accents on the upper combine with small Air Pod details for a fresh look with just enough flash.',
+      title: 'Nike Air VaporMax 360',
+      src: images('./air-vapormax-360-mens-shoe.png'),
+      category: 'Men\'s Shoe',
+      cost: 194
+    },
+    {
+      id: 4,
+      description:
+        'Designed specifically for a woman\'s foot, the Nike Air Max Dia delivers a lifted look, an airy aesthetic and a sleek shape. The minimal upper modernizes the look, while the Max Air unit, surrounded by clear TPU, is amplified even further by an exaggerated midsole for a boost of style.',
+      title: 'Nike Air Max Dia',
+      src: images('./air-max-dia-womens-shoe.png'),
+      category: 'Women\'s Shoe',
+      cost: 111
+    },
+    {
+      id: 5,
+      description:
+        'Featuring the original ripple design inspired by Japanese bullet trains, the Nike Air Max 97 Tortoise Shell lets you push your style full-speed ahead. With its revolutionary full-length Nike Air unit that shook up the running world and new tortoise shell print details, it lets you ride in first-class comfort.',
+      title: 'Nike Air Max 97 Tortoise Shell',
+      src: images('./air-max-97-tortoise-shell-womens-shoe.png'),
+      category: 'Women\'s Shoe',
+      cost: 159
+    },
+    {
+      id: 6,
+      description:
+        'The Nike Vista Lite SE brings you to a bold new place both rebellious and refined. Using recycled foam from the Nike Zoom X family, it takes Nike DNA and fuses it to elements of fashion and technology. Lightweight mesh, exaggerated stitching and the transparent window on the upper add a modern look while the thick stack of foam adds unreal comfort and response.',
+      title: 'Nike Vista Lite SE',
+      src: images('./vista-lite-se-womens.png'),
+      category: 'Women\'s Shoe',
+      cost: 99
+    },
+     {
+      id: 1,
+      description:
+        'Rise from the ashes with the new LeBron 15, engineered with next-generation BattleKnit technology for an unrivaled combination of flexibility and strength.',
+      title: 'LeBron 17',
+      src: images('./lebron-17-big-kids-shoe.png'),
+      category: 'Men\'s Shoe',
+      cost: 199
+    },
   ],
   newArrivals: [
   //   {
