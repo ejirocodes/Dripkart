@@ -7,7 +7,7 @@ const products = {
       description:
         'Rise from the ashes with the new LeBron 15, engineered with next-generation BattleKnit technology for an unrivaled combination of flexibility and strength.',
       title: 'LeBron 15',
-      src: images('./LeBron-15.png'),
+      src: images('./lebron-17-big-kids-shoe.png'),
       category: 'Men\'s Shoe',
       cost: 199
     },

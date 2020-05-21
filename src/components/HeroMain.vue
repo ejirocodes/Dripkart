@@ -15,7 +15,12 @@
         </div>
       </div>
       <div class="hero-main-right">
-        <img class="hero-img" :src="selectedImage.src" alt="Nike shoe" />
+        <img
+          class="hero-img"
+          :src="selectedImage.src"
+          :alt="selectedImage.title"
+          :title="selectedImage.title"
+        />
         <button @click="prevHero()">
           <font-awesome-icon class="hero-icon" :icon="['fas', 'chevron-circle-left']" />
         </button>
@@ -134,15 +139,15 @@ export default {
   height: 31rem;
   max-height: 100%;
   background-color: $colour-sec;
-    user-select: none;  
+  user-select: none;
   cursor: pointer;
   .hero-img {
-  @include hover-trans-1;
+    @include hover-trans-1;
     width: 35rem;
     max-width: 100%;
     padding: 3rem;
     margin: auto;
-    user-select: none;  
+    user-select: none;
     &:hover {
       transform: scale(1.07);
     }
@@ -166,7 +171,7 @@ export default {
     color: $colour-uni;
     transition: colour;
     &:hover {
-    color: $colour-pri;
+      color: $colour-pri;
     }
   }
 }
