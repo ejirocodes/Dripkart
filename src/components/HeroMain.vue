@@ -118,6 +118,7 @@ export default {
     text-decoration: none;
     user-select: none;
     &:nth-child(2) {
+      margin-right: 0;
       color: #fff;
       background-color: $colour-pri;
     }
@@ -129,12 +130,12 @@ export default {
   height: 31rem;
   max-height: 100%;
   background-color: $colour-sec;
-    transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
   .hero-img {
     transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
     width: 35rem;
     max-width: 100%;
-    padding:  3rem;
+    padding: 3rem;
     margin: auto;
   }
   @mixin hero-btn {
@@ -157,6 +158,15 @@ export default {
   }
 }
 // Media Queries
+@media screen and (max-width: 991px) {
+  .hero-main-right {
+    height: 25rem;
+    .hero-img {
+      margin: 0;
+      object-fit: contain;
+    }
+  }
+}
 @media screen and (max-width: 768px) {
   .hero-main {
     align-items: flex-start;
