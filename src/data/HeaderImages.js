@@ -5,8 +5,12 @@ const heroImg = {
     {
       src: images('./nike-red.png'),
     },
-    { src: images('./nike-blue.png') 
-  }
+    { src: images('./air-max-2090-womens-shoe.png') 
+    },
+    { src: images('./air-max-dia-womens-shoe.png') 
+    },
+    { src: images('./air-max-97-tortoise-shell-womens-shoe.png') 
+    },
   ]
 }
 export default heroImg;

@@ -80,7 +80,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 96vh;
+  height: 100%;
+  margin-top: 4rem;
 }
 .hero-main-left {
   h1 {
@@ -123,12 +124,18 @@ export default {
   }
 }
 .hero-main-right {
-  background-color: $colour-sec;
+  display: flex;
   position: relative;
+  height: 31rem;
+  max-height: 100%;
+  background-color: $colour-sec;
+    transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
   .hero-img {
+    transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
     width: 35rem;
     max-width: 100%;
-    padding: 1rem 3rem 7rem 3rem;
+    padding:  3rem;
+    margin: auto;
   }
   @mixin hero-btn {
     border: none;
@@ -142,7 +149,7 @@ export default {
   }
   button:last-of-type {
     @include hero-btn;
-        right: 0;
+    right: 0;
   }
   .hero-icon {
     font-size: 1.2rem;
@@ -153,6 +160,7 @@ export default {
 @media screen and (max-width: 768px) {
   .hero-main {
     align-items: flex-start;
+    margin-top: 2rem;
   }
   .hero-main-left {
     h1 {
