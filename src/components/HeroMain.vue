@@ -21,10 +21,10 @@
           :alt="selectedImage.title"
           :title="selectedImage.title"
         />
-        <button @click="prevHero()">
+        <button @click="prevHero()" title="previous image">
           <font-awesome-icon class="hero-icon" :icon="['fas', 'chevron-circle-left']" />
         </button>
-        <button @click="nextHero()">
+        <button @click="nextHero()" title="next image">
           <font-awesome-icon class="hero-icon" :icon="['fas', 'chevron-circle-right']" />
         </button>
       </div>
