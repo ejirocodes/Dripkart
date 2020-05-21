@@ -157,7 +157,7 @@ export default {
     right: 0;
   }
   .hero-icon {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: $colour-uni;
   }
 }
