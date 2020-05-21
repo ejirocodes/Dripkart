@@ -131,12 +131,16 @@ export default {
   max-height: 100%;
   background-color: $colour-sec;
   transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+  cursor: pointer;
   .hero-img {
     transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
     width: 35rem;
     max-width: 100%;
     padding: 3rem;
     margin: auto;
+    &:hover {
+      transform: scale(1.07);
+    }
   }
   @mixin hero-btn {
     border: none;
