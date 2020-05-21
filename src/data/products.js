@@ -6,20 +6,20 @@ const products = {
       id: 1,
       description:
         'Rise from the ashes with the new LeBron 15, engineered with next-generation BattleKnit technology for an unrivaled combination of flexibility and strength.',
-      title: 'LeBron 15',
+      title: 'LeBron 17',
       src: images('./lebron-17-big-kids-shoe.png'),
       category: 'Men\'s Shoe',
       cost: 199
     },
-    // {
-    //   id: 2,
-    //   description: 'Go for gold in the Nike Air Max 270 React. The design draws inspiration from the Air Max pantheon, showcasing Nike\'s big innovation with its large window and fresh array of colors.',
-    //   title: 'Nike Air Max 270 React',
-    //   src: images('./air-max-270-react-mens-shoe.png'),
-    //   cost: 189,
-    //   category: 'Men\'s Shoe',
-    //   onSale: true
-    // },
+    {
+      id: 2,
+      description: 'Go for gold in the Nike Air Max 270 React. The design draws inspiration from the Air Max pantheon, showcasing Nike\'s big innovation with its large window and fresh array of colors.',
+      title: 'Nike Air Max 270 React',
+      src: images('./air-max-270-react-mens-shoe.png'),
+      cost: 189,
+      category: 'Men\'s Shoe',
+      onSale: true
+    },
     // {
     //   id: 3,
     //   description:
