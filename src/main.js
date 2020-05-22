@@ -5,11 +5,16 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faChevronCircleRight, faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VueNavigationBar from "vue-navigation-bar";
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 import './assets/css/reset.css';
 
 Vue.config.productionTip = false
 
 Vue.use(VueRouter);
+
+import 'swiper/css/swiper.css'
+
+Vue.use(VueAwesomeSwiper, /* { default options with global component } */)
 
 library.add(faChevronCircleRight, faChevronCircleLeft)
 Vue.component('font-awesome-icon', FontAwesomeIcon);  

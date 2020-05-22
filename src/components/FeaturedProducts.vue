@@ -4,20 +4,27 @@
       <h1>{{title}}</h1>
     </div>
     <section class="products-container">
-      <figure class="imghvr-push-right" v-for="(product, index) in featuredProducts" :key="index">
-        <img class="product" :src="product.src" :alt="product.title" :title="product.title" />
-        <figcaption>
-          <h3>{{product.title}}</h3>
-          <p>{{product.category}}</p>
-          <p>&#36;{{product.cost}}</p>
-        </figcaption>
-        <div class="product-title">
-          <p>{{product.category}}</p>
-          <h3>{{product.title}}</h3>
-          <p>&#36;{{product.cost}}</p>
-          <CartButton />
-        </div>
-      </figure>
+      <swiper class="swiper" :options="swiperOption">
+        <swiper-slide v-for="(product, index) in featuredProducts" :key="index">
+          <figure class="imghvr-push-right">
+            <img class="product" :src="product.src" :alt="product.title" :title="product.title" />
+            <figcaption>
+              <h3>{{product.title}}</h3>
+              <p>{{product.category}}</p>
+              <p>&#36;{{product.cost}}</p>
+            </figcaption>
+            <div class="product-title">
+              <p>{{product.category}}</p>
+              <h3>{{product.title}}</h3>
+              <p>&#36;{{product.cost}}</p>
+              <CartButton />
+            </div>
+          </figure>
+        </swiper-slide>
+        <div class="swiper-pagination" slot="pagination"></div>
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
+      </swiper>
     </section>
   </section>
 </template>
@@ -26,15 +33,35 @@
 import products from "../data/products";
 const featuredProducts = products.featured;
 import CartButton from "./CartButton.vue";
+
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+import "swiper/css/swiper.css";
 export default {
   name: "FeaturedProducts",
   components: {
-    CartButton
+    CartButton,
+    Swiper,
+    SwiperSlide
   },
   data() {
     return {
       title: "What's trending",
-      featuredProducts
+      featuredProducts,
+      swiperOption: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      }
     };
   },
   beforeCreate() {
@@ -44,10 +71,12 @@ export default {
 </script>
 <style lang="scss">
 @import "../assets/sass/variables.scss";
+
 .prod-showcase {
   margin: 8rem 0;
 }
 .prod-showcase-heading {
+  margin-bottom: 4.6rem;
   h1 {
     font-size: 1.5rem;
     font-weight: 600;
@@ -57,7 +86,7 @@ export default {
       border-top: 2px solid $colour-pri;
       display: block;
       position: relative;
-      top: -25px;
+      top: -12px;
       margin: 0 auto;
       width: 10%;
       content: "";
