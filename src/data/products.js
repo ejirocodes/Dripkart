@@ -201,9 +201,41 @@ const products = {
   ],
   inspImage: [
     {
-      src: images('./nike-red.png'),
+      id: 3,
+      description:
+        'Featuring a full-length foam midsole and VaporMax Air unit, the Nike Air VaporMax 360 gives you a cushy ride with bold \'90s style. Iridescent accents on the upper combine with small Air Pod details for a fresh look with just enough flash.',
+      title: 'Nike Air VaporMax 360',
+      src: images('./air-vapormax-360-mens-shoe.png'),
+      category: 'Men\'s Shoe',
+      cost: 194
+    },
+    {
+      description:
+      'Run or cross-train in these lightweight and supportive shoes. The breathable mesh upper is built with targeted areas of support and stretch for confident multidirectional movement. Flexible cushioning adds spring to your step.',
+      id: 12,
       title: 'ALPHABOUNCE+ RUN EM SHOES',
-    }
+      src: images('./Alphabounce+_Run_EM_Shoes.png'),
+      category: 'Women\'s Shoe',
+      cost: 159
+    },
+    {
+      id: 1,
+      description:
+        'The Nike Joyride Dual Run is designed to help make running feel easier and give your legs a day off. Tiny foam beads underfoot conform to your foot for cushioning that stands up to your mileage.',
+      title: 'Nike Joyride Dual Run',
+      src: images('./joyride-dual-run-womens-running.png'),
+      category: 'Men\'s Shoe',
+      cost: 129
+    },
+    {
+      id: 2,
+      description:
+        'Reinvigorate your stride with the Nike Air Zoom Pegasus 37. Delivering the same fit and feel that runners love, the shoe has an all-new forefoot cushioning unit and foam for maximum responsiveness. The result is a durable, lightweight trainer designed for everyday running.',
+      title: 'Nike Air Zoom Pegasus 37',
+      src: images('./air-zoom-pegasus-37-womens-running-shoe.png'),
+      category: 'Women\'s Shoe',
+      cost: 179
+    },
 
   ]
 }
