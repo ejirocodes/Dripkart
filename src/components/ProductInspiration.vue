@@ -19,9 +19,9 @@
 </template>
 
 <script>
-import heroImg from "../data/HeaderImages";
+import heroImg from "../data/products";
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
-const img = heroImg.image;
+const img = heroImg.inspImage;
 
 export default {
   name: "ProductInspiration",

@@ -33,8 +33,8 @@
 </template>
 
 <script>
-import heroImg from "../data/HeaderImages";
-const img = heroImg.image;
+import heroImg from "../data/products";
+const img = heroImg.heroImage;
 
 function getPreviousValidIndex(index, length) {
   const deprecatedIndex = index - 1;
