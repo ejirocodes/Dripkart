@@ -1,39 +1,26 @@
 <template>
-  <header>
-    <div class="hero-main">
+    <section class="hero-main">
+      <div class="hero-main-right example-3d">
+        <swiper class="swiper" :options="swiperOption">
+          <swiper-slide v-for="(image, index) in img" :key="index">
+            <img class="hero-img" :src="image.src" :alt="image.title" :title="image.title" />
+          </swiper-slide>
+          <div class="swiper-pagination" slot="pagination"></div>
+        </swiper>
+      </div>
       <div class="hero-main-left">
-        <h1>
-          DripKart
-          <br />
-          collection {{new Date().getFullYear()}}
-        </h1>
-        <p>Dripkart brings you to a new collection of next-generation <br> BattleKnit technology engineered shoes.</p>
-        <p class="price">&#36;899</p>
+        <h1>Made for icons</h1>
+        <p>Capturing all the glory of the 1971 original, the Stan Smith&nbsp;returns&nbsp;for the&nbsp;win.</p>
         <div class="hero-main-left-btn">
           <a href="#">Shop</a>
-          <a href="#">Explore</a>
         </div>
       </div>
-      <div class="hero-main-right">
-        <img
-          class="hero-img"
-          :src="selectedImage.src"
-          :alt="selectedImage.title"
-          :title="selectedImage.title"
-        />
-        <button @click="prevHero()" title="previous image">
-          <font-awesome-icon class="hero-icon" :icon="['fas', 'chevron-circle-left']" />
-        </button>
-        <button @click="nextHero()" title="next image">
-          <font-awesome-icon class="hero-icon" :icon="['fas', 'chevron-circle-right']" />
-        </button>
-      </div>
-    </div>
-  </header>
+    </section>
 </template>
 
 <script>
 import heroImg from "../data/HeaderImages";
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 const img = heroImg.image;
 
 function getPreviousValidIndex(index, length) {
@@ -46,19 +33,32 @@ function getNextValidIndex(index, length) {
 }
 
 export default {
-  name: "HeroMain",
+  name: "ProductInspiration",
+  components: {
+    Swiper,
+    SwiperSlide
+  },
   data() {
     return {
-      selectedHeroIndex: 0
+      img,
+      selectedHeroIndex: 0,
+      swiperOption: {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: false,
+        slidesPerView: 2,
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true
+        },
+        pagination: {
+          el: ".swiper-pagination"
+        }
+      }
     };
-  },
-  created() {
-    console.log(img);
-  },
-  computed: {
-    selectedImage() {
-      return img[this.selectedHeroIndex];
-    }
   },
   methods: {
     nextHero() {
@@ -118,15 +118,10 @@ export default {
     @include button-style;
     padding: 0.9rem 2.62rem;
     color: $colour-uni;
-    background-color: $colour-sec;
     margin-right: $gutter-1;
     text-decoration: none;
+    background-color: $colour-pri;
     user-select: none;
-    &:nth-child(2) {
-      margin-right: 0;
-      color: #fff;
-      background-color: $colour-pri;
-    }
   }
 }
 @mixin hover-trans-1 {
@@ -136,11 +131,8 @@ export default {
   @include hover-trans-1;
   display: flex;
   position: relative;
-  height: 31rem;
-  max-height: 100%;
+  height: 100% !important;
   background-color: $colour-sec;
-  user-select: none;
-  cursor: pointer;
   .hero-img {
     @include hover-trans-1;
     width: 35rem;
@@ -175,6 +167,34 @@ export default {
     }
   }
 }
+.example-3d {
+  width: 50%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper {
+  height: 100%;
+  width: 100%;
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+  }
+
+  .swiper-pagination {
+    /deep/ .swiper-pagination-bullet.swiper-pagination-bullet-active {
+      background-color: white;
+    }
+  }
+}
+
 // Media Queries
 @media screen and (max-width: 991px) {
   .hero-main-right {

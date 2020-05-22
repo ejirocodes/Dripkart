@@ -55,30 +55,31 @@ export default {
         loopFillGroupWithBlank: false,
         pagination: {
           el: ".swiper-pagination",
-          clickable: true
+          clickable: false,
+          type: "progressbar"
         },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
         },
-         breakpoints: {
-            1024: {
-              slidesPerView: 4,
-              spaceBetween: 40
-            },
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 30
-            },
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 20
-            },
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 10
-            }
+        breakpoints: {
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 40
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10
           }
+        }
       }
     };
   },
@@ -166,17 +167,19 @@ export default {
     background-color: $colour-pri;
     padding: 1rem;
   }
-  .swiper-container  {
-    padding: .5rem;
+  .swiper-container {
+    padding: 0.5rem;
   }
- .swiper-button-prev:after, .swiper-button-next:after {
-   font-size: 2rem;
- }
-  .swiper-pagination-bullet-active {
-    background: $colour-uni;
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 2rem;
   }
-  .swiper-button-prev, .swiper-button-next {
+  .swiper-button-prev,
+  .swiper-button-next {
     color: $colour-uni;
+  }
+  .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: $colour-pri;
   }
 }
 </style>

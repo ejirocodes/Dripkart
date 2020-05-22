@@ -4,6 +4,7 @@
     <HeroMain />
     <main>
       <FeaturedProducts />
+      <ProductInspiration />
     </main>
   </div>
 </template>
@@ -12,13 +13,15 @@
 import HeroMain from "./components/HeroMain.vue";
 import Navbar from "./components/Navbar.vue";
 import FeaturedProducts from "./components/FeaturedProducts.vue";
+import ProductInspiration from "./components/ProductInspiration.vue";
 
 export default {
   name: "App",
   components: {
     Navbar,
     HeroMain,
-    FeaturedProducts
+    FeaturedProducts,
+    ProductInspiration
   }
 };
 </script>
