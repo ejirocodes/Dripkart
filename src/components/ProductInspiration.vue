@@ -37,7 +37,7 @@ export default {
         effect: "coverflow",
         grabCursor: true,
         centeredSlides: false,
-        slidesPerView: 2,
+        slidesPerView: 1,
         loop: true,
         coverflowEffect: {
           rotate: 50,
@@ -51,24 +51,6 @@ export default {
           clickable: true
         }
       },
-      breakpoints: {
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 40
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 30
-        },
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 20
-        },
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 10
-        }
-      }
     };
   }
 };
@@ -98,11 +80,6 @@ export default {
     color: $colour-ter;
     margin-bottom: $gutter-2;
     line-height: 1.5;
-    &.price {
-      color: $colour-uni;
-      font-size: 1.8rem;
-      margin-bottom: $gutter-2;
-    }
   }
 }
 @mixin button-style {
@@ -189,7 +166,7 @@ export default {
 
 // Media Queries
 @media screen and (max-width: 991px) {
-  .hero-main-right {
+  .hero-main-left {
     height: 25rem;
     .hero-img {
       margin: 0;
@@ -202,13 +179,13 @@ export default {
     align-items: flex-start;
     margin-top: 2rem;
   }
-  .hero-main-left {
+  .hero-main-right {
     h1 {
       font-size: 2.2rem;
       margin-bottom: $gutter-1;
     }
   }
-  .hero-main-right {
+  .hero-main-left {
     .hero-img {
       padding: 1.5rem;
     }
@@ -219,7 +196,7 @@ export default {
     flex-direction: column;
     height: 100%;
   }
-  .hero-main-left {
+  .hero-main-right {
     margin-right: 0;
     margin-bottom: $gutter-3;
     h1 {
@@ -227,30 +204,22 @@ export default {
     }
     p {
       margin-bottom: $gutter-1;
-      &.price {
-        margin-bottom: $gutter-1;
-      }
     }
   }
-  .hero-main-right {
+  .hero-main-left {
     .hero-img {
       width: 100%;
     }
   }
 }
 @media screen and (max-width: 375px) {
-  .hero-main-left {
+  .hero-main-right {
     h1 {
       font-size: 2.2rem;
       margin-bottom: $gutter-1;
     }
-    p {
-      &.price {
-        font-size: 1.6rem;
-      }
-    }
   }
-  .hero-main-left-btn {
+  .hero-main-right-btn {
     a {
       padding: 0.9rem 2.02rem;
       margin-right: $gutter-0;
