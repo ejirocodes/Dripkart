@@ -7,7 +7,7 @@
           <br />
           collection {{new Date().getFullYear()}}
         </h1>
-        <p>Dripkart brings you to a new collection of shoes. A new advanced breed of shoes</p>
+        <p>Dripkart brings you to a new collection of next-generation <br> BattleKnit technology engineered shoes.</p>
         <p class="price">&#36;899</p>
         <div class="hero-main-left-btn">
           <a href="#">Shop</a>
@@ -83,12 +83,13 @@ export default {
 
 .hero-main {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 100%;
   margin-top: 4rem;
 }
 .hero-main-left {
+  margin-right: 1rem;
   h1 {
     font-size: 3rem;
     text-transform: uppercase;
@@ -99,7 +100,6 @@ export default {
     font-size: 1rem;
     color: $colour-ter;
     margin-bottom: $gutter-2;
-    width: 70%;
     line-height: 1.5;
     &.price {
       color: $colour-uni;
@@ -195,9 +195,6 @@ export default {
       font-size: 2.2rem;
       margin-bottom: $gutter-1;
     }
-    p {
-      width: 85%;
-    }
   }
   .hero-main-right {
     .hero-img {
@@ -211,6 +208,7 @@ export default {
     height: 100%;
   }
   .hero-main-left {
+    margin-right: 0;
     margin-bottom: $gutter-3;
     h1 {
       font-size: 3rem;
@@ -235,7 +233,6 @@ export default {
       margin-bottom: $gutter-1;
     }
     p {
-      width: 100%;
       &.price {
         font-size: 1.6rem;
       }

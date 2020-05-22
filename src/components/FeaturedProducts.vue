@@ -48,11 +48,11 @@ export default {
       title: "What's trending",
       featuredProducts,
       swiperOption: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        slidesPerGroup: 3,
+        slidesPerView: 4,
+        spaceBetween: 2,
+        slidesPerGroup: 4,
         loop: true,
-        loopFillGroupWithBlank: true,
+        loopFillGroupWithBlank: false,
         pagination: {
           el: ".swiper-pagination",
           clickable: true
@@ -60,7 +60,25 @@ export default {
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
-        }
+        },
+         breakpoints: {
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 40
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 30
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            },
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10
+            }
+          }
       }
     };
   },
@@ -99,19 +117,17 @@ export default {
     margin-right: 0.8rem;
   }
   figure {
-    width: 18rem;
     display: flex;
     flex-direction: column;
     align-items: baseline;
     justify-content: center;
     padding: 1rem;
-    background: #fff;
     height: 22rem;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     &:hover {
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-        0 10px 10px rgba(0, 0, 0, 0.22);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     }
     .product {
       width: 100%;
@@ -149,6 +165,18 @@ export default {
   [class^="imghvr-"] figcaption {
     background-color: $colour-pri;
     padding: 1rem;
+  }
+  .swiper-container  {
+    padding: .5rem;
+  }
+ .swiper-button-prev:after, .swiper-button-next:after {
+   font-size: 2rem;
+ }
+  .swiper-pagination-bullet-active {
+    background: $colour-uni;
+  }
+  .swiper-button-prev, .swiper-button-next {
+    color: $colour-uni;
   }
 }
 </style>
