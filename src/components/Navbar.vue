@@ -123,7 +123,12 @@ import "vue-navigation-bar/dist/vue-navigation-bar.css";
 <style lang="scss">
 @import "../assets/sass/variables.scss";
 @import "../assets/sass/bounce-to-right.scss";
-
+#main-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: rgba($color: #fff, $alpha: .9)
+}
 .vnb {
   .signup-custom {
     padding: 0.6rem 1.6rem;
