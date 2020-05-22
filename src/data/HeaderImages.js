@@ -29,6 +29,15 @@ const heroImg = {
       src: images('./nike-red.png'),
       title: 'Red Nike',
     },
+  ],
+  inspImage: [
+    {
+      src: images('./nike-red.png'),
+      title: 'ALPHABOUNCE+ RUN EM SHOES',
+    }
+
   ]
 }
+
+ heroImg.inspImage.map(low => low.title.toLowerCase)
 export default heroImg;
