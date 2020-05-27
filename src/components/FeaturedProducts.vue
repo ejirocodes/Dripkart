@@ -92,10 +92,10 @@ export default {
 @import "../assets/sass/variables.scss";
 
 .prod-showcase {
-  margin: 8rem 0;
+  margin: 4rem 0;
 }
 .prod-showcase-heading {
-  margin-bottom: 4.6rem;
+  margin-bottom: 3rem;
   h1 {
     font-size: 1.5rem;
     font-weight: 600;

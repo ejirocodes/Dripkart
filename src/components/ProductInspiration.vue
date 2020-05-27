@@ -37,7 +37,7 @@ export default {
         effect: "coverflow",
         grabCursor: true,
         centeredSlides: false,
-        slidesPerView: 1,
+        slidesPerView: 2,
         loop: true,
         coverflowEffect: {
           rotate: 50,
@@ -50,7 +50,7 @@ export default {
           el: ".swiper-pagination",
           clickable: true
         }
-      },
+      }
     };
   }
 };
@@ -65,7 +65,6 @@ export default {
   justify-content: space-around;
   align-items: center;
   height: 100%;
-  margin-top: 4rem;
 }
 .hero-main-right {
   margin-right: 1rem;
@@ -175,10 +174,6 @@ export default {
   }
 }
 @media screen and (max-width: 768px) {
-  .hero-main {
-    align-items: flex-start;
-    margin-top: 2rem;
-  }
   .hero-main-right {
     h1 {
       font-size: 2.2rem;
@@ -190,13 +185,19 @@ export default {
       padding: 1.5rem;
     }
   }
+  .swiper-slide.swiper-slide-active {
+    width: 100% !important;
+  }
+  .swiper-container-3d {
+    perspective: none;
+  }
 }
 @media screen and (max-width: 670px) {
   .hero-main {
     flex-direction: column;
-    height: 100%;
   }
   .hero-main-right {
+    text-align: center;
     margin-right: 0;
     margin-bottom: $gutter-3;
     h1 {
@@ -207,6 +208,7 @@ export default {
     }
   }
   .hero-main-left {
+    width: 100%;
     .hero-img {
       width: 100%;
     }
@@ -228,11 +230,21 @@ export default {
       padding: 0.8rem 1.6rem;
     }
   }
-  
 }
 .swiper-pagination-fraction,
-  .swiper-pagination-custom,
-  .swiper-container-horizontal > .swiper-pagination-bullets {
-    bottom: 0 !important;
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 0 !important;
+}
+</style>
+
+<style lang="scss">
+@media screen and (max-width: 768px) {
+  .swiper-container-3d {
+    .swiper-slide-shadow-left,
+    .swiper-slide-shadow-right {
+      background-image: none;
+    }
   }
+}
 </style>
