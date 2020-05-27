@@ -48,14 +48,12 @@ export default {
       title: "What's trending",
       featuredProducts,
       swiperOption: {
-        slidesPerView: 4,
-        spaceBetween: 2,
-        slidesPerGroup: 4,
+        slidesPerView: 5,
+        spaceBetween: 50,
         loop: true,
-        loopFillGroupWithBlank: false,
         pagination: {
           el: ".swiper-pagination",
-          clickable: false,
+          clickable: true,
           type: "progressbar"
         },
         navigation: {

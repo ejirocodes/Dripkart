@@ -29,7 +29,7 @@
 
 <script>
 import products from "../data/products";
-const featuredProducts = products.featured;
+const featuredProducts = products.newArrivals;
 import CartButton from "./CartButton.vue";
 
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";

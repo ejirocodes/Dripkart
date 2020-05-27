@@ -58,47 +58,69 @@ const products = {
     },
   ],
   newArrivals: [
-    //   {
-    //     id: 1,
-    //     description: 'An articulated arm with a claw -- great for reaching around corners or working in tight spaces.',
-    //     title: 'Articulated',
-    //     src: images('./arm-articulated-claw.png'),
-    //     category: 'arms',
-    //     cost: 275
-    //   },
-    //   {
-    //     id: 2,
-    //     description: 'An arm with two independent claws -- great when you need an extra hand. Need four hands? Equip your bot with two of these arms.',
-    //     title: 'Two Clawed',
-    //     src: images('./arm-dual-claw.png'),
-    //     category: 'arms',
-    //     cost: 285
-    //   },
-    //   {
-    //     id: 3,
-    //     description: 'A telescoping arm with a grabber.',
-    //     title: 'Grabber',
-    //     src: images('./arm-grabber.png'),
-    //     category: 'arms',
-    //     cost: 205.5
-    //   },
-    //   {
-    //     id: 4,
-    //     description: 'An arm with a propeller -- good for propulsion or as a cooling fan.',
-    //     title: 'Propeller',
-    //     src: images('./arm-propeller.png'),
-    //     category: 'arms',
-    //     cost: 230,
-    //     onSale: true
-    //   },
-    //   {
-    //     id: 5,
-    //     description: 'A short and stubby arm with a claw -- simple, but cheap.',
-    //     title: 'Stubby Claw',
-    //     src: images('./arm-stubby-claw.png'),
-    //     category: 'arms',
-    //     cost: 125
-    //   }
+     {
+      id: 1,
+      description:
+        'The Nike React Phantom Run Flyknit 2 offers versatility for the everyday runner. Building on the foundation of its predecessor, the shoe expands on its laceless design by adding secure support that feels like it "disappears" on your foot. More foam means better cushioning, keeping you comfortable as you run.',
+      title: 'Nike React Phantom Run Flyknit 2',
+      src: images('./react-phantom-run-flyknit-2-mens-running-shoe.png'),
+      category: 'Men\'s Running Shoe',
+      cost: 185,
+    },
+    {
+      id: 2,
+      description:
+        'The Nike Zoom Pegasus Turbo 2 is updated with a featherlight upper, while innovative foam brings revolutionary responsiveness to your long distance training.',
+      title: 'Nike Zoom Pegasus Turbo 2',
+      src: images('./zoom-pegasus-turbo-2-mens-running-shoe-GcDSX3.png'),
+      category: 'Men\'s Running Shoe',
+      cost: 201,
+    },
+    {
+      id: 3,
+      description:
+        'The Nike Joyride Run Flyknit is designed to help make running feel easier and give your legs a day off. Tiny foam beads underfoot conform to your foot for cushioning that',
+      title: 'Nike Joyride Run Flyknit',
+      src: images('./joyride-run-flyknit-womens-running-shoe-HcfnJd.png'),
+      category: 'Women\'s Running Shoe',
+      cost: 185,
+    },
+    {
+      id: 4,
+      description:
+        'The Nike Wildhorse 6 keeps it stable, secure and lightweight on the trail. An updated outsole delivers the traction you need, while a foam midsole keeps you cushioned on your run.',
+      title: 'Nike Wildhorse 6',
+      src: images('./wildhorse-6-womens-trail-running-shoe-jJXN1F.png'),
+      category: 'Women\'s Trail Running Shoe',
+      cost: 295,
+    },
+    {
+      id: 5,
+      description:
+        'Inspired by the Vaporfly, the Nike Zoom Fly 3 gives distance runners race-day comfort and durability. The power of a carbon fiber plate keeps you in the running mile after mile.',
+      title: 'Nike Zoom Fly 3',
+      src: images('./zoom-fly-3-mens-running-shoe-XhzpPH.png'),
+      category: 'Men\'s Running Shoe',
+      cost: 185,
+    },
+     {
+      id: 6,
+      description:
+        'The Nike Zoom Pegasus Turbo Shield delivers your favorite lightweight running shoe in a smart, weatherized design, so you can continue training in confidence despite those dark and rainy months.',
+      title: 'Nike Zoom Pegasus Turbo Shield',
+      src: images('./zoom-pegasus-turbo-shield-womens-running-shoe-TP4DR2.png'),
+      category: 'Women\'s Running Shoe',
+      cost: 210.23,
+    },
+     {
+       id: 7,
+      description:
+        'The Nike Air VaporMax Plus looks to the past to propel itself into the future. Nodding to the \'98 Air Max Plus with its floating cage, cushioned upper and heel logo, it adds revolutionary VaporMax Air technology and colors inspired by skydiving and balloons to ramp up the comfort and modern look.',
+      src: images('./air-vapormax-plus-mens-shoe-fPnNXW.png'),
+      title: 'Air Vapormax Plus',
+      category: 'Men\'s Shoe',
+      cost: 389,
+    }
     // ],
     // torsos: [
     //   {
