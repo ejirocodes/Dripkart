@@ -5,6 +5,7 @@
     <main>
       <FeaturedProducts />
       <ProductInspiration />
+      <NewArrival />
     </main>
   </div>
 </template>
@@ -14,6 +15,7 @@ import HeroMain from "./components/HeroMain.vue";
 import Navbar from "./components/Navbar.vue";
 import FeaturedProducts from "./components/FeaturedProducts.vue";
 import ProductInspiration from "./components/ProductInspiration.vue";
+import NewArrival from "./components/NewArrival.vue";
 
 export default {
   name: "App",
@@ -21,7 +23,8 @@ export default {
     Navbar,
     HeroMain,
     FeaturedProducts,
-    ProductInspiration
+    ProductInspiration,
+    NewArrival,
   }
 };
 </script>
