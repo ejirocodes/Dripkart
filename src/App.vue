@@ -6,6 +6,7 @@
       <FeaturedProducts />
       <ProductInspiration />
       <NewArrival />
+      <TestimonialSection />
     </main>
   </div>
 </template>
@@ -16,6 +17,7 @@ import Navbar from "./components/Navbar.vue";
 import FeaturedProducts from "./components/FeaturedProducts.vue";
 import ProductInspiration from "./components/ProductInspiration.vue";
 import NewArrival from "./components/NewArrival.vue";
+import TestimonialSection from "./components/TestimonialSection.vue";
 
 export default {
   name: "App",
@@ -25,6 +27,7 @@ export default {
     FeaturedProducts,
     ProductInspiration,
     NewArrival,
+    TestimonialSection,
   }
 };
 </script>
