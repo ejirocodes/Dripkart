@@ -25,7 +25,7 @@
 <script>
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
-import testBanner from "../data/images/joyride-run-flyknit-womens-running-shoe-HcfnJd.jpg";
+import testBanner from "../data/images/air-jordan-13-retro-shoe-zp4pp0.jpg";
 
 export default {
   name: "Testimonial",
@@ -56,13 +56,20 @@ export default {
 <style lang="scss" scoped>
 .testimonial {
   display: flex;
+  justify-content: center;
+  align-items: center;
   .testimonial-left {
     width: 40%;
+    cursor: grabbing;
+  }
+  .testimonial-right {
+      width: 60%;
+      img {
+          width: 100%;
+      }
   }
   .swiper {
     height: 300px;
-    width: 100%;
-
     .swiper-slide {
       display: flex;
       justify-content: center;
@@ -70,7 +77,6 @@ export default {
       text-align: center;
       font-weight: bold;
       font-size: 6rem;
-      background-color: #fff;
     }
   }
 }
