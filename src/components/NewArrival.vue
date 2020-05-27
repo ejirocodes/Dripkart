@@ -4,8 +4,8 @@
       <h1>{{title}}</h1>
     </div>
     <section class="products-container">
-      <swiper class="swiper" :options="swiperOption">
-        <swiper-slide v-for="(product, index) in featuredProducts" :key="index">
+     <swiper class="swiper" :options="swiperOption">
+        <swiper-slide  v-for="(product, index) in featuredProducts" :key="index">
           <figure class="imghvr-push-right">
             <img class="product" :src="product.src" :alt="product.title" :title="product.title" />
             <figcaption>
@@ -22,8 +22,6 @@
           </figure>
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
       </swiper>
     </section>
   </section>
@@ -45,22 +43,14 @@ export default {
   },
   data() {
     return {
-      title: "What's trending",
+      title: "New Arrivals",
       featuredProducts,
       swiperOption: {
-        slidesPerView: 4,
-        spaceBetween: 2,
-        slidesPerGroup: 4,
-        loop: true,
-        loopFillGroupWithBlank: false,
+        slidesPerView: 5,
+        spaceBetween: 50,
         pagination: {
           el: ".swiper-pagination",
-          clickable: false,
-          type: "progressbar"
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
+          clickable: true
         },
         breakpoints: {
           1024: {
