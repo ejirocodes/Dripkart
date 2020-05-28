@@ -20,7 +20,16 @@
       </h2>
     </div>
     <swiper class="swiper testimonial-right" :options="swiperOption">
-      <swiper-slide>Slide 1</swiper-slide>
+      <swiper-slide class="testimony">
+        <h3 class="testimonial-right-title">I've never felt this confident</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Temporibus voluptatem,
+          ab vitae laboriosam corporis veritatis eum,
+          iste fuga minus voluptates at laudantium ad natus
+          culpa consequuntur animi sit reiciendis esse!
+        </p>
+      </swiper-slide>
       <swiper-slide>Slide 2</swiper-slide>
       <swiper-slide>Slide 3</swiper-slide>
       <swiper-slide>Slide 4</swiper-slide>
@@ -49,11 +58,7 @@ export default {
   data() {
     return {
       swiperOption: {
-        slidesPerView: 1,
         spaceBetween: 30,
-        slidesPerGroup: 3,
-        loop: true,
-        loopFillGroupWithBlank: true,
         pagination: {
           el: ".swiper-pagination",
           clickable: true
@@ -73,6 +78,7 @@ export default {
 .testimonial {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 2rem 0;
   padding: 6rem 0;
   font-size: 6rem;
@@ -116,7 +122,7 @@ export default {
         position: absolute;
         bottom: -1rem;
         left: -2rem;
-        opacity: .3;
+        opacity: 0.3;
       }
 
       .dots > div {
@@ -129,6 +135,31 @@ export default {
   }
   .testimonial-right {
     width: 50%;
+    &.swiper {
+      height: 300px;
+      .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-weight: bold;
+        padding: 4rem;
+      }
+    }
+  }
+  .testimony {
+    .testimonial-right-title {
+      font-size: 2rem;
+      text-transform: capitalize;
+      margin-bottom: 1rem;
+    }
+    p {
+      line-height: 1.4;
+    }
+  }
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 3.4rem;
   }
 }
 </style>
