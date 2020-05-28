@@ -190,4 +190,12 @@ export default {
     bottom: 26px;
   }
 }
+@media screen and (max-width: 768px){
+  .testimonial {
+    flex-direction: column;
+    .testimonial-left, .testimonial-right {
+      width: 100%;
+    }
+  }
+}
 </style>
