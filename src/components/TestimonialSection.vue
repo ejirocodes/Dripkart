@@ -29,6 +29,15 @@
           iste fuga minus voluptates at laudantium ad natus
           culpa consequuntur animi sit reiciendis esse!
         </p>
+        <figure role="figure">
+          <div class="test-avatar-container">
+            <img src="../assets/images/testimonial-avatar.jpg" alt class="test-avatar" />
+          </div>
+          <div class="figure-caption" role="figure">
+            <h1>Ejiro Asiuwhu</h1>
+            <p>Front End Developer at Codekago</p>
+          </div>
+        </figure>
       </swiper-slide>
       <swiper-slide>Slide 2</swiper-slide>
       <swiper-slide>Slide 3</swiper-slide>
@@ -79,8 +88,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem 0;
-  padding: 6rem 0;
+  margin: $gutter-3 0;
   font-size: 6rem;
   .testimonial-left {
     display: flex;
@@ -136,7 +144,7 @@ export default {
   .testimonial-right {
     width: 50%;
     &.swiper {
-      height: 300px;
+      height: 100%;
       .swiper-slide {
         display: flex;
         flex-direction: column;
@@ -147,8 +155,34 @@ export default {
         padding: 4rem;
       }
     }
+    .test-avatar-container {
+      width: 5rem;
+      height: 5rem;
+      margin-bottom: 0.8rem;
+      .test-avatar {
+        object-fit: cover;
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+    .figure-caption {
+      h1 {
+        font-size: 1.4rem;
+        margin-bottom: $gutter-0;
+      }
+      p {
+        font-size: 1rem;
+        color: $colour-ter;
+      }
+    }
   }
   .testimony {
+    figure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
     .testimonial-right-title {
       font-size: 2rem;
       text-transform: capitalize;
@@ -156,10 +190,11 @@ export default {
     }
     p {
       line-height: 1.4;
+      margin-bottom: 1rem;
     }
   }
   .swiper-container-horizontal > .swiper-pagination-bullets {
-    bottom: 3.4rem;
+    bottom: 0;
   }
 }
 </style>
