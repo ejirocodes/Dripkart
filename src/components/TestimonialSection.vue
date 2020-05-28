@@ -20,33 +20,24 @@
       </h2>
     </div>
     <swiper class="swiper testimonial-right" :options="swiperOption">
-      <swiper-slide class="testimony">
-        <h3 class="testimonial-right-title">I've never felt this confident</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur,
-          adipisicing elit. Temporibus voluptatem,
-          ab vitae laboriosam corporis veritatis eum,
-          iste fuga minus voluptates at laudantium ad natus
-          culpa consequuntur animi sit reiciendis esse!
-        </p>
+      <swiper-slide
+        v-for="(testInfo, index) in testData"
+        :key="index"
+        class="testimony"
+        :options="swiperOption"
+      >
+        <h3 class="testimonial-right-title">{{testInfo.caption}}</h3>
+        <p class="testimon">{{testInfo.testimony}}</p>
         <figure role="figure">
           <div class="test-avatar-container">
-            <img src="../assets/images/testimonial-avatar.jpg" alt class="test-avatar" />
+            <img :src="testInfo.avatar" :alt="testInfo.name" class="test-avatar" />
           </div>
           <div class="figure-caption" role="figure">
-            <h1>Ejiro Asiuwhu</h1>
-            <p>Front End Developer at Codekago</p>
+            <h1>{{testInfo.name}}</h1>
+            <p>{{testInfo.title}}</p>
           </div>
         </figure>
       </swiper-slide>
-      <swiper-slide>Slide 2</swiper-slide>
-      <swiper-slide>Slide 3</swiper-slide>
-      <swiper-slide>Slide 4</swiper-slide>
-      <swiper-slide>Slide 5</swiper-slide>
-      <swiper-slide>Slide 6</swiper-slide>
-      <swiper-slide>Slide 7</swiper-slide>
-      <swiper-slide>Slide 8</swiper-slide>
-      <swiper-slide>Slide 9</swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
       <div class="swiper-button-prev" slot="button-prev"></div>
       <div class="swiper-button-next" slot="button-next"></div>
@@ -56,8 +47,8 @@
 
 <script>
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
-import "swiper/css/swiper.css";
-
+import data from "../data/testimonial";
+const testData = data.testimonial;
 export default {
   name: "Testimonial",
   components: {
@@ -66,6 +57,7 @@ export default {
   },
   data() {
     return {
+      testData,
       swiperOption: {
         spaceBetween: 30,
         pagination: {
@@ -142,8 +134,8 @@ export default {
     }
   }
   .testimonial-right {
-    width: 50%;
     &.swiper {
+      width: 50%;
       height: 100%;
       .swiper-slide {
         display: flex;
@@ -153,6 +145,7 @@ export default {
         text-align: center;
         font-weight: bold;
         padding: 4rem;
+        cursor: grabbing;
       }
     }
     .test-avatar-container {
@@ -188,13 +181,13 @@ export default {
       text-transform: capitalize;
       margin-bottom: 1rem;
     }
-    p {
+    .testimon {
       line-height: 1.4;
       margin-bottom: 1rem;
     }
   }
   .swiper-container-horizontal > .swiper-pagination-bullets {
-    bottom: 0;
+    bottom: 26px;
   }
 }
 </style>
