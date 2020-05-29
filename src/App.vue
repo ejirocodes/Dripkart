@@ -7,6 +7,7 @@
       <ProductInspiration />
       <NewArrival />
       <TestimonialSection />
+      <Newsletter />
     </main>
   </div>
 </template>
@@ -18,6 +19,7 @@ import FeaturedProducts from "./components/FeaturedProducts.vue";
 import ProductInspiration from "./components/ProductInspiration.vue";
 import NewArrival from "./components/NewArrival.vue";
 import TestimonialSection from "./components/TestimonialSection.vue";
+import Newsletter from "./components/Newsletter.vue";
 
 export default {
   name: "App",
@@ -28,6 +30,7 @@ export default {
     ProductInspiration,
     NewArrival,
     TestimonialSection,
+    Newsletter,
   }
 };
 </script>

@@ -6,17 +6,23 @@ import { faChevronCircleRight, faChevronCircleLeft } from '@fortawesome/free-sol
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VueNavigationBar from "vue-navigation-bar";
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import VueFormulate from '@braid/vue-formulate'
 import './assets/css/reset.css';
+import '../node_modules/@braid/vue-formulate/themes/snow/snow.scss';
+
 
 Vue.config.productionTip = false
 
 Vue.use(VueRouter);
 
-import 'swiper/css/swiper.css'
+Vue.use(VueFormulate);
 
-Vue.use(VueAwesomeSwiper, /* { default options with global component } */)
+Vue.use(VueAwesomeSwiper)
+
+Vue.component("vue-navigation-bar", VueNavigationBar);
 
 library.add(faChevronCircleRight, faChevronCircleLeft)
+
 Vue.component('font-awesome-icon', FontAwesomeIcon);  
 
 const router = new VueRouter({
@@ -37,9 +43,6 @@ const router = new VueRouter({
     { path: "/login" }
   ]
 });
-
-Vue.component("vue-navigation-bar", VueNavigationBar);
-
 
 new Vue({
   router,
