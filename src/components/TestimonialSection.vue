@@ -190,12 +190,41 @@ export default {
     bottom: 26px;
   }
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .testimonial {
     flex-direction: column;
-    .testimonial-left, .testimonial-right {
+    .testimonial-left,
+    .testimonial-right {
       width: 100%;
     }
+    .testimonial-right {
+      &.swiper {
+        width: 100%;
+      }
+    }
   }
+}
+@media screen and (max-width: 425px) {
+  .testimonial {
+    .testimonial-left {
+      min-height: 23rem;
+      .testimonial-left-title {
+        font-size: 2.2rem;
+      }
+    }
+    .testimonial-right {
+      margin-top: 1.5rem;
+      &.swiper {
+        .swiper-slide {
+          padding: 1rem;
+        }
+      }
+    }
+    .swiper-container-horizontal > .swiper-pagination-bullets {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 375px) {
 }
 </style>
