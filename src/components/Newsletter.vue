@@ -41,7 +41,7 @@ export default {
   align-items: center;
   font-size: 4rem;
   background-color: $colour-pri;
-  padding: 1rem 3rem;
+  padding: 1rem 7rem;
   .newsletter-left {
     h2 {
       text-transform: capitalize;
