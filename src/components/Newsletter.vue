@@ -16,7 +16,7 @@
           aria-placeholder="myname@example.com"
           validation="required|email"
         />
-        <FormulateInput type="submit" label="Login" />
+        <FormulateInput type="submit" label="SUBSCRIBE" />
       </FormulateForm>
     </div>
   </section>
@@ -27,7 +27,7 @@ export default {
   data() {
     return {
       values: {},
-      handleLogin: () => alert("Logged in")
+      handleLogin: () => alert("You've suscribed to our newsletter")
     };
   }
 };
@@ -40,9 +40,10 @@ export default {
   justify-content: space-evenly;
   align-items: center;
   font-size: 4rem;
-  background-color: $colour-pri;
-  padding: 1rem 7rem;
+  background-color: $colour-mast;
+  padding: 6rem 0;
   .newsletter-left {
+    line-height: 1.5;
     h2 {
       text-transform: capitalize;
       font-weight: 600;
@@ -56,6 +57,7 @@ export default {
 </style>
 
 <style lang="scss">
+@import "../assets/sass/variables.scss";
 .newsletter {
   .newsletter-right {
     form {
@@ -63,13 +65,57 @@ export default {
     }
     .formulate-input[data-classification="text"] input {
       font-size: 1rem !important;
+      color: #fff;
+      border-color: #fff;
+      &::placeholder {
+        color: $colour-sec;
+      }
+      &:focus {
+        border-color: #fff;
+      }
     }
     .formulate-input[data-classification="button"] button {
       font-size: 1rem;
-      padding: .75em 1.8rem;
+      padding: 0.75em 1.8rem;
+      background-color: $colour-pri;
     }
     .formulate-input {
-        margin-bottom: 0;
+      margin-bottom: 0;
+      .formulate-input-element {
+        max-width: 28rem;
+      }
+    }
+    li.formulate-input-error {
+      color: $colour-uni;
+      font-size: 0.9rem;
+    }
+  }
+}
+// Media Queries
+@media screen and (max-width: 768px) {
+  .newsletter {
+    flex-direction: column;
+    .newsletter-left {
+      margin-bottom: 2.2rem;
+    }
+    .newsletter-right {
+      .formulate-input[data-classification="button"] button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+@media screen and (max-width: 458px) {
+  .newsletter {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    .newsletter-right {
+      .formulate-input .formulate-input-element {
+        max-width: 8rem;
+      }
     }
   }
 }
