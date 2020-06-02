@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import heroImg from "../data/products";
+import heroImg from "../../data/products";
 const img = heroImg.heroImage;
 
 function getPreviousValidIndex(index, length) {
@@ -78,8 +78,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/sass/variables.scss";
-@import "../assets/sass/bounce-to-right.scss";
+@import "../../assets/sass/bounce-to-right.scss";
+@import "../../assets/sass/_variables.scss";
 
 .hero-main {
   display: flex;

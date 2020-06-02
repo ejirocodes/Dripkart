@@ -4,8 +4,8 @@
       <h1>{{title}}</h1>
     </div>
     <section class="products-container">
-     <swiper class="swiper" :options="swiperOption">
-        <swiper-slide  v-for="(product, index) in featuredProducts" :key="index">
+      <swiper class="swiper" :options="swiperOption">
+        <swiper-slide v-for="(product, index) in featuredProducts" :key="index">
           <figure class="imghvr-push-right">
             <img class="product" :src="product.src" :alt="product.title" :title="product.title" />
             <figcaption>
@@ -22,20 +22,22 @@
           </figure>
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
       </swiper>
     </section>
   </section>
 </template>
 
 <script>
-import products from "../data/products";
-const featuredProducts = products.newArrivals;
-import CartButton from "./CartButton.vue";
+import products from "../../data/products";
+const featuredProducts = products.featured;
+import CartButton from "../CartButton.vue";
 
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
 export default {
-  name: "NewArrival",
+  name: "FeaturedProducts",
   components: {
     CartButton,
     Swiper,
@@ -43,14 +45,20 @@ export default {
   },
   data() {
     return {
-      title: "New Arrivals",
+      title: "What's trending",
       featuredProducts,
       swiperOption: {
         slidesPerView: 5,
         spaceBetween: 50,
+        loop: true,
         pagination: {
           el: ".swiper-pagination",
-          clickable: true
+          clickable: true,
+          type: "progressbar"
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
         },
         breakpoints: {
           1024: {
@@ -79,7 +87,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "../assets/sass/variables.scss";
+@import "../../assets/sass/_variables.scss";
 
 .prod-showcase {
   margin: 4rem 0;

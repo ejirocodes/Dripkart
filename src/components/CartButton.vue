@@ -11,8 +11,9 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-@import "../assets/sass/variables.scss";
 @import "../assets/sass/bounce-to-right.scss";
+@import "../assets/sass/_variables.scss";
+
 button {
   @include hvr-bounce-to-right;
   padding: 0.8rem 1.5rem;

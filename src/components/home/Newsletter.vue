@@ -34,7 +34,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/sass/variables.scss";
+@import "../../assets/sass/_variables.scss";
+
 .newsletter {
   display: flex;
   justify-content: space-evenly;
@@ -57,7 +58,7 @@ export default {
 </style>
 
 <style lang="scss">
-@import "../assets/sass/variables.scss";
+@import "../../assets/sass/_variables.scss";
 .newsletter {
   .newsletter-right {
     form {

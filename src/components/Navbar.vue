@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import cartIcon from '../assets/images/supermarket.svg'
 export default {
   name: "Navbar",
   data() {
@@ -56,29 +57,29 @@ export default {
           {
             type: "link",
             text: "Shop",
-            path: "/shop"
-            // subMenuOptions: [
-            //   {
-            //     type: "link",
-            //     text: "Customer Service",
-            //     path: "./customer-service"
-            //   },
-            //   {
-            //     type: "link",
-            //     text: "Accounting",
-            //     path: "./accounting"
-            //   },
-            //   {
-            //     type: "hr"
-            //   },
-            //   {
-            //     type: "link",
-            //     text: "Reception",
-            //     path: "./reception",
-            //     iconLeft:
-            //       '<svg id="i-telephone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"> <path d="M3 12 C3 5 10 5 16 5 22 5 29 5 29 12 29 20 22 11 22 11 L10 11 C10 11 3 20 3 12 Z M11 14 C11 14 6 19 6 28 L26 28 C26 19 21 14 21 14 L11 14 Z" /> <circle cx="16" cy="21" r="4" /> </svg>'
-            //   }
-            // ]
+            path: "/shop",
+            subMenuOptions: [
+              {
+                type: "link",
+                text: "Customer Service",
+                path: "./customer-service"
+              },
+              {
+                type: "link",
+                text: "Accounting",
+                path: "./accounting"
+              },
+              {
+                type: "hr"
+              },
+              {
+                type: "link",
+                text: "Reception",
+                path: "./reception",
+                iconLeft:
+                  '<svg id="i-telephone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"> <path d="M3 12 C3 5 10 5 16 5 22 5 29 5 29 12 29 20 22 11 22 11 L10 11 C10 11 3 20 3 12 Z M11 14 C11 14 6 19 6 28 L26 28 C26 19 21 14 21 14 L11 14 Z" /> <circle cx="16" cy="21" r="4" /> </svg>'
+              }
+            ]
           },
           {
             type: "link",
@@ -93,15 +94,16 @@ export default {
           {
             type: "link",
             text: "About",
-            path: "./pricing",
-            iconRight: '<i class="fa fa-long-arrow-right fa-fw"></i>'
+            path: "./about",
+            iconRight: `<${cartIcon} />`,
+              // '<svg id="<i-telephone></i-telephone>" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 490.674 490.674" style="enable-background:new 0 0 490.674 490.674;" xml:space="preserve" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"> <path style="fill:#FFC107;" d="M488,78.276c-2.026-2.294-4.94-3.607-8-3.605H96c-5.891-0.001-10.668,4.773-10.669,10.664	c0,0.717,0.072,1.433,0.216,2.136l42.667,213.333c1.014,4.967,5.384,8.534,10.453,8.533c0.469,0.031,0.939,0.031,1.408,0l320-42.667	c4.807-0.642,8.576-4.446,9.173-9.259l21.333-170.667C490.989,83.681,490.047,80.592,488,78.276z"/> <circle cx="16" cy="21" r="4" /> </svg>'
           }
         ],
         menuOptionsRight: [
           {
-            type: "button",
+            type: "link",
             text: "Signup",
-            path: "./signup",
+            path: "/signup",
             class: "login-btn signup-custom"
           },
           {
@@ -110,11 +112,15 @@ export default {
             path: "./login",
             class: "login-btn",
             iconRight:
-              '<svg id="i-arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"> <path d="M22 6 L30 16 22 26 M30 16 L2 16" /> </svg>'
+              '<svg id="i-arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"> <path d="M22 6 L30 16 22 26 M30 16 L2 16" /> </>'
           }
         ]
       }
     };
+  },
+  beforeCreate() {
+    console.log(cartIcon);
+    
   }
 };
 import "vue-navigation-bar/dist/vue-navigation-bar.css";
@@ -127,7 +133,7 @@ import "vue-navigation-bar/dist/vue-navigation-bar.css";
   position: sticky;
   top: 0;
   z-index: 2;
-  background: rgba($color: #fff, $alpha: .9)
+  background: rgba($color: #fff, $alpha: 0.9);
 }
 .vnb {
   .signup-custom {

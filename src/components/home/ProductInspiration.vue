@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import heroImg from "../data/products";
+import heroImg from "../../data/products";
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 const img = heroImg.inspImage;
 
@@ -49,8 +49,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/sass/variables.scss";
-@import "../assets/sass/bounce-to-right.scss";
+@import "../../assets/sass/bounce-to-right.scss";
+@import "../../assets/sass/_variables.scss";
 
 .hero-main {
   display: flex;

@@ -47,7 +47,8 @@
 
 <script>
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
-import data from "../data/testimonial";
+import data from "../../data/testimonial";
+
 const testData = data.testimonial;
 export default {
   name: "Testimonial",
@@ -75,7 +76,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/sass/variables.scss";
+@import "../../assets/sass/_variables.scss";
 .testimonial {
   display: flex;
   justify-content: space-between;
