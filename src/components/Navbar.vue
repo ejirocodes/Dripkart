@@ -126,7 +126,7 @@ import "vue-navigation-bar/dist/vue-navigation-bar.css";
 </script>
 
 <style lang="scss">
-@import "../assets/sass/variables.scss";
+@import "../assets/sass/_variables.scss";
 @import "../assets/sass/bounce-to-right.scss";
 #main-navbar {
   position: sticky;

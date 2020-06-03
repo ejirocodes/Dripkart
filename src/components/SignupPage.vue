@@ -1,42 +1,74 @@
 <template>
   <section class="signup">
     <div class="signup-title">
-      <!-- <h2>{{title}}</h2> -->
+      <h2>{{title}}</h2>
     </div>
-    <div class="signup-left">
-      <img src="../data/images/air-max-2090-womens-shoe.png" aria-hidden="true" alt />
-    </div>
-    <div class="signup-right">
-      <c-box>
-        <c-tabs variant="enclosed-colored" is-fitted>
-          <c-tab-list>
-            <c-tab>Sign in</c-tab>
-            <c-tab>Sign up</c-tab>
-          </c-tab-list>
-          <c-tab-panels>
-            <c-tab-panel>
-              <p>
-                <c-form-control is-required>
-                  <c-form-label for="email">Email</c-form-label>
-                  <c-input type="email" id="email" aria-describedby="email-helper-text" />
-                  <c-form-helper-text id="email-helper-text">We'll never share your email.</c-form-helper-text>
-                  <c-form-error-message>Check again, something ain'right</c-form-error-message>
-                </c-form-control>
-              </p>
-            </c-tab-panel>
-            <c-tab-panel>
-              <p>two!</p>
-            </c-tab-panel>
-          </c-tab-panels>
-        </c-tabs>
-      </c-box>forgot your password?
-      <c-spinner thickness="4px" speed="0.65s" empty-color="green.200" color="vue.500" size="xl" />
+    <div class="signup-main">
+      <div class="signup-left">
+        <img src="../data/images/air-max-2090-womens-shoe.png" aria-hidden="true" alt />
+      </div>
+      <div class="signup-right">
+        <c-box class="c-box-container">
+          <c-tabs variant="enclosed-colored" is-fitted>
+            <c-tab-list>
+              <c-tab>Sign in</c-tab>
+              <c-tab>Sign up</c-tab>
+            </c-tab-list>
+            <c-tab-panels>
+              <c-tab-panel>
+                <form action method="post">
+                  <c-form-control is-required>
+                    <c-form-label for="email">Email</c-form-label>
+                    <c-input
+                      width="100%"
+                      type="email"
+                      id="email"
+                      aria-describedby="email-helper-text"
+                    />
+                    <c-form-helper-text id="email-helper-text">We'll never share your email.</c-form-helper-text>
+                    <c-form-label for="password">Password</c-form-label>
+                    <c-input
+                      type="password"
+                      width="100%"
+                      id="password"
+                      ar
+                      ia-describedby="email-helper-text"
+                    />
+                    <c-form-helper-text id="password-helper-text">Your password is secured with us.</c-form-helper-text>
+                    <c-form-error-message>Check again, something ain'right</c-form-error-message>
+                    <c-button
+                      type="submit"
+                      rounded="0"
+                      height="50px"
+                      width="100%"
+                      fontSize="14px"
+                      transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
+                      variant-color="#FFB667"
+                      bg="#000"
+                      color="#fff"
+                      size="lg"
+                      :_active="{ bg: '#000' }"
+                      :_hover="{ bg: '#FFB667' } "
+                    >Log in</c-button>
+                  </c-form-control>
+                </form>
+              </c-tab-panel>
+              <c-tab-panel>
+                <p>two!</p>
+              </c-tab-panel>
+            </c-tab-panels>
+          </c-tabs>
+        </c-box>
+        <c-link class="respass-link" as="router-link" to="/resetpassword">Forgot your password?</c-link>
+        <c-spinner thickness="4px" speed="0.65s" empty-color="green.200" color="vue.500" size="xl" />
+      </div>
     </div>
   </section>
 </template>
 
 <script>
 import {
+  CBox,
   CTabs,
   CTabList,
   CTabPanels,
@@ -47,7 +79,9 @@ import {
   CInput,
   CFormErrorMessage,
   CFormHelperText,
-  CSpinner
+  CSpinner,
+  CButton,
+  CLink
 } from "@chakra-ui/vue";
 export default {
   name: "Signup",
@@ -57,6 +91,7 @@ export default {
     };
   },
   components: {
+    CBox,
     CTabs,
     CTabList,
     CTabPanels,
@@ -67,17 +102,24 @@ export default {
     CInput,
     CFormErrorMessage,
     CFormHelperText,
-    CSpinner
+    CSpinner,
+    CButton,
+    CLink
   }
 };
 </script>
 
 <style scoped lang="scss">
+@import "../assets/sass/_variables.scss";
 .signup {
-  display: flex;
   font-size: 5rem;
+  .signup-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
   .signup-left {
-    background: red;
+    background: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,6 +159,18 @@ export default {
   }
   .signup-title {
     font-size: 4rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .signup-right {
+    width: 20rem;
+    .c-box-container {
+      min-height: 15.5rem;
+    }
+    .respass-link, .respass-link:active, .respass-link:visited {
+      text-align: center;
+      color: $colour-uni;
+    }
   }
 }
 </style>
