@@ -10,13 +10,15 @@ import VueFormulate from '@braid/vue-formulate'
 import './assets/css/reset.css';
 import './assets/sass/_variables.scss';
 import '../node_modules/@braid/vue-formulate/themes/snow/snow.scss';
-
+import Chakra, { CThemeProvider } from '@chakra-ui/vue';
 
 Vue.config.productionTip = false
 
 Vue.use(VueFormulate);
 
-Vue.use(VueAwesomeSwiper)
+Vue.use(VueAwesomeSwiper);
+
+Vue.use(Chakra);
 
 Vue.component("vue-navigation-bar", VueNavigationBar);
 
@@ -26,5 +28,5 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 new Vue({
   router,
-  render: h => h(App),
+  render: h => h(CThemeProvider, [h(App)]),
 }).$mount('#app')
