@@ -15,6 +15,7 @@
               <c-tab>Sign up</c-tab>
             </c-tab-list>
             <c-tab-panels>
+              
               <c-tab-panel>
                 <form action method="post">
                   <c-form-control is-required>
@@ -82,7 +83,7 @@
                       id="email"
                       aria-describedby="first name and last name"
                       aria-placeholder="first name and last name"
-                     placeholder="First name Last name"
+                      placeholder="First name Last name"
                     />
                     <c-form-label for="email">Email</c-form-label>
                     <c-input width="100%" type="email" id="email" aria-describedby="email address" />

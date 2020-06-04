@@ -11,6 +11,7 @@ import './assets/css/reset.css';
 import './assets/sass/_variables.scss';
 import '../node_modules/@braid/vue-formulate/themes/snow/snow.scss';
 import Chakra, { CThemeProvider } from '@chakra-ui/vue';
+import VueDarkMode from '@vue-a11y/dark-mode'
 
 Vue.config.productionTip = false
 
@@ -26,10 +27,13 @@ library.add(faChevronCircleRight, faChevronCircleLeft, faShoppingCart)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
+Vue.use(VueDarkMode)
+
 if (process.env.NODE_ENV === 'development') {
   const VueAxe = require('vue-axe').default
   Vue.use(VueAxe)
 }
+
 
 new Vue({
   router,
