@@ -10,7 +10,7 @@
       <div class="signup-right">
         <c-box class="c-box-container">
           <c-tabs variant="enclosed-colored" is-fitted>
-            <c-tab-list>
+            <c-tab-list class="tab-list">
               <c-tab>Sign in</c-tab>
               <c-tab>Sign up</c-tab>
             </c-tab-list>
@@ -52,6 +52,25 @@
                     >Log in</c-button>
                   </c-form-control>
                 </form>
+                <c-link
+                  class="respass-link"
+                  as="router-link"
+                  to="/resetpassword"
+                >Forgot your password?</c-link>
+                <div class="hor-line">
+                  <div class="circle"></div>
+                </div>
+                <div class="auth-signin">
+                  <p>
+                    <a href="/facebook">Facebook</a>
+                  </p>
+                  <p>
+                    <a href="/twitter">Twitter</a>
+                  </p>
+                  <p>
+                    <a href="/google">Google</a>
+                  </p>
+                </div>
               </c-tab-panel>
               <c-tab-panel>
                 <p>two!</p>
@@ -59,8 +78,6 @@
             </c-tab-panels>
           </c-tabs>
         </c-box>
-        <c-link class="respass-link" as="router-link" to="/resetpassword">Forgot your password?</c-link>
-        <c-spinner thickness="4px" speed="0.65s" empty-color="green.200" color="vue.500" size="xl" />
       </div>
     </div>
   </section>
@@ -79,7 +96,6 @@ import {
   CInput,
   CFormErrorMessage,
   CFormHelperText,
-  CSpinner,
   CButton,
   CLink
 } from "@chakra-ui/vue";
@@ -102,7 +118,6 @@ export default {
     CInput,
     CFormErrorMessage,
     CFormHelperText,
-    CSpinner,
     CButton,
     CLink
   }
@@ -165,12 +180,81 @@ export default {
   .signup-right {
     width: 20rem;
     .c-box-container {
-      min-height: 15.5rem;
+      min-height: 13.5rem;
     }
-    .respass-link, .respass-link:active, .respass-link:visited {
-      text-align: center;
+    form {
+      line-height: 1.6;
+    }
+    .tab-list {
+      margin-bottom: 1.8rem;
+    }
+    .respass-link,
+    .respass-link:active,
+    .respass-link:visited {
       color: $colour-uni;
     }
+    .respass-link {
+      text-align: center;
+      display: block;
+      margin: 1rem 0;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    input {
+      border-color: $colour-uni;
+    }
+    #password-helper-text,
+    #email-helper-text {
+      margin-bottom: 1.2rem;
+    }
+    .circle {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-top: -2rem;
+      background-color: $colour-uni;
+    }
+    .hor-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+    .hor-line::before,
+    .hor-line::after {
+      display: inline-block;
+      content: "";
+      border-top: 2px solid black;
+      width: 7rem;
+      margin: 0 1rem;
+      transform: translateY(-1rem);
+    }
+    .auth-signin {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: $colour-uni;
+      p:not(:last-of-type) {
+        margin-right: 2rem;
+      }
+      a {
+      color: $colour-uni;
+      text-decoration: none;
+      }
+    }
   }
+     
 }
+</style>
+
+<style lang="scss">
+@import "../assets/sass/_variables.scss";
+   .css-16tdle4[aria-selected=true] {
+        color: $colour-uni;
+        border-color: $colour-uni;
+        border-top-color: $colour-uni;
+        border-bottom-color: transparent;
+      }
 </style>
