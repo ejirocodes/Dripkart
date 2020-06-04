@@ -26,6 +26,11 @@ library.add(faChevronCircleRight, faChevronCircleLeft, faShoppingCart)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
+if (process.env.NODE_ENV === 'development') {
+  const VueAxe = require('vue-axe').default
+  Vue.use(VueAxe)
+}
+
 new Vue({
   router,
   render: h => h(CThemeProvider, [h(App)]),

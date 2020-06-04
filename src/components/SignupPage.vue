@@ -49,7 +49,7 @@
                       size="lg"
                       :_active="{ bg: '#000' }"
                       :_hover="{ bg: '#FFB667' } "
-                    >Log in</c-button>
+                    >Sign in</c-button>
                   </c-form-control>
                 </form>
                 <c-link
@@ -73,7 +73,65 @@
                 </div>
               </c-tab-panel>
               <c-tab-panel>
-                <p>two!</p>
+                <form action method="post">
+                  <c-form-control is-required>
+                    <c-form-label for="email">Full Name</c-form-label>
+                    <c-input
+                      width="100%"
+                      type="email"
+                      id="email"
+                      aria-describedby="first name and last name"
+                      aria-placeholder="first name and last name"
+                     placeholder="First name Last name"
+                    />
+                    <c-form-label for="email">Email</c-form-label>
+                    <c-input width="100%" type="email" id="email" aria-describedby="email address" />
+                    <c-form-helper-text id="email-helper-text">We'll never share your email.</c-form-helper-text>
+                    <c-form-label for="password">Password</c-form-label>
+                    <c-input
+                      type="password"
+                      width="100%"
+                      id="password"
+                      ar
+                      ia-describedby="password"
+                    />
+                    <c-form-helper-text id="password-helper-text">Your password is secured with us.</c-form-helper-text>
+                    <c-form-error-message>Check again, something ain'right</c-form-error-message>
+                    <c-button
+                      type="submit"
+                      rounded="0"
+                      height="50px"
+                      width="100%"
+                      fontSize="14px"
+                      transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
+                      variant-color="#FFB667"
+                      bg="#000"
+                      color="#fff"
+                      size="lg"
+                      :_active="{ bg: '#000' }"
+                      :_hover="{ bg: '#FFB667' } "
+                    >Sign up</c-button>
+                  </c-form-control>
+                </form>
+                <c-link
+                  class="respass-link"
+                  as="router-link"
+                  to="/resetpassword"
+                >Forgot your password?</c-link>
+                <div class="hor-line">
+                  <div class="circle"></div>
+                </div>
+                <div class="auth-signin">
+                  <p>
+                    <a href="/facebook">Facebook</a>
+                  </p>
+                  <p>
+                    <a href="/twitter">Twitter</a>
+                  </p>
+                  <p>
+                    <a href="/google">Google</a>
+                  </p>
+                </div>
               </c-tab-panel>
             </c-tab-panels>
           </c-tabs>
@@ -240,21 +298,26 @@ export default {
         margin-right: 2rem;
       }
       a {
-      color: $colour-uni;
-      text-decoration: none;
+        color: $colour-uni;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
-     
 }
 </style>
 
 <style lang="scss">
 @import "../assets/sass/_variables.scss";
-   .css-16tdle4[aria-selected=true] {
-        color: $colour-uni;
-        border-color: $colour-uni;
-        border-top-color: $colour-uni;
-        border-bottom-color: transparent;
-      }
+.css-16tdle4[aria-selected="true"] {
+  color: $colour-uni;
+  border-color: $colour-uni;
+  border-top-color: $colour-uni;
+  border-bottom-color: transparent;
+}
+.css-16tdle4 {
+  user-select: none;
+}
 </style>
