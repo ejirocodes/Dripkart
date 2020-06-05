@@ -98,11 +98,9 @@ export default {
   }
   p {
     font-size: 1rem;
-    color: $colour-ter;
     margin-bottom: $gutter-2;
     line-height: 1.5;
     &.price {
-      color: $colour-uni;
       font-size: 1.8rem;
       margin-bottom: $gutter-2;
     }

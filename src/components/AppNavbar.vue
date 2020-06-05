@@ -132,12 +132,13 @@ import "vue-navigation-bar/dist/vue-navigation-bar.css";
   .signup-custom {
     padding: 0.6rem 1.6rem;
     .login-btn:hover {
-      background: $colour-pri-hover;
+      background: $colour-pri-hover !important;
     }
   }
   .login-btn {
     @include hvr-bounce-to-right;
-    background: $colour-pri;
+    background: $colour-pri !important;
+    color: #fff !important;
   }
 }
 .vnb__sub-menu-options__option__link:hover {
