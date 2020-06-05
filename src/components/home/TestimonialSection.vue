@@ -28,11 +28,12 @@
       >
         <h3 class="testimonial-right-title">{{testInfo.caption}}</h3>
         <p class="testimon">{{testInfo.testimony}}</p>
-        <figure role="figure">
+        <figure>
+          
           <div class="test-avatar-container">
             <img :src="testInfo.avatar" :alt="testInfo.name" class="test-avatar" />
           </div>
-          <div class="figure-caption" role="figure">
+          <div class="figure-caption">
             <h1>{{testInfo.name}}</h1>
             <p>{{testInfo.title}}</p>
           </div>

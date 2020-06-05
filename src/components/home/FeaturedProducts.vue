@@ -9,13 +9,13 @@
           <figure class="imghvr-push-right">
             <img class="product" :src="product.src" :alt="product.title" :title="product.title" />
             <figcaption>
-              <h3>{{product.title}}</h3>
+              <h4>{{product.title}}</h4>
               <p>{{product.category}}</p>
               <p>&#36;{{product.cost}}</p>
             </figcaption>
             <div class="product-title">
               <p>{{product.category}}</p>
-              <h3>{{product.title}}</h3>
+              <h4>{{product.title}}</h4>
               <p>&#36;{{product.cost}}</p>
               <CartButton />
             </div>
@@ -134,7 +134,7 @@ export default {
   }
   figcaption {
     color: #222;
-    h3 {
+    h4 {
       color: #222;
       font-size: 1.8rem;
       margin-bottom: 0.8rem;
@@ -148,7 +148,7 @@ export default {
   }
   .product-title {
     margin-top: 1rem;
-    h3 {
+    h4 {
       font-size: 1.2rem;
     }
     color: $colour-uni;
