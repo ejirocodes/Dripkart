@@ -86,6 +86,7 @@ export default {
     .formulate-input {
       margin-bottom: 0;
       .formulate-input-element {
+        
         max-width: 28rem;
       }
     }

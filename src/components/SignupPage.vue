@@ -1,7 +1,7 @@
 <template>
   <section class="signup">
     <div class="signup-title">
-      <h2>{{title}}</h2>
+      <h1>{{title}}</h1>
     </div>
     <div class="signup-main">
       <div class="signup-left">
@@ -15,7 +15,6 @@
               <c-tab>Sign up</c-tab>
             </c-tab-list>
             <c-tab-panels>
-              
               <c-tab-panel>
                 <form action method="post">
                   <c-form-control is-required>
@@ -24,7 +23,7 @@
                       width="100%"
                       type="email"
                       id="email"
-                      aria-describedby="email-helper-text"
+                      aria-describedby="email"
                     />
                     <c-form-helper-text id="email-helper-text">We'll never share your email.</c-form-helper-text>
                     <c-form-label for="password">Password</c-form-label>
@@ -32,8 +31,7 @@
                       type="password"
                       width="100%"
                       id="password"
-                      ar
-                      ia-describedby="email-helper-text"
+                      aria-describedby="password input"
                     />
                     <c-form-helper-text id="password-helper-text">Your password is secured with us.</c-form-helper-text>
                     <c-form-error-message>Check again, something ain'right</c-form-error-message>
@@ -76,25 +74,22 @@
               <c-tab-panel>
                 <form action method="post">
                   <c-form-control is-required>
-                    <c-form-label for="email">Full Name</c-form-label>
+                    <c-form-label for="name">Full Name</c-form-label>
                     <c-input
                       width="100%"
-                      type="email"
-                      id="email"
+                      type="name"
                       aria-describedby="first name and last name"
                       aria-placeholder="first name and last name"
                       placeholder="First name Last name"
                     />
-                    <c-form-label for="email">Email</c-form-label>
-                    <c-input width="100%" type="email" id="email" aria-describedby="email address" />
+                    <c-form-label for="email-2">Email</c-form-label>
+                    <c-input width="100%" type="email" id="email-2" aria-describedby="email address" />
                     <c-form-helper-text id="email-helper-text">We'll never share your email.</c-form-helper-text>
-                    <c-form-label for="password">Password</c-form-label>
+                    <c-form-label for="password-2">Password</c-form-label>
                     <c-input
                       type="password"
                       width="100%"
-                      id="password"
-                      ar
-                      ia-describedby="password"
+                      id="password-2"
                     />
                     <c-form-helper-text id="password-helper-text">Your password is secured with us.</c-form-helper-text>
                     <c-form-error-message>Check again, something ain'right</c-form-error-message>
