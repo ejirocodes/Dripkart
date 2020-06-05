@@ -14,6 +14,7 @@
           stroke-linecap="round"
           stroke-linejoin="round"
         >
+
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
         </svg>
         <svg
@@ -90,15 +91,19 @@ export default {
 }
 
 html.dark-mode {
-  --bg: #232b32;
-  --color: #ddd8ca;
+  --bg: #232b32 !important;
+  --color: #ddd8ca !important;
 }
 html.sepia-mode {
   --bg: #d8c7a2;
   --color: #ddd8ca;
 }
-body {
+body,  #main-navbar,  #main-navbar * {
   background-color: var(--bg);
   color: var(--color);
+}
+.vue-dark-mode  {
+  display: flex;
+  margin: .5rem auto;
 }
 </style>

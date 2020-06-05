@@ -31,7 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-    padding: 2rem;
+    padding: 1rem 1.5rem;
 }
 @media screen and (max-width: 375px) {
   body {
