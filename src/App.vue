@@ -1,6 +1,18 @@
 <template>
   <div id="app">
-    <vue-dark-mode>
+    <vue-dark-mode
+      :metaThemeColor="{
+    light: '#f2f2f2 ',
+    dark: '#232b32',
+    sepia: '#d8c7a2'
+  }"
+      :modes="[
+    'light',
+    'dark',
+    'system',
+    'sepia'
+  ]"
+    >
       <template v-slot="{ mode }">
         <svg
           v-show="mode === 'dark'"
@@ -10,12 +22,10 @@
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
         >
-
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
         </svg>
         <svg
@@ -56,6 +66,7 @@
           <line x1="8" y1="21" x2="16" y2="21" />
           <line x1="12" y1="17" x2="12" y2="21" />
         </svg>
+        Color mode: {{ mode }}
       </template>
     </vue-dark-mode>
     <Navbar />
@@ -99,12 +110,23 @@ html.sepia-mode {
   --bg: #d8c7a2;
   --color: #ddd8ca;
 }
-body,  #main-navbar,  #main-navbar * {
+body,
+#main-navbar,
+#main-navbar * {
   background-color: var(--bg);
   color: var(--color);
 }
-.vue-dark-mode  {
+.vue-dark-mode {
   display: flex;
-  margin: .5rem auto;
+  margin: 0.3rem auto;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+</style>
+
+<style  lang="scss">
+svg {
+  margin-right: 1rem;
 }
 </style>
