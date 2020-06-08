@@ -5,7 +5,7 @@
     </div>
     <div class="signup-main">
       <div class="signup-left">
-        <!-- <img src="../data/images/josh-redd-unsplash.jpg" aria-hidden="true" alt /> -->
+        <img src="../data/images/josh-redd-unsplash.jpg" aria-hidden="true" alt />
       </div>
       <div class="signup-right">
         <c-box class="c-box-container">
@@ -184,128 +184,105 @@ export default {
     justify-content: space-around;
   }
   .signup-left {
-    background: url("../data/images/josh-redd-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 80vh;
     width: 50vw;
-    -moz-transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    clip-path: polygon(
-      43% 0,
-      62% 0,
-      52% 26%,
-      69% 20%,
-      32% 100%,
-      42% 40%,
-      26% 46%
-    );
+    clip-path: circle(75%);
+    transition: clip-path 1s;
+    cursor: pointer;
     &:hover {
-      clip-path: polygon(
-        0 14%,
-        0 0,
-        36% 0,
-        70% 0,
-        100% 0,
-        100% 26%,
-        99% 44%,
-        100% 68%,
-        100% 100%,
-        69% 100%,
-        35% 100%,
-        0 100%,
-        0 78%,
-        0 56%,
-        0 34%
-      );
-    transition: all 0.2s ease-in-out;
-
+      clip-path: circle(25%);
     }
     img {
       width: 100%;
-      transition: all ease-in-out 0.3s;
     }
   }
-  .signup-title {
-    font-size: 4rem;
+}
+.signup-title {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.signup-right {
+  width: 20rem;
+  .c-box-container {
+    min-height: 13.5rem;
+  }
+  form {
+    line-height: 1.6;
+  }
+  .tab-list {
+    margin-bottom: 1.8rem;
+  }
+  .respass-link,
+  .respass-link:active,
+  .respass-link:visited {
+    color: $colour-uni;
+  }
+  .respass-link {
     text-align: center;
-    margin-bottom: 3rem;
+    display: block;
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 600;
   }
-  .signup-right {
-    width: 20rem;
-    .c-box-container {
-      min-height: 13.5rem;
+  input {
+    border-color: $colour-uni;
+  }
+  #password-helper-text,
+  #email-helper-text {
+    margin-bottom: 1.2rem;
+  }
+  .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: -2rem;
+    background-color: $colour-uni;
+  }
+  .hor-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  .hor-line::before,
+  .hor-line::after {
+    display: inline-block;
+    content: "";
+    border-top: 2px solid black;
+    width: 7rem;
+    margin: 0 1rem;
+    transform: translateY(-1rem);
+  }
+  .auth-signin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: $colour-uni;
+    p:not(:last-of-type) {
+      margin-right: 2rem;
     }
-    form {
-      line-height: 1.6;
-    }
-    .tab-list {
-      margin-bottom: 1.8rem;
-    }
-    .respass-link,
-    .respass-link:active,
-    .respass-link:visited {
+    a {
       color: $colour-uni;
-    }
-    .respass-link {
-      text-align: center;
-      display: block;
-      margin: 1rem 0;
-      font-size: 1rem;
-      font-weight: 600;
-    }
-    input {
-      border-color: $colour-uni;
-    }
-    #password-helper-text,
-    #email-helper-text {
-      margin-bottom: 1.2rem;
-    }
-    .circle {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      margin-top: -2rem;
-      background-color: $colour-uni;
-    }
-    .hor-line {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 3rem;
-    }
-    .hor-line::before,
-    .hor-line::after {
-      display: inline-block;
-      content: "";
-      border-top: 2px solid black;
-      width: 7rem;
-      margin: 0 1rem;
-      transform: translateY(-1rem);
-    }
-    .auth-signin {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
-      font-weight: 600;
-      color: $colour-uni;
-      p:not(:last-of-type) {
-        margin-right: 2rem;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
       }
-      a {
-        color: $colour-uni;
-        text-decoration: none;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
+    }
+  }
+}
+
+//////////MEDIA QUERIES
+@media screen and (max-width: 768px) {
+  .signup {
+    .signup-left,
+    .signup-right {
+      width: 100%;
     }
   }
 }
