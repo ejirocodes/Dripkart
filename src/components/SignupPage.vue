@@ -279,12 +279,34 @@ export default {
 
 //////////MEDIA QUERIES
 @media screen and (max-width: 768px) {
-  .signup {
-    .signup-left,
-    .signup-right {
-      width: 100%;
+  .signup-main {
+    .signup-left {
+      height: 100%;
+      margin-right: 1rem;
     }
   }
+}
+@media screen and (max-width: 650px) {
+  .signup {
+    .signup-title {
+      margin-bottom: 1.5rem;
+    }
+    .signup-main {
+      flex-direction: column;
+      .signup-left {
+        width: 80vw;
+        margin: 0 0 1.5rem 0;
+      }
+      .signup-right {
+        width: 80vw;
+      }
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .signup-title {
+      font-size: 3rem;
+    }
 }
 </style>
 
