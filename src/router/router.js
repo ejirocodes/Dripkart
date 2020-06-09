@@ -5,6 +5,7 @@ Vue.use(Router);
 
 import Homepage from "../components/home/HomePage.vue";
 import Signup from "../components/SignupPage.vue";
+import Cart from "../components/cart/ShoppingCart.vue";
 
 export default new Router({
   mode: "history",
@@ -18,7 +19,11 @@ export default new Router({
       component: Signup,
 
     },
-    { path: "/login" }
+    {
+      path: "/cart",
+      component: Cart,
+
+    },
   ]
 });
 

@@ -12,6 +12,8 @@ import './assets/sass/_variables.scss';
 import '../node_modules/@braid/vue-formulate/themes/snow/snow.scss';
 import Chakra, { CThemeProvider } from '@chakra-ui/vue';
 import VueDarkMode from '@vue-a11y/dark-mode'
+import store from './store/index'
+
 
 Vue.config.productionTip = false
 
@@ -37,5 +39,6 @@ if (process.env.NODE_ENV === 'development') {
 
 new Vue({
   router,
+  store,
   render: h => h(CThemeProvider, [h(App)]),
 }).$mount('#app')

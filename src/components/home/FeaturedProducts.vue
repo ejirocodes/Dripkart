@@ -5,7 +5,7 @@
     </div>
     <section class="products-container">
       <swiper class="swiper" :options="swiperOption">
-        <swiper-slide v-for="(product, index) in featuredProducts" :key="index">
+        <swiper-slide v-for="(product, index) in featuredProducts" :key="index + 'new'">
           <figure class="imghvr-push-right">
             <img class="product" :src="product.src" :alt="product.title" :title="product.title" />
             <figcaption>
@@ -17,10 +17,15 @@
               <p>{{product.category}}</p>
               <h4>{{product.title}}</h4>
               <p>&#36;{{product.cost}}</p>
-              <CartButton />
+              <button class="cart-btn" @click="addToCart()">add to cart</button>
             </div>
           </figure>
         </swiper-slide>
+        <div
+          class="cart"
+          v-for="(item, index) in this.$store.state.cart"
+          :key="index"
+        >{{item.title}}</div>
         <div class="swiper-pagination" slot="pagination"></div>
         <div class="swiper-button-prev" slot="button-prev"></div>
         <div class="swiper-button-next" slot="button-next"></div>
@@ -32,21 +37,23 @@
 <script>
 import products from "../../data/products";
 const featuredProducts = products.featured;
-import CartButton from "../CartButton.vue";
-
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
-import "swiper/css/swiper.css";
 export default {
   name: "FeaturedProducts",
   components: {
-    CartButton,
     Swiper,
     SwiperSlide
+  },
+  beforeCreate() {
+    console.log("featured pro", featuredProducts);
+    console.log("prod", products);
   },
   data() {
     return {
       title: "What's trending",
       featuredProducts,
+      addedToCart: false,
+      cart: [],
       swiperOption: {
         slidesPerView: 5,
         spaceBetween: 50,
@@ -81,13 +88,29 @@ export default {
       }
     };
   },
-  beforeCreate() {
-    console.log(products);
+  methods: {
+    addToCart() {
+      const product = this.featuredProducts;
+      const cost = product.cost;
+      this.$store.commit("addProductToCart", Object.assign({}, product, {cost}));
+      this.addedToCart = true;
+    }
   }
 };
 </script>
 <style lang="scss">
 @import "../../assets/sass/_variables.scss";
+@import "../../assets/sass/bounce-to-right.scss";
+
+.cart-btn {
+  @include hvr-bounce-to-right;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  background: $colour-pri;
+  font-size: 0.8rem;
+  color: #fff;
+  text-transform: uppercase;
+}
 
 .prod-showcase {
   margin: 4rem 0;

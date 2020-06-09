@@ -52,9 +52,6 @@ export default {
       selectedHeroIndex: 0
     };
   },
-  created() {
-    console.log(img);
-  },
   computed: {
     selectedImage() {
       return img[this.selectedHeroIndex];
