@@ -3,28 +3,36 @@ import Router from 'vue-router';
 
 Vue.use(Router);
 
-import Homepage from "../components/home/HomePage.vue";
-import Signup from "../components/SignupPage.vue";
-import Cart from "../components/cart/ShoppingCart.vue";
+import Homepage from '../components/home/HomePage.vue';
+import Signup from '../components/SignupPage.vue';
+import Cart from '../components/cart/ShoppingCart.vue';
+import ProductDetails from '../components/product/ProductDetails.vue';
 
 export default new Router({
-  mode: "history",
+  mode: 'history',
   routes: [
     {
-      path: "/",
+      path: '/',
       component: Homepage
     },
     {
-      path: "/signup",
-      component: Signup,
-
+      path: '/signup',
+      component: Signup
     },
     {
-      path: "/cart",
-      component: Cart,
-
+      path: '/cart',
+      component: Cart
     },
+    // {
+    //   path: '/product-details/:id',
+    //   name: 'productDetails',
+    //   component: ProductDetails,
+    //   props: true
+    // }
+    {
+      path: '/product-details',
+      name: 'ProductDetails',
+      component: ProductDetails,
+    }
   ]
 });
-
-

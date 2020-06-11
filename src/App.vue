@@ -73,6 +73,7 @@
     <main>
       <router-view></router-view>
     </main>
+    <ProductSelector />
     <Footer />
   </div>
 </template>
@@ -80,11 +81,13 @@
 <script>
 import Navbar from "./components/AppNavbar.vue";
 import Footer from "./components/AppFooter.vue";
+import ProductSelector from "./components/product/ProductSelector.vue";
 export default {
   name: "App",
   components: {
     Navbar,
-    Footer
+    Footer,
+    ProductSelector
   }
 };
 </script>
