@@ -22,6 +22,23 @@
       <div class="swiper-button-prev" slot="button-prev"></div>
       <div class="swiper-button-next" slot="button-next"></div>
     </swiper>
+    <div>
+      <h1>Cart</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(product, index) in cart" :key="index">
+            <td>{{product.title}}</td>
+            <td>{{product.cost}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 </template>
 
@@ -33,6 +50,8 @@ export default {
     return {
       title: "What's trending",
       featuredProducts,
+      cart: [],
+      selectedProdIndex: 0,
       swiperOption: {
         slidesPerView: 5,
         spaceBetween: 50,
@@ -66,6 +85,21 @@ export default {
         }
       }
     };
+  },
+  computed: {
+    selectedProduct() {
+      return featuredProducts[this.selectedProdIndex];
+    }
+  },
+  beforeCreate() {
+    console.log(featuredProducts.map(prod => prod.cost));
+  },
+
+  methods: {
+    addToCart() {
+      const cost = featuredProducts.map(prod => prod.cost);
+      this.cart.push(Object.assign({}, { cost }));
+    }
   }
 };
 </script>
