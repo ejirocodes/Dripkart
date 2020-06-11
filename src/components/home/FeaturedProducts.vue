@@ -89,13 +89,24 @@ export default {
     };
   },
   methods: {
-    addToCart() {
-      const product = this.featuredProducts;
-      const cost = product.cost;
-      this.$store.commit("addProductToCart", Object.assign({}, product, {cost}));
-      this.addedToCart = true;
-    }
-  }
+    // addToCart() {
+    //   const product = this.featuredProducts;
+    //   const cost = product.cost;
+    //   this.$store.commit("addProductToCart", Object.assign({}, product, {cost}));
+    //   this.addedToCart = true;
+    // }
+    addToCart(id){
+                this.$store.dispatch("addToCart", id);
+            }
+  },
+  computed: {
+            products(){
+                return this.$store.state.products;
+            }
+        },
+        created(){
+            this.$store.dispatch("fetchProducts");
+        }
 };
 </script>
 <style lang="scss">
