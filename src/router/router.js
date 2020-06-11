@@ -23,14 +23,8 @@ export default new Router({
       path: '/cart',
       component: Cart
     },
-    // {
-    //   path: '/product-details/:id',
-    //   name: 'productDetails',
-    //   component: ProductDetails,
-    //   props: true
-    // }
     {
-      path: '/product-details',
+      path: '/product-details/:productType/:id',
       name: 'ProductDetails',
       component: ProductDetails,
     }
