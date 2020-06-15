@@ -5,7 +5,7 @@
         <router-link
           :to="{
           name: 'ProductDetails',
-          params: { id: featuredProducts.id}
+          //params: { id: featuredProducts.id}
         }"
         >
           <figure class="imghvr-push-right">
