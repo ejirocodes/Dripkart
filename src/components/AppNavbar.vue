@@ -11,7 +11,7 @@ export default {
         elementId: 'main-navbar',
         isUsingVueRouter: true,
         mobileBreakpoint: 992,
-        brandImagePath: './',
+        brandImagePath: '/',
         brandImage: require('../assets/logo.png'),
         brandImageAltText: 'Dripkart',
         // collapseButtonImageOpen: require('../src/assets/images/collapse-menu-dark.png'),
