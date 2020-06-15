@@ -5,7 +5,7 @@
         <router-link
           :to="{
           name: 'ProductDetails',
-          //params: { id: featuredProducts.id}
+          params: { id: featuredProducts[index].id}
         }"
         >
           <figure class="imghvr-push-right">
@@ -93,15 +93,6 @@ export default {
       }
     };
   },
-  computed: {
-    selectedProduct() {
-      return featuredProducts[this.selectedProdIndex];
-    }
-  },
-  beforeCreate() {
-    console.log(featuredProducts.map(prod => prod.cost));
-  },
-
   methods: {
     addToCart() {
       const cost = featuredProducts.map(prod => prod.cost);

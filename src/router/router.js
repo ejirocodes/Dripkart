@@ -24,10 +24,10 @@ export default new Router({
       component: Cart
     },
     {
-      name: 'ProductDetails',
       path: '/product-details/:id',
+      name: 'ProductDetails',
       component: ProductDetails,
-      // props: true
+      props: true
     },
   ]
 });
