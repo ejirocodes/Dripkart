@@ -11,12 +11,12 @@ const selectedProd = products.featured;
 export default {
   name: 'ProductDetails',
   created() {
-    console.log(selectedProd);
+    console.log(this.$route.params.slug);
   },
   computed: {
     product() {
-      const id = this.$route.params.id * 1;
-      return selectedProd.find(prod => prod.id === id);
+      const slug = this.$route.params.slug;
+      return selectedProd.find(prod => prod.slug === slug);
     }
   }
 };
