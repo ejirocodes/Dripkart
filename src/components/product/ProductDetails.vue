@@ -4,7 +4,7 @@
       <h1 class="product-title">{{product.title }}</h1>
       <p class="product-desc">{{product.description}}</p>
       <p class="product-cost">&#36;{{product.cost}}</p>
-      <button>
+      <button class="cart-btn">
         <i class="fas fa-shopping-cart"></i> Add to cart
       </button>
     </div>
@@ -32,6 +32,7 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+@import '../../assets/sass/_variables.scss';
 .prod-det {
   font-size: 3rem !important;
   font-family: 'Lato', sans-serif;
@@ -45,9 +46,23 @@ export default {
       width: 100%;
     }
   }
+  .prod-det-left {
+    .cart-btn {
+      border-radius: 40px;
+      .fa-shopping-cart {
+        font-size: .8rem;
+        margin-right: .7rem;
+        // padding: ;
+      }
+    }
+  }
   .product-title {
-    font-size: 4rem;
+    font-size: 3.2rem;
     font-weight: 700;
+    text-transform: uppercase;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    color: $colour-pri;
   }
 }
 </style>
