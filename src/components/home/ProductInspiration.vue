@@ -5,7 +5,7 @@
         <swiper-slide v-for="(image, index) in img" :key="index">
           <img class="hero-img" :src="image.src" :alt="image.title" :title="image.title" />
         </swiper-slide>
-        <div class="swiper-pagination" slot="pagination"></div>
+        <!-- <div class="swiper-pagination" slot="pagination"></div> -->
       </swiper>
     </div>
     <div class="hero-main-right">
