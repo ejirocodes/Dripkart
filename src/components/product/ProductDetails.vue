@@ -7,16 +7,14 @@
 
 <script>
 import products from '../../data/products';
-const selectedProd = products.featured;
+const featuredProduct = products.featured;
+const newArrival = products.newArrivals;
 export default {
   name: 'ProductDetails',
-  created() {
-    console.log(this.$route.params.slug);
-  },
   computed: {
     product() {
       const slug = this.$route.params.slug;
-      return selectedProd.find(prod => prod.slug === slug);
+      return featuredProduct.find(prod => prod.slug === slug) || newArrival.find(prod => prod.slug === slug);
     }
   }
 };

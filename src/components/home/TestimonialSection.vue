@@ -29,7 +29,6 @@
         <h3 class="testimonial-right-title">{{testInfo.caption}}</h3>
         <p class="testimon">{{testInfo.testimony}}</p>
         <figure>
-          
           <div class="test-avatar-container">
             <img :src="testInfo.avatar" :alt="testInfo.name" class="test-avatar" />
           </div>
@@ -47,12 +46,12 @@
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from "vue-awesome-swiper";
-import data from "../../data/testimonial";
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
+import data from '../../data/testimonial';
 
 const testData = data.testimonial;
 export default {
-  name: "Testimonial",
+  name: 'Testimonial',
   components: {
     Swiper,
     SwiperSlide
@@ -63,12 +62,12 @@ export default {
       swiperOption: {
         spaceBetween: 30,
         pagination: {
-          el: ".swiper-pagination",
+          el: '.swiper-pagination',
           clickable: true
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
         }
       }
     };
@@ -77,13 +76,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/sass/_variables.scss";
+@import '../../assets/sass/_variables.scss';
 .testimonial {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: $gutter-3 0;
   font-size: 6rem;
+  font-family: 'Prata', serif;
+  div[role='button']:active {
+    outline: -webkit-focus-ring-color auto 1px;
+  }
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 2rem;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: $colour-uni;
+  }
   .testimonial-left {
     display: flex;
     align-items: center;
@@ -91,7 +102,6 @@ export default {
     width: 50%;
     background-color: $colour-pri;
     line-height: 1.3;
-    font-family: "Prata", serif;
     text-transform: capitalize;
     text-align: center;
     min-height: 35rem;
@@ -104,7 +114,7 @@ export default {
         position: absolute;
         top: -2.4rem;
         left: -2rem;
-        font-family: "PT Serif", serif;
+        font-family: 'PT Serif', serif;
         font-size: 1.5em;
         width: 60px;
         height: 60px;

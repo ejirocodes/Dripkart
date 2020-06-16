@@ -30,9 +30,6 @@ import ProdSlider from '../product/ProductSlider';
 export default {
   name: 'FeaturedProducts',
   components: { ProdSlider },
-  created() {
-    console.log(this.featuredProducts[0].category);
-  },
   data() {
     return {
       title: "What's trending",

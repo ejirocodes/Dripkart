@@ -5,50 +5,52 @@
     </div>
     <section class="products-container">
       <swiper class="swiper" :options="swiperOption">
-        <!-- <swiper-slide v-for="(product) in featuredProducts" :key="product.id">
-          <figure class="imghvr-push-right">
-            <img class="product" :src="product.src" :alt="product.title" :title="product.title" />
-            <figcaption>
-              <h4>{{product.title}}</h4>
-              <p>{{product.category}}</p>
-              <p>&#36;{{product.cost}}</p>
-            </figcaption>
-            <div class="product-title">
-              <p>{{product.category}}</p>
-              <h4>{{product.title}}</h4>
-              <p>&#36;{{product.cost}}</p>
-              <button class="cart-btn" @click="addToCart()">add to cart</button>
-            </div>
-          </figure>
-        </swiper-slide> -->
+        <swiper-slide v-for="(product, index) in newArrival" :key="index + 'new'">
+          <router-link
+            :to="{
+          name: 'ProductDetails',
+          params: { slug: product.slug}
+        }"
+          >
+            <ProdSlider :product="product" />
+          </router-link>
+        </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
       </swiper>
     </section>
   </section>
 </template>
 
 <script>
-import products from "../../data/products";
-const featuredProducts = products.newArrivals;
+import products from '../../data/products';
+const newArrival = products.newArrivals;
+import ProdSlider from '../product/ProductSlider';
 
-// import { Swiper, SwiperSlide } from "vue-awesome-swiper";
-import "swiper/css/swiper.css";
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
+import 'swiper/css/swiper.css';
 export default {
-  name: "NewArrival",
+  name: 'NewArrival',
   components: {
-    // Swiper,
-    // SwiperSlide
+    Swiper,
+    SwiperSlide,
+    ProdSlider
   },
   data() {
     return {
-      title: "New Arrivals",
-      featuredProducts,
+      title: 'New Arrivals',
+      newArrival,
       swiperOption: {
         slidesPerView: 5,
         spaceBetween: 50,
         pagination: {
-          el: ".swiper-pagination",
+          el: '.swiper-pagination',
           clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
         },
         breakpoints: {
           1024: {
@@ -77,8 +79,8 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "../../assets/sass/_variables.scss";
-@import "../../assets/sass/bounce-to-right.scss";
+@import '../../assets/sass/_variables.scss';
+@import '../../assets/sass/bounce-to-right.scss';
 
 .cart-btn {
   @include hvr-bounce-to-right;
@@ -107,7 +109,7 @@ export default {
       top: -12px;
       margin: 0 auto;
       width: 10%;
-      content: "";
+      content: '';
     }
   }
 }
@@ -162,7 +164,7 @@ export default {
       margin-bottom: 1rem;
     }
   }
-  [class^="imghvr-"] figcaption {
+  [class^='imghvr-'] figcaption {
     background-color: $colour-pri;
     padding: 1rem;
   }
@@ -179,6 +181,9 @@ export default {
   }
   .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
     background: $colour-pri;
+  }
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 0;
   }
 }
 </style>
