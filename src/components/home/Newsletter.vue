@@ -10,7 +10,6 @@
     <div class="newsletter-right">
       <FormulateForm v-model="values" @submit="handleLogin">
         <div class="input-con">
-          <label for="email">Email</label>
           <FormulateInput
             type="text"
             name="email"

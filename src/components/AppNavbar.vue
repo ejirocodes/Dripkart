@@ -24,9 +24,8 @@ export default {
             path: '/new-releases',
             subMenuOptions: [
               {
-                isLinkAction: true,
                 type: 'link',
-                text: 'SHOP ALL NEW ARRIVALS',
+                text: 'Shop All New Arrivals',
                 subText:
                   'All the lastest sneaker from the top brands at your feet.',
                 path: './new-arrivals'
@@ -36,7 +35,7 @@ export default {
               },
               {
                 type: 'link',
-                text: 'NIKELAB',
+                text: 'Nikelab',
                 subText: 'The latest sneakers from addidas at your feet',
                 path: './nike-lab'
               },
@@ -45,7 +44,7 @@ export default {
               },
               {
                 type: 'link',
-                text: 'ADDIDASLAB',
+                text: 'Adidaslab',
                 subText: 'The latest sneakers from addidas at your feet',
                 path: './addidas-lab'
               }
@@ -55,27 +54,6 @@ export default {
             type: 'link',
             text: 'Shop',
             path: '/shop',
-            subMenuOptions: [
-              {
-                type: 'link',
-                text: 'Customer Service',
-                path: './customer-service'
-              },
-              {
-                type: 'link',
-                text: 'Accounting',
-                path: './accounting'
-              },
-              {
-                type: 'hr'
-              },
-              {
-                type: 'link',
-                text: 'Reception',
-                path: './reception',
-                iconLeft: ''
-              }
-            ]
           },
           {
             type: 'link',
@@ -158,12 +136,12 @@ import 'vue-navigation-bar/dist/vue-navigation-bar.css';
 @media screen and (max-width: 991px) {
   .vnb__popup__bottom__menu-options__option__link--no-highlight,
   .vnb__popup__bottom__sub-menu-options__option__link {
-    text-transform: uppercase;
     font-size: 1.2rem;
     color: $colour-uni;
     line-height: 1.4;
     padding: 10px 24px;
     border-left: none;
+    text-transform: capitalize;
   }
   .vnb__popup__bottom__menu-options {
     border-left: 2px solid $colour-pri;
@@ -171,6 +149,9 @@ import 'vue-navigation-bar/dist/vue-navigation-bar.css';
   }
   .vnb__popup__bottom__menu-options__option__link {
     font-size: 1.2rem;
+  }
+   .vnb__popup__bottom__sub-menu-options__option__link__sub-text {
+    display: none !important;
   }
 }
 .vnb__menu-options__option__button__icon--right {
