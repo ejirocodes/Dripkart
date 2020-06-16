@@ -95,7 +95,7 @@
     <main>
       <router-view></router-view>
     </main>
-    <go-top :size="40" bg-color="#000"></go-top>
+    <go-top :size="40" :bottom="30" :max-width="0" :right="30" bg-color="#000">Back to top</go-top>
     <Footer />
   </div>
 </template>
