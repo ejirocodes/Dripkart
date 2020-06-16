@@ -5,7 +5,7 @@
         <swiper-slide v-for="(image, index) in img" :key="index">
           <img class="hero-img" :src="image.src" :alt="image.title" :title="image.title" />
         </swiper-slide>
-        <!-- <div class="swiper-pagination" slot="pagination"></div> -->
+        <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
     </div>
     <div class="hero-main-right">
@@ -19,12 +19,12 @@
 </template>
 
 <script>
-import heroImg from "../../data/products";
-import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+import heroImg from '../../data/products';
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
 const img = heroImg.inspImage;
 
 export default {
-  name: "ProductInspiration",
+  name: 'ProductInspiration',
   components: {
     Swiper,
     SwiperSlide
@@ -34,12 +34,12 @@ export default {
       img,
       selectedHeroIndex: 0,
       swiperOption: {
-        effect: "flip",
+        effect: 'flip',
         grabCursor: true,
         centeredSlides: false,
         loop: true,
         pagination: {
-          el: ".swiper-pagination",
+          el: '.swiper-pagination',
           clickable: true
         }
       }
@@ -49,8 +49,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../../assets/sass/bounce-to-right.scss";
-@import "../../assets/sass/_variables.scss";
+@import '../../assets/sass/bounce-to-right.scss';
+@import '../../assets/sass/_variables.scss';
 
 .hero-main {
   display: flex;

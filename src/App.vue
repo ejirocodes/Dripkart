@@ -94,7 +94,6 @@
     <Navbar />
     <main>
       <router-view></router-view>
-      <ProductSlider />
     </main>
     <go-top :size="40" bg-color="#000"></go-top>
     <Footer />
@@ -104,14 +103,12 @@
 <script>
 import Navbar from './components/AppNavbar.vue';
 import Footer from './components/AppFooter.vue';
-import ProductSlider from './components/product/ProductSlider.vue';
 import GoTop from '@inotom/vue-go-top';
 
 export default {
   name: 'App',
   components: {
     Navbar,
-    ProductSlider,
     Footer,
     GoTop,
   }
