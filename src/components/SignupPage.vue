@@ -189,7 +189,8 @@ export default {
     justify-content: center;
     height: 80vh;
     width: 50vw;
-    clip-path: circle(75%);
+    animation: circle 3s infinite;
+  clip-path: circle(75%);
     transition: clip-path 1s;
     cursor: pointer;
     &:hover {
@@ -199,6 +200,11 @@ export default {
       width: 100%;
     }
   }
+}
+@keyframes circle {
+  0% { clip-path: circle(75%); }
+  50% { clip-path: circle(25%); }
+  100% { clip-path: circle(75%); }
 }
 .signup-title {
   font-size: 4rem;
