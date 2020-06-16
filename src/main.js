@@ -7,6 +7,7 @@ import {
   faChevronCircleLeft,
   faShoppingCart
 } from '@fortawesome/free-solid-svg-icons';
+import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import VueNavigationBar from 'vue-navigation-bar';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
@@ -31,7 +32,12 @@ Vue.use(GoTop);
 
 Vue.component('vue-navigation-bar', VueNavigationBar);
 
-library.add(faChevronCircleRight, faChevronCircleLeft, faShoppingCart);
+library.add(
+  faChevronCircleRight,
+  faChevronCircleLeft,
+  faShoppingCart,
+  faGithubSquare
+);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 

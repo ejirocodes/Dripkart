@@ -1,7 +1,9 @@
 <template>
   <div>
-    <h1>{{product.title }}</h1>
-    <img :src="product.src" :alt="product.src" :title="product.title" />
+    <h1 class="product-title">{{product.title }}</h1>
+    <img class="product-img" :src="product.src" :alt="product.src" :title="product.title" />
+    <p class="product-title">{{product.descriotion}}</p>
+    <p class="product-cost">{{product.cost}}</p>
   </div>
 </template>
 

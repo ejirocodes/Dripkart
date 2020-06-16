@@ -148,12 +148,12 @@ import {
   CFormHelperText,
   CButton,
   CLink
-} from "@chakra-ui/vue";
+} from '@chakra-ui/vue';
 export default {
-  name: "Signup",
+  name: 'Signup',
   data() {
     return {
-      title: "Create Account"
+      title: 'Create Account'
     };
   },
   components: {
@@ -175,7 +175,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/sass/_variables.scss";
+@import '../assets/sass/_variables.scss';
 .signup {
   font-size: 5rem;
   .signup-main {
@@ -190,7 +190,7 @@ export default {
     height: 80vh;
     width: 50vw;
     animation: circle 3s infinite;
-  clip-path: circle(75%);
+    clip-path: circle(75%);
     transition: clip-path 1s;
     cursor: pointer;
     &:hover {
@@ -202,9 +202,15 @@ export default {
   }
 }
 @keyframes circle {
-  0% { clip-path: circle(75%); }
-  50% { clip-path: circle(25%); }
-  100% { clip-path: circle(75%); }
+  0% {
+    clip-path: circle(75%);
+  }
+  50% {
+    clip-path: circle(25%);
+  }
+  100% {
+    clip-path: circle(75%);
+  }
 }
 .signup-title {
   font-size: 4rem;
@@ -257,7 +263,7 @@ export default {
   .hor-line::before,
   .hor-line::after {
     display: inline-block;
-    content: "";
+    content: '';
     border-top: 2px solid black;
     width: 7rem;
     margin: 0 1rem;
@@ -311,14 +317,14 @@ export default {
 }
 @media screen and (max-width: 320px) {
   .signup-title {
-      font-size: 3rem;
-    }
+    font-size: 3rem;
+  }
 }
 </style>
 
 <style lang="scss">
-@import "../assets/sass/_variables.scss";
-.css-16tdle4[aria-selected="true"] {
+@import '../assets/sass/_variables.scss';
+.css-16tdle4[aria-selected='true'] {
   color: $colour-uni;
   border-color: $colour-uni;
   border-top-color: $colour-uni;

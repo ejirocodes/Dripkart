@@ -2,20 +2,25 @@
   <footer>
     <c-link href="https://github.com/Ejiro-Asiuwhu/dripkart" is-external>
       View on GitHub
-      <c-icon name="external-link-alt" mx="2px" />
+      <i class="fab fa-github"></i>
     </c-link>
   </footer>
 </template>
 
 <script>
-import { CLink, CIcon } from "@chakra-ui/vue";
+import { CLink } from '@chakra-ui/vue';
 export default {
   components: {
-    CLink,
-    CIcon
+    CLink
   }
 };
 </script>
+
+<style scoped lang="scss">
+footer {
+  font-size: 1rem;
+}
+</style>
 
 
  
