@@ -1,6 +1,11 @@
 <template>
   <figure class="imghvr-push-right">
-    <img class="product" :src="product && product.src  " :alt="product && product.title" :title="product && product.title" />
+    <img
+      class="product"
+      :src="product && product.src  "
+      :alt="product && product.title"
+      :title="product && product.title"
+    />
     <figcaption>
       <h4>{{product && product.title}}</h4>
       <p>{{product && product.category}}</p>
@@ -17,8 +22,8 @@
 
 <script>
 export default {
-  props: ['product'],
-}
+  props: ['product']
+};
 </script>
 
 <style lang="scss">
@@ -82,9 +87,8 @@ export default {
     }
   }
   figcaption {
-    color: #222;
+    color: $colour-sec;
     h4 {
-      color: #222;
       font-size: 1.8rem;
       margin-bottom: 0.8rem;
     }

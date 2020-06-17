@@ -110,6 +110,7 @@ export default {
     .testimonial-left-title {
       position: relative;
       font-size: 3.2rem;
+      color: $colour-sec;
       span.quote {
         position: absolute;
         top: -2.4rem;
