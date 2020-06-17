@@ -5,7 +5,7 @@
         <h1 class="product-title">{{product.title}}</h1>
         <p class="product-desc">{{product.description}}</p>
         <p class="product-cost">&#36;{{product.cost}}</p>
-        <button class="cart-btn-2">
+        <button class="cart-btn-2" @click="addToCart()">
           <span>
             <i class="fas fa-shopping-cart"></i> Add to cart
           </span>
@@ -27,6 +27,12 @@ const featuredProduct = products.featured;
 const newArrival = products.newArrivals;
 export default {
   name: 'ProductDetails',
+  data() {
+    return {
+      featuredProduct,
+      addedToCart: false
+    };
+  },
   computed: {
     product() {
       const slug = this.$route.params.slug;
@@ -34,6 +40,19 @@ export default {
         featuredProduct.find(prod => prod.slug === slug) ||
         newArrival.find(prod => prod.slug === slug)
       );
+    }
+  },
+  methods: {
+    addToCart() {
+      const product = this.featuredProduct.forEach(function(item, index) {
+        return item[index];
+      });
+      const cost = product.cost;
+      this.$store.commit(
+        'addProductToCart',
+        Object.assign({}, product, { cost })
+      );
+      this.addedToCart = true;
     }
   }
 };
@@ -167,7 +186,7 @@ export default {
         font-size: 1rem;
       }
       .cart-btn-2 {
-            padding: 0.7rem 1.8rem;
+        padding: 0.7rem 1.8rem;
       }
     }
   }
