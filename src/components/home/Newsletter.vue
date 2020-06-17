@@ -46,9 +46,11 @@ export default {
   align-items: center;
   font-size: 4rem;
   background-color: $colour-pri;
+  color: $colour-sec;
   padding: 6rem 0;
   .newsletter-left {
     line-height: 1.5;
+    text-align: left;
     h2 {
       text-transform: capitalize;
       font-weight: 600;
