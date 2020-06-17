@@ -46,7 +46,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  margin-top: 5rem;
   .prod-det-right,
   .prod-det-left {
     width: 100%;
