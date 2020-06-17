@@ -5,7 +5,9 @@
       <p class="product-desc">{{product.description}}</p>
       <p class="product-cost">&#36;{{product.cost}}</p>
       <button class="cart-btn-2">
-        <i class="fas fa-shopping-cart"></i> Add to cart
+        <span>
+          <i class="fas fa-shopping-cart"></i> Add to cart
+        </span>
       </button>
     </div>
     <div class="prod-det-right">
@@ -58,6 +60,16 @@ export default {
   }
   .prod-det-left {
     .cart-btn-2 {
+      &:hover {
+        &:after {
+          left: 120%;
+          transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+        }
+      }
+      &:active {
+      box-shadow: none;
+
+      }
       border-radius: 40px;
       font-family: 'Lato', sans-serif;
       padding: 0.8rem 2.5rem;
@@ -71,9 +83,29 @@ export default {
       transition-timing-function: unset;
       border: none;
       background: #f71565;
-      font-size: 0.8rem;
       color: #fff;
       text-transform: uppercase;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      span {
+        z-index: 20;
+      font-size: 0.8rem;
+
+      }
+      &:after {
+        background: #fff;
+        content: '';
+        height: 155px;
+        left: -75px;
+        opacity: 0.2;
+        position: absolute;
+        top: -50px;
+        transform: rotate(35deg);
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+        width: 50px;
+        z-index: -10;
+      }
       .fa-shopping-cart {
         font-size: 0.8rem;
         margin-right: 0.7rem;
