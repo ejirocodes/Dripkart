@@ -77,3 +77,10 @@ export default {
   }
 };
 </script>
+<style lang="scss">
+  @media screen and (max-width: 768px) {
+    .prod-feature.prod-showcase {
+      margin: 4rem 0 0 0 !important;
+    }
+  }
+</style>

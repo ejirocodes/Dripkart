@@ -133,7 +133,6 @@ export default {
 }
 .example-3d {
   width: 50%;
-  padding-top: 50px;
   padding-bottom: 50px;
 }
 .swiper {
