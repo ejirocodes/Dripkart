@@ -1,18 +1,21 @@
 <template>
-  <section class="prod-det">
-    <div class="prod-det-left">
-      <h1 class="product-title">{{product.title}}</h1>
-      <p class="product-desc">{{product.description}}</p>
-      <p class="product-cost">&#36;{{product.cost}}</p>
-      <button class="cart-btn-2">
-        <span>
-          <i class="fas fa-shopping-cart"></i> Add to cart
-        </span>
-      </button>
+  <section>
+    <div class="prod-det">
+      <div class="prod-det-left">
+        <h1 class="product-title">{{product.title}}</h1>
+        <p class="product-desc">{{product.description}}</p>
+        <p class="product-cost">&#36;{{product.cost}}</p>
+        <button class="cart-btn-2">
+          <span>
+            <i class="fas fa-shopping-cart"></i> Add to cart
+          </span>
+        </button>
+      </div>
+      <div class="prod-det-right">
+        <img class="product-img" :src="product.src" :alt="product.title" :title="product.title" />
+      </div>
     </div>
-    <div class="prod-det-right">
-      <img class="product-img" :src="product.src" :alt="product.title" :title="product.title" />
-    </div>
+    <router-link class="more-link" to="/shop">Discover Everything</router-link>
   </section>
 </template>
 
@@ -67,8 +70,7 @@ export default {
         }
       }
       &:active {
-      box-shadow: none;
-
+        box-shadow: none;
       }
       border-radius: 40px;
       font-family: 'Lato', sans-serif;
@@ -90,8 +92,7 @@ export default {
       display: flex;
       span {
         z-index: 20;
-      font-size: 0.8rem;
-
+        font-size: 0.8rem;
       }
       &:after {
         background: #fff;
@@ -129,5 +130,13 @@ export default {
       margin-bottom: 2rem;
     }
   }
+}
+.more-link {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1.2px;
+  color: $colour-uni;
 }
 </style>
