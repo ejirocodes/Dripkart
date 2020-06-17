@@ -1,7 +1,7 @@
 <template>
   <section class="prod-det">
     <div class="prod-det-left">
-      <h1 class="product-title">{{product.title }}</h1>
+      <h1 class="product-title">{{product.title}}</h1>
       <p class="product-desc">{{product.description}}</p>
       <p class="product-cost">&#36;{{product.cost}}</p>
       <button class="cart-btn">
@@ -37,6 +37,9 @@ export default {
   font-size: 3rem !important;
   font-family: 'Lato', sans-serif;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
   .prod-det-right,
   .prod-det-left {
     width: 50vw;
@@ -49,20 +52,30 @@ export default {
   .prod-det-left {
     .cart-btn {
       border-radius: 40px;
+      font-family: 'Lato', sans-serif;
+      padding: .8rem 2.5rem;
       .fa-shopping-cart {
-        font-size: .8rem;
-        margin-right: .7rem;
-        // padding: ;
+        font-size: 0.8rem;
+        margin-right: 0.7rem;
       }
     }
-  }
-  .product-title {
-    font-size: 3.2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    word-spacing: 5px;
-    letter-spacing: 2px;
-    color: $colour-pri;
+    .product-title {
+      font-size: 3.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      word-spacing: 5px;
+      letter-spacing: 2px;
+      color: $colour-pri;
+      margin-bottom: 2rem;
+    }
+    .product-desc {
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      text-align: justify;
+    }
+    .product-cost {
+      margin-bottom: 2rem;
+    }
   }
 }
 </style>

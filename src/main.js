@@ -4,10 +4,8 @@ import router from './router/router';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faChevronCircleRight,
-  faChevronCircleLeft,
-  faShoppingCart
+  faChevronCircleLeft
 } from '@fortawesome/free-solid-svg-icons';
-import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import VueNavigationBar from 'vue-navigation-bar';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
@@ -35,8 +33,6 @@ Vue.component('vue-navigation-bar', VueNavigationBar);
 library.add(
   faChevronCircleRight,
   faChevronCircleLeft,
-  faShoppingCart,
-  faGithubSquare
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
