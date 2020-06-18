@@ -12,12 +12,7 @@
         </button>
       </div>
       <div class="prod-det-right">
-        <img
-          class="product-img"
-          :src="product.src"
-          :alt="product.title"
-          :title="product.title"
-        />
+        <img class="product-img" :src="product.src" :alt="product.title" :title="product.title" />
       </div>
     </div>
     <!-- <button @click="NextProd()">Next</button> -->
@@ -204,11 +199,17 @@ export default {
   .prod-det {
     flex-direction: column-reverse;
     height: 100%;
+    margin-top: 3rem;
     .prod-det-left {
       margin-right: 0;
     }
     .prod-det-right {
       margin-bottom: 2rem;
+      justify-content: center;
+      display: flex;
+      .product-img {
+        width: 80%;
+      }
     }
   }
 }
