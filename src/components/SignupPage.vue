@@ -5,7 +5,7 @@
     </div>
     <div class="signup-main">
       <div class="signup-left">
-        <img src="../data/images/josh-redd-unsplash.jpg" aria-hidden="true" alt />
+        <img src="../assets/images/signup-img.png" aria-hidden="true" alt="" />
       </div>
       <div class="signup-right">
         <c-box class="c-box-container">
@@ -187,7 +187,6 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
     width: 50vw;
     animation: circle 3s infinite;
     clip-path: circle(75%);
