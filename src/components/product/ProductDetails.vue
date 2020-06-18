@@ -12,9 +12,16 @@
         </button>
       </div>
       <div class="prod-det-right">
-        <img class="product-img" :src="product.src" :alt="product.title" :title="product.title" />
+        <img
+          class="product-img"
+          :src="product.src"
+          :alt="product.title"
+          :title="product.title"
+        />
       </div>
     </div>
+    <!-- <button @click="NextProd()">Next</button> -->
+    <!-- <button @click="PrevProd()">Prev</button> -->
     <p>
       <router-link class="more-link" to="/shop">Discover Everything</router-link>
     </p>
@@ -25,12 +32,23 @@
 import products from '../../data/products';
 const featuredProduct = products.featured;
 const newArrival = products.newArrivals;
+
+function getPreviousValidIndex(index, length) {
+  const deprecatedIndex = index - 1;
+  return deprecatedIndex < 0 ? length - 1 : deprecatedIndex;
+}
+function getNextValidIndex(index, length) {
+  const incrementedIndex = index + 1;
+  return incrementedIndex > length - 1 ? 0 : incrementedIndex;
+}
+
 export default {
   name: 'ProductDetails',
   data() {
     return {
       featuredProduct,
-      addedToCart: false
+      addedToCart: false,
+      selectedProdIndex: 0
     };
   },
   computed: {
@@ -40,9 +58,27 @@ export default {
         featuredProduct.find(prod => prod.slug === slug) ||
         newArrival.find(prod => prod.slug === slug)
       );
+    },
+    selectedProd() {
+      return featuredProduct[this.selectedProdIndex];
     }
   },
+  created() {
+    console.log(featuredProduct[this.selectedProdIndex]);
+  },
   methods: {
+    NextProd() {
+      this.selectedProdIndex = getNextValidIndex(
+        this.selectedProdIndex,
+        featuredProduct.length
+      );
+    },
+    PrevProd() {
+      this.selectedProdIndex = getPreviousValidIndex(
+        this.selectedProdIndex,
+        featuredProduct.length
+      );
+    },
     addToCart() {
       const product = this.featuredProduct.forEach(function(item, index) {
         return item[index];
@@ -190,8 +226,8 @@ export default {
       }
     }
   }
-}
-.more-link {
-  display: none;
+  .more-link {
+    display: none;
+  }
 }
 </style>
