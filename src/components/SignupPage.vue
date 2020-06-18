@@ -5,7 +5,7 @@
     </div>
     <div class="signup-main">
       <div class="signup-left">
-        <img src="../assets/images/signup-img.png" aria-hidden="true" alt="" />
+        <img src="../assets/images/signup-img.png" aria-hidden="true" alt />
       </div>
       <div class="signup-right">
         <c-box class="c-box-container">
@@ -37,12 +37,7 @@
                       width="100%"
                       fontSize="14px"
                       transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
-                      variant-color="#FFB667"
-                      bg="#000"
-                      color="#fff"
                       size="lg"
-                      :_active="{ bg: '#000' }"
-                      :_hover="{ bg: '#FFB667' } "
                     >Sign in</c-button>
                   </c-form-control>
                 </form>
@@ -96,12 +91,8 @@
                       width="100%"
                       fontSize="14px"
                       transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
-                      variant-color="#FFB667"
-                      bg="#000"
                       color="#fff"
                       size="lg"
-                      :_active="{ bg: '#000' }"
-                      :_hover="{ bg: '#FFB667' } "
                     >Sign up</c-button>
                   </c-form-control>
                 </form>
@@ -188,7 +179,6 @@ export default {
     align-items: center;
     justify-content: center;
     width: 50vw;
-    animation: circle 3s infinite;
     clip-path: circle(75%);
     transition: clip-path 1s;
     cursor: pointer;
@@ -331,5 +321,21 @@ export default {
 }
 .css-16tdle4 {
   user-select: none;
+}
+.css-klqw1y,
+.css-1pla2it,
+.css-zldgca {
+  background-color: $colour-pri;
+  color: #fff;
+  &:hover {
+    background-color: $colour-pri-hover;
+  }
+}
+.css-16tdle4[aria-selected='true'] {
+  background-color: $colour-pri;
+  color: #fff;
+}
+.css-16tdle4 {
+  background-color: transparentize($color: $colour-pri, $amount: .7);
 }
 </style>
