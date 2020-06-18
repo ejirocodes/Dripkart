@@ -110,7 +110,7 @@ export default {
   components: {
     Navbar,
     Footer,
-    GoTop,
+    GoTop
   }
 };
 </script>
@@ -153,5 +153,14 @@ body,
 <style  lang="scss">
 svg {
   margin-right: 1rem;
+}
+</style>
+
+<style  scoped lang="scss">
+button {
+  position: fixed;
+  z-index: 300;
+  left: 50%;
+  margin-left: -90px;
 }
 </style>
