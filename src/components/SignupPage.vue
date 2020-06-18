@@ -325,17 +325,17 @@ export default {
 .css-klqw1y,
 .css-1pla2it,
 .css-zldgca {
-  background-color: $colour-pri;
-  color: #fff;
+  background-color: $colour-pri !important;
+  color: #fff !important;
   &:hover {
-    background-color: $colour-pri-hover;
+    background-color: $colour-pri-hover !important;
   }
 }
 .css-16tdle4[aria-selected='true'] {
-  background-color: $colour-pri;
-  color: #fff;
+  background-color: $colour-pri !important;
+  color: #fff !important;
 }
 .css-16tdle4 {
-  background-color: transparentize($color: $colour-pri, $amount: .8);
+  background-color: transparentize($color: $colour-pri, $amount: .8) !important;
 }
 </style>
