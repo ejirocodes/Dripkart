@@ -336,6 +336,6 @@ export default {
   color: #fff;
 }
 .css-16tdle4 {
-  background-color: transparentize($color: $colour-pri, $amount: .7);
+  background-color: transparentize($color: $colour-pri, $amount: .8);
 }
 </style>
