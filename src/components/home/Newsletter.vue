@@ -4,7 +4,7 @@
       <h2>Subscribe to our newsletter</h2>
       <p>
         Subscribe to stay updated with the latest
-        <br />trend in the shoe industry
+        trend in the shoe industry
       </p>
     </div>
     <div class="newsletter-right">
@@ -20,7 +20,7 @@
             validation="required|email"
           />
         </div>
-        <FormulateInput type="submit" label="SUBSCRIBE" />
+        <FormulateInput type="submit" label="Subscribe" />
       </FormulateForm>
     </div>
   </section>
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../../assets/sass/_variables.scss";
+@import '../../assets/sass/_variables.scss';
 
 .newsletter {
   display: flex;
@@ -50,7 +50,7 @@ export default {
   padding: 6rem 0;
   .newsletter-left {
     line-height: 1.5;
-    text-align: left;
+    width: 50%;
     h2 {
       text-transform: capitalize;
       font-weight: 600;
@@ -64,10 +64,10 @@ export default {
 </style>
 
 <style lang="scss">
-@import "../../assets/sass/_variables.scss";
+@import '../../assets/sass/_variables.scss';
 .newsletter {
   .newsletter-right {
-    .formulate-input[data-classification="text"] input {
+    .formulate-input[data-classification='text'] input {
       font-size: 1rem !important;
       color: #fff;
       border-color: #fff;
@@ -78,17 +78,24 @@ export default {
         border-color: #fff;
       }
     }
-    .formulate-input[data-classification="button"] button {
+    .formulate-input[data-classification='button'] button {
       font-size: 1rem;
       padding: 0.75em 1.8rem;
       background-color: $colour-uni;
       border: none;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      span {
+        font-size: 1rem;
+        font-weight: 400;
+      }
     }
     .formulate-input {
       margin-bottom: 0;
       .formulate-input-element {
-        
-        max-width: 28rem;
+        max-width: 100%;
+        width: 100%;
       }
     }
     li.formulate-input-error {
@@ -106,13 +113,16 @@ export default {
 }
 // Media Queries
 @media screen and (max-width: 768px) {
+  .input-con {
+    width: 20rem;
+  }
   .newsletter {
     flex-direction: column;
     .newsletter-left {
       margin-bottom: 2.2rem;
     }
     .newsletter-right {
-      .formulate-input[data-classification="button"] button {
+      .formulate-input[data-classification='button'] button {
         width: 100%;
         display: flex;
         align-items: center;
@@ -125,9 +135,22 @@ export default {
   .newsletter {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
+    .newsletter-left {
+      text-align: center;
+      width: 100% !important;
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  .newsletter {
     .newsletter-right {
+      .formulate-input[data-classification='text'] input,
+      .formulate-input[data-classification='button'] button {
+        width: 84%;
+      }
       .formulate-input .formulate-input-element {
-        max-width: 8rem;
+        display: flex;
+        justify-content: center;
       }
     }
   }
