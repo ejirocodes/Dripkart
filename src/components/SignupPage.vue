@@ -19,7 +19,13 @@
                 <form action method="post">
                   <c-form-control is-required>
                     <c-form-label for="email">Email</c-form-label>
-                    <c-input width="100%" type="email" id="email" aria-describedby="email" />
+                    <c-input
+                      width="100%"
+                      type="email"
+                      id="email"
+                      placeholder="ejiro@example.com"
+                      aria-describedby="email"
+                    />
                     <c-form-helper-text id="email-helper-text">We'll never share your email.</c-form-helper-text>
                     <c-form-label for="password">Password</c-form-label>
                     <c-input
@@ -27,6 +33,7 @@
                       width="100%"
                       id="password"
                       aria-describedby="password input"
+                      placeholder="minimum of 8 characters"
                     />
                     <c-form-helper-text id="password-helper-text">Your password is secured with us.</c-form-helper-text>
                     <c-form-error-message>Check again, something ain'right</c-form-error-message>
@@ -68,9 +75,9 @@
                     <c-input
                       width="100%"
                       type="name"
-                      aria-describedby="first name and last name"
-                      aria-placeholder="first name and last name"
-                      placeholder="First name Last name"
+                      aria-describedby="First Name and Last Name"
+                      aria-placeholder="First Name and Last Name"
+                      placeholder="First Name and Last Name"
                     />
                     <c-form-label for="email-2">Email</c-form-label>
                     <c-input
@@ -78,10 +85,16 @@
                       type="email"
                       id="email-2"
                       aria-describedby="email address"
+                      placeholder="ejiro@example.com"
                     />
                     <c-form-helper-text id="email-helper-text">We'll never share your email.</c-form-helper-text>
                     <c-form-label for="password-2">Password</c-form-label>
-                    <c-input type="password" width="100%" id="password-2" />
+                    <c-input
+                      type="password"
+                      width="100%"
+                      id="password-2"
+                      placeholder="minimum of 8 characters"
+                    />
                     <c-form-helper-text id="password-helper-text">Your password is secured with us.</c-form-helper-text>
                     <c-form-error-message>Check again, something ain'right</c-form-error-message>
                     <c-button
@@ -336,6 +349,9 @@ export default {
   color: #fff !important;
 }
 .css-16tdle4 {
-  background-color: transparentize($color: $colour-pri, $amount: .8) !important;
+  background-color: transparentize(
+    $color: $colour-pri,
+    $amount: 0.8
+  ) !important;
 }
 </style>
