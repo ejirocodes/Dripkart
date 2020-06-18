@@ -73,6 +73,7 @@ export default {
       border-color: #fff;
       &::placeholder {
         color: $colour-sec;
+        text-align: center;
       }
       &:focus {
         border-color: #fff;
@@ -119,6 +120,7 @@ export default {
   .newsletter {
     flex-direction: column;
     .newsletter-left {
+      text-align: center;
       margin-bottom: 2.2rem;
     }
     .newsletter-right {
@@ -136,7 +138,6 @@ export default {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
     .newsletter-left {
-      text-align: center;
       width: 100% !important;
     }
   }
