@@ -7,6 +7,7 @@ import Homepage from '../components/home/HomePage.vue';
 import Signup from '../components/SignupPage.vue';
 import Cart from '../components/cart/ShoppingCart.vue';
 import ProductDetails from '../components/product/ProductDetails.vue';
+import NotFound from '../components/NotFound.vue';
 
 export default new Router({
   mode: 'history',
@@ -28,6 +29,11 @@ export default new Router({
       name: 'ProductDetails',
       component: ProductDetails,
       props: true
+    },
+    {
+      path: '*',
+      name: 'NotFound',
+      component: NotFound
     }
   ]
 });
