@@ -243,13 +243,16 @@ h1 {
   .prod-det {
     .prod-det-left {
       .product-title {
-        font-size: 2rem;
+        font-size: 1.6rem;
       }
       .product-desc {
         font-size: 1rem;
       }
       .cart-btn-2 {
-        padding: 0.7rem 1.8rem;
+        padding: 1rem 1.8rem;
+      }
+      .product-cost {
+        margin-bottom: 1.2rem;
       }
     }
   }
