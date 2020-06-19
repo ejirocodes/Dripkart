@@ -17,7 +17,7 @@ export default {
         }
     },
     beforeCreate() {
-        console.log('from the cart', this.cart);
+        console.log('from the cart', this.$store.state.cart);
         
     },
 }

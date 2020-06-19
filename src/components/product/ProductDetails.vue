@@ -58,9 +58,6 @@ export default {
       return featuredProduct[this.selectedProdIndex];
     }
   },
-  created() {
-    console.log(featuredProduct[this.selectedProdIndex]);
-  },
   methods: {
     NextProd() {
       this.selectedProdIndex = getNextValidIndex(
@@ -75,14 +72,14 @@ export default {
       );
     },
     addToCart() {
-      const product = this.featuredProduct.forEach(function(item, index) {
-        return item[index];
-      });
+      const product = this.product
+      
       const cost = product.cost;
       this.$store.commit(
         'addProductToCart',
-        Object.assign({}, product, { cost })
+        Object.assign({}, product,  cost )
       );
+      console.log( Object.assign({}, product,  cost ));
       this.addedToCart = true;
     }
   }
