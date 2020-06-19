@@ -5,11 +5,11 @@
         <h1 class="product-title">{{product.title}}</h1>
         <p class="product-desc">{{product.description}}</p>
         <p class="product-cost">&#36;{{product.cost}}</p>
-        <button class="cart-btn-2" @click="addToCart()">
+        <c-button class="cart-btn-2" @click="addToCart()">
           <span>
             <i class="fas fa-shopping-cart"></i> Add to cart
           </span>
-        </button>
+        </c-button>
       </div>
       <div class="prod-det-right">
         <img class="product-img" :src="product.src" :alt="product.title" :title="product.title" />
@@ -17,9 +17,8 @@
     </div>
     <!-- <button @click="NextProd()">Next</button> -->
     <!-- <button @click="PrevProd()">Prev</button> -->
-    <p>
-      <router-link class="more-link" to="/shop">Discover Everything</router-link>
-    </p>
+    <router-link tag="div" class="more-link" to="/shop">Discover Everything</router-link>
+    <CBox />
   </section>
 </template>
 
@@ -27,6 +26,8 @@
 import products from '../../data/products';
 const featuredProduct = products.featured;
 const newArrival = products.newArrivals;
+
+import { CBox, CButton } from '@chakra-ui/vue';
 
 function getPreviousValidIndex(index, length) {
   const deprecatedIndex = index - 1;
@@ -39,6 +40,7 @@ function getNextValidIndex(index, length) {
 
 export default {
   name: 'ProductDetails',
+  components: { CBox, CButton },
   data() {
     return {
       featuredProduct,
@@ -56,6 +58,9 @@ export default {
     },
     selectedProd() {
       return featuredProduct[this.selectedProdIndex];
+    },
+    cart() {
+      return this.$store.state.cart;
     }
   },
   methods: {
@@ -71,22 +76,38 @@ export default {
         featuredProduct.length
       );
     },
+    showToast() {
+      this.$toast({
+        title: 'Account created.',
+        description: "We've created your account for you.",
+        status: 'success',
+        duration: 10000,
+        position: 'top-right'
+      });
+    },
     addToCart() {
-      const product = this.product
-      
+      // Add products to cart
+      const product = this.product;
       const cost = product.cost;
-      this.$store.commit(
-        'addProductToCart',
-        Object.assign({}, product,  cost )
-      );
-      console.log( Object.assign({}, product,  cost ));
+      this.$store.commit('addProductToCart', Object.assign({}, product, cost));
+      console.log(Object.assign({}, product, cost));
       this.addedToCart = true;
+      this.$toast({
+        title: ` ${this.product.title} have been added to cart.`,
+        description: ` You have ${this.cart.length} items in cart`,
+        status: 'success',
+        duration: 10000,
+        position: 'bottom'
+      });
     }
   }
 };
 </script>
 <style scoped lang="scss">
 @import '../../assets/sass/_variables.scss';
+h1 {
+  font-size: 5rem;
+}
 .prod-det {
   font-size: 3rem !important;
   font-family: 'Lato', sans-serif;
@@ -181,14 +202,18 @@ export default {
 }
 .more-link {
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 700;
   font-family: 'Lato', sans-serif;
   letter-spacing: 1.2px;
   color: $colour-uni;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  float: right;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.cart-info {
+  font-size: 1rem;
+  color: #79d70f;
 }
 
 // MEDIA QUERIES
@@ -228,4 +253,11 @@ export default {
     display: none;
   }
 }
+
+</style>
+
+<style lang="scss">
+  .css-1acfs8s {
+    font-size: 2.4rem;
+  }
 </style>
