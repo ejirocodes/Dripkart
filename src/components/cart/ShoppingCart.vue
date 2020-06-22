@@ -61,6 +61,7 @@ export default {
 .cart-page {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 2rem;
   .cart-left {
     display: flex;
     align-items: center;

@@ -156,7 +156,7 @@ pa
   position: fixed;
   left: 0px;
   bottom: -1px;
-  height: 3rem;
+  height: 3.1rem;
   width: 100%;
   background: $colour-pri;
   font-size: 2rem;

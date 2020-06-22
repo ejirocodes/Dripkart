@@ -123,6 +123,7 @@ import 'vue-navigation-bar/dist/vue-navigation-bar.css';
     @include hvr-bounce-to-right;
     background: $colour-pri !important;
     color: #fff !important;
+    border-radius: 0;
   }
 }
 .vnb__sub-menu-options__option__link:hover {

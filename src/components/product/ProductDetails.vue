@@ -143,7 +143,7 @@ h1 {
       &:active {
         box-shadow: none;
       }
-      border-radius: 40px;
+      border-radius: 0;
       font-family: 'Lato', sans-serif;
       padding: 0.8rem 2.5rem;
       vertical-align: middle;
