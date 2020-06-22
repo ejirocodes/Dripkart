@@ -167,6 +167,9 @@ export default {
       .cart-img {
         margin-right: 1.5rem;
         width: 100%;
+        img {
+          width: 8rem;
+        }
       }
     }
   }
