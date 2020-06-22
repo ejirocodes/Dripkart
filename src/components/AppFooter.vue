@@ -2,7 +2,6 @@
   <footer>
     <c-link href="https://github.com/Ejiro-Asiuwhu/dripkart" is-external>
       View on GitHub
-      <i class="fab fa-github"></i>
     </c-link>
   </footer>
 </template>

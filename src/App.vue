@@ -94,6 +94,7 @@
     <Navbar />
     <main>
       <router-view></router-view>
+      <AppShell></AppShell>
     </main>
     <go-top :size="40" :bottom="30" :max-width="0" :right="30" bg-color="#000">Back to top</go-top>
     <Footer />
@@ -103,6 +104,7 @@
 <script>
 import Navbar from './components/AppNavbar.vue';
 import Footer from './components/AppFooter.vue';
+import AppShell from './components/AppShell.vue';
 import GoTop from '@inotom/vue-go-top';
 
 export default {
@@ -110,6 +112,7 @@ export default {
   components: {
     Navbar,
     Footer,
+    AppShell,
     GoTop
   }
 };
