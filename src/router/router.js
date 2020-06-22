@@ -8,6 +8,7 @@ import Signup from '../views/SignupPage.vue';
 import Cart from '../components/cart/ShoppingCart.vue';
 import ProductDetails from '../components/product/ProductDetails.vue';
 import NotFound from '../views/NotFound.vue';
+import Shop from '../views/Shop.vue';
 
 export default new Router({
   mode: 'history',
@@ -22,7 +23,13 @@ export default new Router({
     },
     {
       path: '/cart',
-      component: Cart
+      component: Cart,
+      name: 'Cart'
+    },
+    {
+      path: '/shop',
+      component: Shop,
+      name: 'Shop'
     },
     {
       path: '/product-details/:slug',
