@@ -20,6 +20,7 @@
           />
         </g>
       </svg>
+      <span class="icon-label">Home</span>
     </router-link>
     <router-link exact to="/shop">
       <svg
@@ -38,6 +39,7 @@
           />
         </g>
       </svg>
+      <span class="icon-label">Shop</span>
     </router-link>
     <router-link class="cart-router-link" exact to="/cart">
       <svg
@@ -62,6 +64,7 @@
           />
         </g>
       </svg>
+      <p class="icon-label">Cart</p>
       <span>{{cart.length}}</span>
     </router-link>
     <router-link exact to="/signup">
@@ -135,6 +138,7 @@
         <g />
         <g />
       </svg>
+      <span class="icon-label">User</span>
     </router-link>
   </div>
 </template>
@@ -156,7 +160,7 @@ pa
   position: fixed;
   left: 0px;
   bottom: -1px;
-  height: 3.1rem;
+  height: 3.4rem;
   width: 100%;
   background: $colour-pri;
   font-size: 2rem;
@@ -170,19 +174,30 @@ pa
   }
   a {
     padding: 0.3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
     &.router-link-active {
       background: darken($colour-pri, 100%);
       height: 100%;
       display: flex;
       padding: 0.3rem 1rem;
     }
+    .icon-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin-top: 5px;
+    }
   }
   .cart-router-link {
     position: relative;
     span {
       position: absolute;
-      top: -1px;
-      right: 10px;
+      top: -2px;
+      right: 11px;
       color: #fff;
       font-size: 1rem;
     }
