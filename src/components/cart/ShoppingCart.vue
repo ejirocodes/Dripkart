@@ -153,6 +153,11 @@ export default {
     .cart-right {
       align-items: center;
       text-align: center;
+      .cart-left-top {
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
     }
     .cart-left {
       .product-title {
@@ -172,16 +177,19 @@ export default {
         }
       }
     }
+    .cart-left-bottom .checkout-btn {
+      padding: 0.8rem 1.8rem;
+      font-size: 0.8rem;
+    }
   }
 }
 @media (max-width: 320px) {
   .cart-page {
-    .cart-right {
-    }
     .cart-left {
       .product-title {
-        h1{
-        font-size: 0.8rem;}
+        h1 {
+          font-size: 0.8rem;
+        }
       }
       p {
         font-size: 0.6rem;
