@@ -97,7 +97,7 @@
         </g>
       </svg>
     </router-link>
-    <router-link to="/">
+    <router-link to="/signup">
       <svg
         version="1.1"
         id="Capa_1"
@@ -193,6 +193,7 @@ pa
   align-items: center;
   svg {
     fill: #fff;
+    margin: 0;
   }
 }
 </style>

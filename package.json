@@ -38,7 +38,6 @@
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2",
     "vue-axe": "^2.3.0",
-    "vue-svg-loader": "^0.16.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

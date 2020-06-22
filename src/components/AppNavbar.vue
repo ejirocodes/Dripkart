@@ -75,7 +75,7 @@ export default {
         menuOptionsRight: [
           {
             type: 'button',
-            text: 'Signup',
+            text: 'Sign Up',
             path: '/signup',
             class: 'login-btn signup-custom'
           },
