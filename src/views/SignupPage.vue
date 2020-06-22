@@ -292,6 +292,11 @@ export default {
 }
 
 //////////MEDIA QUERIES
+@media screen and (max-width: 992px) {
+  .signup {
+    margin-bottom: 2rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .signup-main {
     .signup-left {

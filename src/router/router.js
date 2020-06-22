@@ -4,10 +4,10 @@ import Router from 'vue-router';
 Vue.use(Router);
 
 import Homepage from '../components/home/HomePage.vue';
-import Signup from '../components/SignupPage.vue';
+import Signup from '../views/SignupPage.vue';
 import Cart from '../components/cart/ShoppingCart.vue';
 import ProductDetails from '../components/product/ProductDetails.vue';
-import NotFound from '../components/NotFound.vue';
+import NotFound from '../views/NotFound.vue';
 
 export default new Router({
   mode: 'history',
