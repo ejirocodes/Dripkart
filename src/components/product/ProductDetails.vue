@@ -221,6 +221,12 @@ h1 {
 }
 
 // MEDIA QUERIES
+
+@media screen and (max-width: 992px) {
+  .prod-det {
+  padding-bottom: 2rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .prod-det {
     flex-direction: column-reverse;
