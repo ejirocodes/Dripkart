@@ -154,7 +154,7 @@ h1 {
       transition-duration: 0.5s !important;
       transition-timing-function: unset;
       border: none;
-      background: #f71565;
+      background: $colour-pri;
       color: #fff;
       overflow: hidden;
       display: flex;
@@ -265,7 +265,9 @@ h1 {
 </style>
 
 <style lang="scss">
+@import '../../assets/sass/_variables.scss';
   .css-1acfs8s {
     font-size: 2.4rem;
+    background-color: $colour-pri;
   }
 </style>
