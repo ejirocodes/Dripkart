@@ -96,8 +96,8 @@ export default {
         title: ` ${this.product.title} have been added to cart.`,
         description: ` You have ${this.cart.length} items in cart`,
         status: 'success',
-        duration: 10000,
-        position: 'bottom'
+        duration: 5000,
+        position: 'top-right',
       });
     }
   }
@@ -215,11 +215,6 @@ h1 {
   text-decoration: underline;
   cursor: pointer;
 }
-.cart-info {
-  font-size: 1rem;
-  color: #79d70f;
-}
-
 // MEDIA QUERIES
 
 @media screen and (max-width: 992px) {
