@@ -196,10 +196,18 @@ pa
     position: relative;
     span {
       position: absolute;
-      top: -2px;
-      right: 11px;
+      top: 0px;
+      right: 9px;
       color: #fff;
       font-size: 1rem;
+      background: #000;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid #fff;
     }
   }
 }
