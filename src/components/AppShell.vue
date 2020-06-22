@@ -199,7 +199,7 @@ pa
   a {
     padding: 0.3rem 1rem;
     &.router-link-active {
-      background: darken($colour-pri, 80%);
+      background: darken($colour-pri, 100%);
       height: 100%;
       display: flex;
       padding: 0.3rem 1rem;

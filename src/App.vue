@@ -96,7 +96,7 @@
       <router-view></router-view>
       <AppShell></AppShell>
     </main>
-    <go-top :size="40" :bottom="30" :max-width="0" :right="30" bg-color="#000">Back to top</go-top>
+    <go-top :size="40" :bottom="52" :max-width="0" :right="30" bg-color="#000">Back to top</go-top>
     <Footer />
   </div>
 </template>
