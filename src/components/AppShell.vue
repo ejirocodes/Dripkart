@@ -1,11 +1,11 @@
 <template>
   <div id="app-shell">
-    <router-link to="/">
+    <router-link exact to="/">
       <svg
         id="Layer_1"
         enable-background="new 0 0 512 512"
         viewBox="0 0 512 512"
-        width="2rem"
+        width="1.6rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g>
@@ -21,7 +21,7 @@
         </g>
       </svg>
     </router-link>
-    <router-link to="/">
+    <router-link exact to="/search">
       <svg
         version="1.1"
         id="Capa_1"
@@ -32,7 +32,7 @@
         viewBox="0 0 396.819 396.819"
         style="enable-background:new 0 0 396.819 396.819;"
         xml:space="preserve"
-        width="2rem"
+        width="1.6rem"
       >
         <g>
           <g>
@@ -73,12 +73,12 @@
         <g />
       </svg>
     </router-link>
-    <router-link to="/cart">
+    <router-link exact to="/cart">
       <svg
         id="Capa_1"
         enable-background="new 0 0 512 512"
         viewBox="0 0 512 512"
-        width="2rem"
+        width="1.6rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g>
@@ -97,7 +97,7 @@
         </g>
       </svg>
     </router-link>
-    <router-link to="/signup">
+    <router-link exact to="/signup">
       <svg
         version="1.1"
         id="Capa_1"
@@ -105,7 +105,7 @@
         xmlns:xlink="http://www.w3.org/1999/xlink"
         x="0px"
         y="0px"
-        width="2rem"
+        width="1.6rem"
         viewBox="0 0 480 480"
         style="enable-background:new 0 0 480 480;"
         xml:space="preserve"
@@ -194,6 +194,18 @@ pa
   svg {
     fill: #fff;
     margin: 0;
+  }
+  .router-link-active {
+    color: red;
+    background-color: rgba(0, 0, 0, 0.445);
+    border-radius: 50%;
+    display: flex;
+    padding: 0.3rem;
+  }
+}
+@media (min-width: 992px) {
+  #app-shell {
+    display: none;
   }
 }
 </style>
