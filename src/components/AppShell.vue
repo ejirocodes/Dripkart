@@ -181,8 +181,8 @@ pa
     position: relative;
     span {
       position: absolute;
-      top: -3px;
-      right: 8px;
+      top: -1px;
+      right: 10px;
       color: #fff;
       font-size: 1rem;
     }

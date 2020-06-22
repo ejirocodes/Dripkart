@@ -76,15 +76,6 @@ export default {
         featuredProduct.length
       );
     },
-    showToast() {
-      this.$toast({
-        title: 'Account created.',
-        description: "We've created your account for you.",
-        status: 'success',
-        duration: 10000,
-        position: 'top-right'
-      });
-    },
     addToCart() {
       // Add products to cart
       const product = this.product;
@@ -96,7 +87,7 @@ export default {
         title: ` ${this.product.title} have been added to cart.`,
         description: ` You have ${this.cart.length} items in cart`,
         status: 'success',
-        duration: 5000,
+        duration: 1000,
         position: 'top-right',
       });
     }

@@ -10,7 +10,7 @@
           <p>{{product.category}}</p>
         </div>
         <div class="product-cost">
-          <p>$ {{product.cost}}</p>
+          <p>${{product.cost}}</p>
         </div>
       </div>
     </div>
@@ -81,6 +81,7 @@ export default {
         font-size: 1.6rem;
         font-weight: 700;
         color: $colour-pri;
+        margin-bottom: 0.6rem;
       }
       p {
         font-size: 1.2rem;
@@ -96,6 +97,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-left: 2rem;
     .cart-left-top {
       h2 {
         font-size: 2rem;
@@ -133,6 +135,54 @@ export default {
       border: none;
       background-color: $colour-pri;
       text-transform: uppercase;
+    }
+  }
+}
+
+// MEDIA QUERIES
+@media (max-width: 768px) {
+  .cart-page {
+    flex-direction: column;
+    .cart-right {
+      margin-left: 0;
+    }
+  }
+}
+@media (max-width: 425px) {
+  .cart-page {
+    .cart-right {
+      align-items: center;
+      text-align: center;
+    }
+    .cart-left {
+      .product-title {
+        margin-right: 1rem;
+        h1 {
+          font-size: 1.2rem;
+        }
+        p {
+          font-size: 0.8rem;
+        }
+      }
+      .cart-img {
+        margin-right: 1.5rem;
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 320px) {
+  .cart-page {
+    .cart-right {
+    }
+    .cart-left {
+      .product-title {
+        h1{
+        font-size: 0.8rem;}
+      }
+      p {
+        font-size: 0.6rem;
+      }
     }
   }
 }
