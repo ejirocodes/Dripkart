@@ -65,7 +65,7 @@
         </g>
       </svg>
       <p class="icon-label">Cart</p>
-      <span>{{cart.length}}</span>
+      <span v-if="cart.length">{{cart.length}}</span>
     </router-link>
     <router-link exact to="/signup">
       <svg
