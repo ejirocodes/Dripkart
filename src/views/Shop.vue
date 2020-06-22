@@ -32,14 +32,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/sass/_variables.scss';
 .shop-container {
+  font-size: 6rem;
+  background-color: $colour-sec;
+  border-radius: 2rem;
   .shop {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-gap: 20px;
     align-items: stretch;
+    margin-top: 2rem;
+    padding: 0 2rem;
+    figure {
+      width: 100%;
+      height: 28rem;
+      padding: 0.5rem;
+      border-radius: 1rem;
+      background-color: #fff;
+    }
     .shop-img {
-     max-width: 100%;   
+      max-width: 100%;
+      background-color: $colour-sec;
+      object-fit: contain;
+      height: 20rem;
+      padding: 1.4rem;
+      border-radius: 1rem;
     }
   }
 }
