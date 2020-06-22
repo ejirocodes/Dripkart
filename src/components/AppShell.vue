@@ -73,7 +73,7 @@
         <g />
       </svg>
     </router-link>
-    <router-link exact to="/cart">
+    <router-link class="cart-router-link" exact to="/cart">
       <svg
         id="Capa_1"
         enable-background="new 0 0 512 512"
@@ -96,6 +96,7 @@
           />
         </g>
       </svg>
+      <span>{{cart.length}}</span>
     </router-link>
     <router-link exact to="/signup">
       <svg
@@ -173,7 +174,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    cart() {
+      return this.$store.state.cart;
+    }
+  }
+};
 </script>
 pa
 <style lang="scss" scoped>
@@ -187,11 +194,10 @@ pa
   width: 100%;
   background: $colour-pri;
   font-size: 2rem;
-  z-index: 300;
+  z-index: 20;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.22), 0 14px 28px rgba(0, 0, 0, 0.25);
   svg {
     fill: #fff;
     margin: 0;
@@ -203,6 +209,14 @@ pa
       height: 100%;
       display: flex;
       padding: 0.3rem 1rem;
+    }
+  }
+  .cart-router-link {
+    position: relative;
+    span {
+      position: absolute;
+      top: 0;
+      right: 4px;
     }
   }
 }
