@@ -11,7 +11,7 @@
         <p class="price">&#36;899</p>
         <div class="hero-main-left-btn">
           <router-link to="/shop">Shop</router-link>
-          <a href="#">Explore</a>
+          <a href="#prod-feature">Explore</a>
         </div>
       </div>
       <div class="hero-main-right">

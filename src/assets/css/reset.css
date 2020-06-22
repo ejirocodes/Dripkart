@@ -170,6 +170,7 @@ html {
   font-size: 100%; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -ms-text-size-adjust: 100%; /* 2 */
+   scroll-behavior: smooth;
 }
 a:focus,
 button:focus,
