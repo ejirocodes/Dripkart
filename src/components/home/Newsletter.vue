@@ -71,6 +71,7 @@ export default {
       font-size: 1rem !important;
       color: #fff;
       border-color: #fff;
+      border-radius: 0;
       &::placeholder {
         color: $colour-sec;
         text-align: center;
@@ -82,6 +83,7 @@ export default {
     .formulate-input[data-classification='button'] button {
       font-size: 1rem;
       padding: 0.75em 1.8rem;
+      border-radius: 0;
       background-color: $colour-uni;
       border: none;
       width: 100%;

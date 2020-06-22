@@ -1,5 +1,5 @@
 <template>
-  <section class="prod-feature prod-showcase">
+  <section id="prod-feature" class="prod-feature prod-showcase">
     <div class="prod-showcase-heading">
       <h1>{{title}}</h1>
     </div>

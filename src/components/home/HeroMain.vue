@@ -10,7 +10,7 @@
         <p>Dripkart brings you to a new collection of next-generation <br> BattleKnit technology engineered shoes.</p>
         <p class="price">&#36;899</p>
         <div class="hero-main-left-btn">
-          <a href="#">Shop</a>
+          <router-link to="/shop">Shop</router-link>
           <a href="#">Explore</a>
         </div>
       </div>

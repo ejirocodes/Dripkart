@@ -259,6 +259,6 @@ h1 {
 @import '../../assets/sass/_variables.scss';
   .css-1acfs8s {
     font-size: 2.4rem;
-    background-color: $colour-pri;
+    background-color: $colour-pri !important;
   }
 </style>

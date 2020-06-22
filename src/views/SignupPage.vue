@@ -244,6 +244,7 @@ export default {
   }
   input {
     border-color: $colour-uni;
+    border-radius: 0 !important;
   }
   #password-helper-text,
   #email-helper-text {
