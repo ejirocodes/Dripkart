@@ -191,16 +191,19 @@ pa
   display: flex;
   justify-content: space-around;
   align-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.22), 0 14px 28px rgba(0, 0, 0, 0.25);
   svg {
     fill: #fff;
     margin: 0;
   }
-  .router-link-active {
-    color: red;
-    background-color: rgba(0, 0, 0, 0.445);
-    border-radius: 50%;
-    display: flex;
-    padding: 0.3rem;
+  a {
+    padding: 0.3rem 1rem;
+    &.router-link-active {
+      background: darken($colour-pri, 80%);
+      height: 100%;
+      display: flex;
+      padding: 0.3rem 1rem;
+    }
   }
 }
 @media (min-width: 992px) {
