@@ -6,7 +6,7 @@
         <img class="shop-img" :src="product.src" :alt="product.title" :title="product.title" />
         <h2 class="shop-title">{{product.title}}</h2>
         <p class="shop-cost">&#36;{{product.cost}}</p>
-        <button class="add-to-cart">
+        <button class="add-to-cart" @click="addToCart()">
           <svg
             version="1.1"
             id="Capa_1"
@@ -64,6 +64,34 @@ export default {
       featuredProducts,
       newArrival
     };
+  },
+  //   mounted() {
+  //       let prodItem = this.featuredProducts.forEach(function(arrayItem) {
+  //         console.log( arrayItem);
+  //       }
+  //     );
+  //   },
+  methods: {
+    addToCart() {
+      const product = this.featuredProducts.forEach((element) => {
+        // console.log(element.title);
+        // console.log(index);
+        // console.log(array);
+        return element.cost;
+      });
+      console.log(product);
+      //   const cost = product.cost;
+
+      this.$store.commit('addProductToCart', Object.assign({}, product));
+      this.addedToCart = true;
+      //   this.$toast({
+      //     title: ` ${this.product.title} have been added to cart.`,
+      //     description: ` You have ${this.cart.length} items in cart`,
+      //     status: 'success',
+      //     duration: 1000,
+      //     position: 'top-right'
+      //   });
+    }
   }
 };
 </script>
