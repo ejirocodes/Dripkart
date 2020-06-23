@@ -1,6 +1,6 @@
 <template>
   <section class="shop-container">
-    <h1>{{title}}</h1>
+    <h1 class="shop-heading">{{title}}</h1>
     <div class="shop">
       <figure v-for="(product) in  newArrival" :key="product.slug">
         <img class="shop-img" :src="product.src" :alt="product.title" :title="product.title" />
@@ -46,8 +46,8 @@
       </figure>
       <figure v-for="(product) in  featuredProducts" :key="product.slug">
         <img class="shop-img" :src="product.src" :alt="product.title" :title="product.title" />
-        <h2>{{product.title}}</h2>
-        <p>&#36;{{product.cost}}</p>
+        <h2 class="shop-title">{{product.title}}</h2>
+        <p class="shop-cost">&#36;{{product.cost}}</p>
         <button class="add-to-cart" @click="addToCart()">
           <svg
             version="1.1"
@@ -136,9 +136,16 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/sass/_variables.scss';
 .shop-container {
+  margin: 2.5rem 0;
   font-size: 6rem;
   background-color: $colour-sec;
   border-radius: 2rem;
+  .shop-heading {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
   .shop {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
