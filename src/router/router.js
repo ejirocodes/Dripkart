@@ -20,7 +20,8 @@ export default new Router({
     },
     {
       path: '/signup',
-      component: Signup
+      component: Signup,
+      beforeEnter: authGuard
     },
     {
       path: '/cart',
@@ -30,8 +31,7 @@ export default new Router({
     {
       path: '/shop',
       component: Shop,
-      name: 'Shop',
-      beforeEnter: authGuard
+      name: 'Shop'
     },
     {
       path: '/product-details/:slug',
