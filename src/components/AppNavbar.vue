@@ -13,7 +13,7 @@ export default {
         isUsingVueRouter: true,
         mobileBreakpoint: 992,
         brandImagePath: '/',
-        brandImage: require('../assets/logo.png'),
+        brandImage: require('../assets/logo-2.png'),
         brandImageAltText: 'Dripkart',
         showBrandImageInMobilePopup: true,
         ariaLabelMainNav: 'Main Navigation',
@@ -142,27 +142,7 @@ import 'vue-navigation-bar/dist/vue-navigation-bar.css';
   font-weight: 600;
   color: $colour-uni;
 }
-@media screen and (max-width: 991px) {
-  .vnb__popup__bottom__menu-options__option__link--no-highlight,
-  .vnb__popup__bottom__sub-menu-options__option__link {
-    font-size: 1.2rem;
-    color: $colour-uni;
-    line-height: 1.4;
-    padding: 10px 24px;
-    border-left: none;
-    text-transform: capitalize;
-  }
-  .vnb__popup__bottom__menu-options {
-    border-left: 2px solid $colour-pri;
-    border-right: 2px solid $colour-pri;
-  }
-  .vnb__popup__bottom__menu-options__option__link {
-    font-size: 1.2rem;
-  }
-  .vnb__popup__bottom__sub-menu-options__option__link__sub-text {
-    display: none !important;
-  }
-}
+
 .vnb__menu-options__option__button__icon--right {
   margin-left: 0;
   margin-right: 5px;
@@ -186,6 +166,32 @@ a.vnb__menu-options__option__link {
   }
   span {
     margin-bottom: 3px;
+  }
+}
+.vnb__brand-image-wrapper__link__image {
+  max-height: 60px;
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 991px) {
+  .vnb__popup__bottom__menu-options__option__link--no-highlight,
+  .vnb__popup__bottom__sub-menu-options__option__link {
+    font-size: 1.2rem;
+    color: $colour-uni;
+    line-height: 1.4;
+    padding: 10px 24px;
+    border-left: none;
+    text-transform: capitalize;
+  }
+  .vnb__popup__bottom__menu-options {
+    border-left: 2px solid $colour-pri;
+    border-right: 2px solid $colour-pri;
+  }
+  .vnb__popup__bottom__menu-options__option__link {
+    font-size: 1.2rem;
+  }
+  .vnb__popup__bottom__sub-menu-options__option__link__sub-text {
+    display: none !important;
   }
 }
 </style>
