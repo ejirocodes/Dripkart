@@ -17,8 +17,8 @@ import Chakra, { CThemeProvider } from '@chakra-ui/vue';
 import VueDarkMode from '@vue-a11y/dark-mode';
 import store from './store/index';
 import GoTop from '@inotom/vue-go-top';
-
-Vue.config.productionTip = false;
+import { domain, clientId } from '../auth_config.json';
+import { Auth0Plugin } from './auth';
 
 Vue.use(VueFormulate);
 
@@ -28,12 +28,21 @@ Vue.use(Chakra);
 
 Vue.use(GoTop);
 
+Vue.use(Auth0Plugin, {
+  domain,
+  clientId,
+  onRedirectCallback: appState => {
+    router.push(
+      appState && appState.targetUrl
+        ? appState.targetUrl
+        : window.location.pathname
+    );
+  }
+});
+
 Vue.component('vue-navigation-bar', VueNavigationBar);
 
-library.add(
-  faChevronCircleRight,
-  faChevronCircleLeft,
-);
+library.add(faChevronCircleRight, faChevronCircleLeft);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
@@ -43,6 +52,8 @@ if (process.env.NODE_ENV === 'development') {
   const VueAxe = require('vue-axe').default;
   Vue.use(VueAxe);
 }
+
+Vue.config.productionTip = false;
 
 new Vue({
   router,
