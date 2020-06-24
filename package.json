@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "node server.js"
   },
   "dependencies": {
     "@braid/vue-formulate": "^2.3.2",
@@ -18,8 +19,10 @@
     "@vue-a11y/dark-mode": "^0.2.0",
     "core-js": "^3.6.4",
     "emotion": "^10.0.27",
+    "express": "^4.17.1",
     "i": "^0.3.6",
     "npm": "^6.14.5",
+    "serve-static": "^1.14.1",
     "swiper": "^5.4.1",
     "vue": "^2.6.11",
     "vue-awesome-swiper": "^4.1.1",
