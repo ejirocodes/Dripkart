@@ -57,15 +57,25 @@
                   <div class="circle"></div>
                 </div>
                 <div class="auth-signin">
-                  <p>
+                  <!-- <p>
                     <a href="/facebook">Facebook</a>
                   </p>
                   <p>
                     <a href="/twitter">Twitter</a>
-                  </p>
-                  <p>
+                  </p>-->
+                  <!-- <p>
                     <a href="/google">Google</a>
-                  </p>
+                  </p> -->
+                   <div v-if="!$auth.loading">
+                    <!-- show login when not authenticated -->
+                    <a v-if="!$auth.isAuthenticated" @click="login" class="button is-dark">
+                      <p>Sign in with Google</p>
+                    </a>
+                    <!-- show logout when authenticated -->
+                    <a v-if="$auth.isAuthenticated" @click="logout" class="button is-dark">
+                      <strong>Log out</strong>
+                    </a>
+                  </div>
                 </div>
               </c-tab-panel>
               <c-tab-panel>
@@ -118,15 +128,26 @@
                   <div class="circle"></div>
                 </div>
                 <div class="auth-signin">
-                  <p>
+                  <!-- <p>
                     <a href="/facebook">Facebook</a>
                   </p>
                   <p>
                     <a href="/twitter">Twitter</a>
-                  </p>
-                  <p>
+                  </p>-->
+
+                  <div v-if="!$auth.loading">
+                    <!-- show login when not authenticated -->
+                    <a v-if="!$auth.isAuthenticated" @click="login" class="button is-dark">
+                      <p>Sign in with Google</p>
+                    </a>
+                    <!-- show logout when authenticated -->
+                    <a v-if="$auth.isAuthenticated" @click="logout" class="button is-dark">
+                      <strong>Log out</strong>
+                    </a>
+                  </div>
+                  <!-- <p>
                     <a href="/google">Google</a>
-                  </p>
+                  </p>-->
                 </div>
               </c-tab-panel>
             </c-tab-panels>
@@ -174,6 +195,18 @@ export default {
     CFormHelperText,
     CButton,
     CLink
+  },
+  methods: {
+    // Log the user in
+    login() {
+      this.$auth.loginWithRedirect();
+    },
+    // Log the user out
+    logout() {
+      this.$auth.logout({
+        returnTo: window.location.origin
+      });
+    }
   }
 };
 </script>
@@ -285,6 +318,8 @@ export default {
     a {
       color: $colour-uni;
       text-decoration: none;
+      font-size: 1.8rem;
+      cursor: pointer;
       &:hover {
         text-decoration: underline;
       }
