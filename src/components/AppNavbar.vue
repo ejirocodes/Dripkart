@@ -193,5 +193,8 @@ a.vnb__menu-options__option__link {
   .vnb__popup__bottom__sub-menu-options__option__link__sub-text {
     display: none !important;
   }
+  .vnb__brand-image-wrapper__link__image {
+  max-height: 50px;
+}
 }
 </style>
