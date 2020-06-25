@@ -19,6 +19,8 @@ import store from './store/index';
 import GoTop from '@inotom/vue-go-top';
 import { domain, clientId } from '../auth_config.json';
 import { Auth0Plugin } from './auth';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 Vue.use(VueFormulate);
 
