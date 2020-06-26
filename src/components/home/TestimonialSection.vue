@@ -83,7 +83,7 @@ export default {
   align-items: center;
   margin: $gutter-3 0;
   font-size: 6rem;
-  font-family: 'Prata', serif;
+  letter-spacing: 1.4px;
   div[role='button']:active {
     outline: -webkit-focus-ring-color auto 1px;
   }
