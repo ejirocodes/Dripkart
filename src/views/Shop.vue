@@ -54,7 +54,7 @@
         <v-lazy-image
           class="shop-img"
           :src="product.src"
-          src-placeholder="https://cdn.dribbble.com/users/148670/screenshots/5252136/dots.gif"
+          src-placeholder="https://i0.wp.com/www.rankred.com/wp-content/uploads/2017/06/Loader.gif"
           :alt="product.title"
           :title="product.title"
         />
