@@ -21,7 +21,7 @@
         <v-lazy-image
           class="hero-img"
           :src="selectedImage.src"
-          src-placeholder="https://mir-s3-cdn-cf.behance.net/project_modules/disp/dae67631234507.564a1d230a290.gif"
+          src-placeholder="https://i0.wp.com/www.rankred.com/wp-content/uploads/2017/06/Loader.gif"
           :alt="selectedImage.title"
           :title="selectedImage.title"
         />

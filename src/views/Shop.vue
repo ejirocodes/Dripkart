@@ -3,7 +3,13 @@
     <h1 class="shop-heading">{{title}}</h1>
     <div class="shop">
       <figure v-for="(product) in  newArrival" :key="product.slug">
-        <img class="shop-img" :src="product.src" :alt="product.title" :title="product.title" />
+        <v-lazy-image
+          class="shop-img"
+          src-placeholder="https://i0.wp.com/www.rankred.com/wp-content/uploads/2017/06/Loader.gif"
+          :src="product.src"
+          :alt="product.title"
+          :title="product.title"
+        />
         <h2 class="shop-title">{{product.title}}</h2>
         <p class="shop-cost">&#36;{{product.cost}}</p>
         <button class="add-to-cart" @click="addToCart()">
@@ -45,7 +51,13 @@
         </button>
       </figure>
       <figure v-for="(product) in  featuredProducts" :key="product.slug">
-        <img class="shop-img" :src="product.src" :alt="product.title" :title="product.title" />
+        <v-lazy-image
+          class="shop-img"
+          :src="product.src"
+          src-placeholder="https://cdn.dribbble.com/users/148670/screenshots/5252136/dots.gif"
+          :alt="product.title"
+          :title="product.title"
+        />
         <h2 class="shop-title">{{product.title}}</h2>
         <p class="shop-cost">&#36;{{product.cost}}</p>
         <button class="add-to-cart" @click="addToCart()">
