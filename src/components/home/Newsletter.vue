@@ -104,6 +104,7 @@ export default {
     li.formulate-input-error {
       color: $colour-uni;
       font-size: 0.9rem;
+      font-weight: 800;
     }
     .input-con {
       margin-bottom: 0.5rem;

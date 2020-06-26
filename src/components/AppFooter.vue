@@ -1,7 +1,7 @@
 <template>
   <footer class="footer p-4 bg-pri text-light" id="footer">
     <div class="row mb-5">
-      <div class="col-6 col-lg-3 col-xl-2">
+      <div class="col-6 col-lg">
         <h5>Our Information</h5>
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -25,19 +25,19 @@
         <h5>About Us</h5>
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a href="#" class="nav-link">Return Policy</a>
+            <a href="#" class="nav-link">Our Story</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Privacy Policy</a>
+            <a href="#" class="nav-link">The Team</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Terms & Conditions</a>
+            <a href="#" class="nav-link">Parnership</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Site Map</a>
+            <a href="#" class="nav-link">Community Programmes</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Store House</a>
+            <a href="#" class="nav-link">Popular Campaign</a>
           </li>
         </ul>
       </div>
@@ -112,16 +112,23 @@ export default {
 
 <style scoped lang="scss">
 @import '../assets/sass/_variables.scss';
-footer * {
-  font-size: 1rem;
-}
 .footer {
+    letter-spacing: 1px;
+
   background-color: $colour-uni;
+  h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
   .nav-link {
     padding: 0.5rem 0;
-  }
-  .btn-pri {
-    background-color: $colour-pri;
+    font-size: 0.8rem;
+    color: $colour-sec;
+    display: inline-block;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 </style>
