@@ -110,7 +110,7 @@ export default {
   //   },
   methods: {
     addToCart() {
-      const product = this.featuredProducts.forEach((element) => {
+      const product = this.featuredProducts.forEach(element => {
         // console.log(element.title);
         // console.log(index);
         // console.log(array);
@@ -145,14 +145,14 @@ export default {
     font-size: 2rem;
     font-weight: 600;
     text-align: center;
+    padding-top: 2rem;
   }
   .shop {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-gap: 20px;
     align-items: stretch;
-    margin-top: 2rem;
-    padding: 0 2rem;
+    padding: 2rem;
     figure {
       padding: 0.5rem;
       border-radius: 1rem;
@@ -181,6 +181,19 @@ export default {
     }
     .shop-title {
       margin: 1rem 0;
+    }
+  }
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 375px) {
+  .shop-container {
+    .shop {
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      padding: 1rem;
+    }
+    .shop-heading {
+      font-size: 1.5rem;
     }
   }
 }
