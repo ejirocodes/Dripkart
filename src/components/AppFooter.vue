@@ -2,7 +2,7 @@
   <footer class="footer p-5 bg-pri text-light" id="footer">
     <div class="row mb-4 pb-4 footer-content">
       <div class="col-6 col-lg">
-        <h5>Our Information</h5>
+        <h5>Information</h5>
         <ul class="nav flex-column">
           <li class="nav-item">
             <a href="#" class="nav-link">Return Policy</a>
