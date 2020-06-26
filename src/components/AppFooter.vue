@@ -115,6 +115,7 @@ export default {
 <style scoped lang="scss">
 @import '../assets/sass/_variables.scss';
 .footer {
+  margin-top: 2rem;
   letter-spacing: 1px;
   background-color: $colour-uni;
   .footer-content {
@@ -157,17 +158,17 @@ export default {
 }
 @media screen and (max-width: 425px) {
   .footer {
-    padding: 2rem  2rem 3rem 3rem !important;
+    padding: 2rem  2rem 3rem 2rem !important;
   }
 }
 @media screen and (max-width: 375px) {
   .footer {
     .footer-content {
       h5 {
-        font-size: 0.8rem;
+        font-size: 1rem;
       }
       .nav-link {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
       }
     }
   }

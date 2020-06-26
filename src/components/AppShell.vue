@@ -190,6 +190,7 @@ pa
       font-size: 0.7rem;
       font-weight: 600;
       margin-top: 5px;
+      margin-bottom: 0;
     }
   }
   .cart-router-link {
