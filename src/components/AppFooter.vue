@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer p-4 bg-pri text-light" id="footer">
+  <footer class="footer p-5 bg-pri text-light" id="footer">
     <div class="row mb-4 pb-4 footer-content">
       <div class="col-6 col-lg">
         <h5>Our Information</h5>
@@ -84,7 +84,7 @@
     </div>
     <div class="row justify-content-center mb-2">
       <div class="col col-md-auto text-center">
-        <small class="text-muted">
+        <small>
           &copy;{{new Date().getFullYear()}} Dripkart All Rights Reserved
           <a href="#">Privacy Policy</a> and
           <a href="#">Terms of Service.</a>
@@ -93,7 +93,11 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-auto">
-        <c-link href="https://github.com/Ejiro-Asiuwhu/dripkart" is-external>View on GitHub</c-link>
+        <c-link
+          class="dev-link"
+          href="https://twitter.com/EjiroCodes"
+          is-external
+        >Developed by E J I R O</c-link>
       </div>
     </div>
   </footer>
@@ -130,6 +134,19 @@ export default {
       }
     }
   }
+  small {
+    font-size: 0.7rem;
+    a {
+      color: #fff;
+      font-size: 0.7rem;
+      text-decoration: underline;
+    }
+  }
+  .dev-link {
+    font-size: .8rem;
+    font-weight: 600;
+    color: #fff;
+  }
 }
 
 // MEDIA QUERIES
@@ -138,15 +155,19 @@ export default {
     margin-top: 2rem;
   }
 }
+@media screen and (max-width: 425px) {
+  .footer {
+    padding: 2rem  2rem 3rem 3rem !important;
+  }
+}
 @media screen and (max-width: 375px) {
   .footer {
     .footer-content {
       h5 {
-        font-size: .8rem;
+        font-size: 0.8rem;
       }
       .nav-link {
-        font-size: .6rem;
-
+        font-size: 0.6rem;
       }
     }
   }
