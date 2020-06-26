@@ -5,11 +5,35 @@ import { authGuard } from '../auth/authGuard';
 Vue.use(Router);
 
 import Homepage from '../components/home/HomePage.vue';
-import Signup from '../views/SignupPage.vue';
-import Cart from '../components/cart/ShoppingCart.vue';
-import ProductDetails from '../components/product/ProductDetails.vue';
-import NotFound from '../views/NotFound.vue';
-import Shop from '../views/Shop.vue';
+
+const Signup = resolve => {
+  require.ensure(['../views/SignupPage.vue'], () => {
+    resolve(require('../views/SignupPage.vue'));
+  });
+};
+
+const Cart = resolve => {
+  require.ensure(['../components/cart/ShoppingCart.vue'], () => {
+    resolve(require('../components/cart/ShoppingCart.vue'));
+  });
+};
+
+const ProductDetails = resolve => {
+  require.ensure(['../components/product/ProductDetails.vue'], () => {
+    resolve(require('../components/product/ProductDetails.vue'));
+  });
+};
+
+const Shop = resolve => {
+  require.ensure(['../views/Shop.vue'], () => {
+    resolve(require('../views/Shop.vue'));
+  });
+};
+const NotFound = resolve => {
+  require.ensure(['../views/NotFound.vue'], () => {
+    resolve(require('../views/NotFound.vue'));
+  });
+};
 
 export default new Router({
   mode: 'history',

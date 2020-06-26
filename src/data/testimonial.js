@@ -27,7 +27,7 @@ const testimonialSection = {
         'Lorem ipsum dolor, adipisicing elit. Temporibus voluptatem, ab vitae laboriosam corporis veritatis eum, iste fuga minus voluptates at laudantium ad natus culpa consequuntur',
       avatar: images('./testimonial-avatar-3.jpg'),
       name: 'Jane Parker',
-      title: 'Professor'
+      title: 'Professor at Howard'
     }
   ]
 };
