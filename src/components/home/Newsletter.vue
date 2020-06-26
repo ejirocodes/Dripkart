@@ -14,9 +14,9 @@
             type="text"
             name="email"
             id="email"
-            aria-labelledby="email for newsletter"
-            placeholder="yourname@name.com"
-            aria-placeholder="yourname@name.com"
+            aria-labelledby="Email Address"
+            placeholder="Email Address"
+            aria-placeholder="Email Address"
             validation="required|email"
           />
         </div>
