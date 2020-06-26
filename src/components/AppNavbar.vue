@@ -169,7 +169,7 @@ a.vnb__menu-options__option__link {
   }
 }
 .vnb__brand-image-wrapper__link__image {
-  max-height: 60px;
+  max-height: 45px;
 }
 
 // MEDIA QUERIES
@@ -194,7 +194,10 @@ a.vnb__menu-options__option__link {
     display: none !important;
   }
   .vnb__brand-image-wrapper__link__image {
-  max-height: 50px;
+    max-height: 40px;
+  }
 }
+.vnb__collapse-button__image {
+    max-height: 22px;
 }
 </style>
