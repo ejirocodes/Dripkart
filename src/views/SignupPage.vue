@@ -5,7 +5,12 @@
     </div>
     <div class="signup-main">
       <div class="signup-left">
-        <img src="../assets/images/signup-img.png" aria-hidden="true" alt />
+        <v-lazy-image
+          src-placeholder="https://cdn.dribbble.com/users/148670/screenshots/5252136/dots.gif"
+          src="../assets/images/signup-img.png"
+          aria-hidden="true"
+          alt
+        />
       </div>
       <div class="signup-right">
         <c-box class="c-box-container">
@@ -65,8 +70,8 @@
                   </p>-->
                   <!-- <p>
                     <a href="/google">Google</a>
-                  </p> -->
-                   <div v-if="!$auth.loading">
+                  </p>-->
+                  <div v-if="!$auth.loading">
                     <!-- show login when not authenticated -->
                     <a v-if="!$auth.isAuthenticated" @click="login" class="button is-dark">
                       <p>Sign in with Google</p>
