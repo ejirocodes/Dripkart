@@ -36,7 +36,7 @@ export default {
               },
               {
                 type: 'link',
-                text: 'Nikelab',
+                text: 'Nike Lab',
                 subText: 'The latest sneakers from addidas at your feet',
                 path: '/nike-lab'
               },
@@ -45,7 +45,7 @@ export default {
               },
               {
                 type: 'link',
-                text: 'Adidaslab',
+                text: 'Adidas Lab',
                 subText: 'The latest sneakers from addidas at your feet',
                 path: '/addidas-lab'
               }
