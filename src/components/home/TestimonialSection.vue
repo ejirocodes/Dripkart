@@ -30,7 +30,12 @@
         <p class="testimon">{{testInfo.testimony}}</p>
         <figure>
           <div class="test-avatar-container">
-            <img :src="testInfo.avatar" :alt="testInfo.name" class="test-avatar" />
+            <v-lazy-image
+              :src="testInfo.avatar"
+              src-placeholder="https://cdn.dribbble.com/users/148670/screenshots/5252136/dots.gif"
+              :alt="testInfo.name"
+              class="test-avatar"
+            />
           </div>
           <div class="figure-caption">
             <h1>{{testInfo.name}}</h1>

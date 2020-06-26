@@ -7,7 +7,10 @@
           <br />
           collection {{new Date().getFullYear()}}
         </h1>
-        <p>Dripkart brings you to a new collection of next-generation <br> BattleKnit technology engineered shoes.</p>
+        <p>
+          Dripkart brings you to a new collection of next-generation
+          <br />BattleKnit technology engineered shoes.
+        </p>
         <p class="price">&#36;899</p>
         <div class="hero-main-left-btn">
           <router-link to="/shop">Shop</router-link>
@@ -15,9 +18,10 @@
         </div>
       </div>
       <div class="hero-main-right">
-        <img
+        <v-lazy-image
           class="hero-img"
           :src="selectedImage.src"
+          src-placeholder="https://mir-s3-cdn-cf.behance.net/project_modules/disp/dae67631234507.564a1d230a290.gif"
           :alt="selectedImage.title"
           :title="selectedImage.title"
         />
@@ -33,7 +37,7 @@
 </template>
 
 <script>
-import heroImg from "../../data/products";
+import heroImg from '../../data/products';
 const img = heroImg.heroImage;
 
 function getPreviousValidIndex(index, length) {
@@ -46,7 +50,7 @@ function getNextValidIndex(index, length) {
 }
 
 export default {
-  name: "HeroMain",
+  name: 'HeroMain',
   data() {
     return {
       selectedHeroIndex: 0
@@ -75,8 +79,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../../assets/sass/bounce-to-right.scss";
-@import "../../assets/sass/_variables.scss";
+@import '../../assets/sass/bounce-to-right.scss';
+@import '../../assets/sass/_variables.scss';
 
 .hero-main {
   display: flex;

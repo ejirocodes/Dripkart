@@ -3,7 +3,13 @@
     <div class="hero-main-left example-3d">
       <swiper class="swiper" :options="swiperOption">
         <swiper-slide v-for="(image, index) in img" :key="index">
-          <img class="hero-img" :src="image.src" :alt="image.title" :title="image.title" />
+          <v-lazy-image
+            class="hero-img"
+            src-placeholder="https://cdn.dribbble.com/users/148670/screenshots/5252136/dots.gif"
+            :src="image.src"
+            :alt="image.title"
+            :title="image.title"
+          />
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
