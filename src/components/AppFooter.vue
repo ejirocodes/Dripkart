@@ -1,6 +1,6 @@
 <template>
   <footer class="footer p-4 bg-pri text-light" id="footer">
-    <div class="row mb-5">
+    <div class="row mb-4 pb-4 footer-content">
       <div class="col-6 col-lg">
         <h5>Our Information</h5>
         <ul class="nav flex-column">
@@ -41,7 +41,7 @@
           </li>
         </ul>
       </div>
-      <div class="col-6 col-lg">
+      <div class="col-6 col-lg fx">
         <h5>Products</h5>
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -61,7 +61,7 @@
           </li>
         </ul>
       </div>
-      <div class="col-6 col-lg">
+      <div class="col-6 col-lg fx">
         <h5>Support</h5>
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -86,10 +86,8 @@
       <div class="col col-md-auto text-center">
         <small class="text-muted">
           &copy;{{new Date().getFullYear()}} Dripkart All Rights Reserved
-          <a
-            href="https://www.google.com/policies/privacy/"
-          >Privacy Policy</a> and
-          <a href="https://policies.google.com/terms">Terms of Service.</a>
+          <a href="#">Privacy Policy</a> and
+          <a href="#">Terms of Service.</a>
         </small>
       </div>
     </div>
@@ -113,21 +111,43 @@ export default {
 <style scoped lang="scss">
 @import '../assets/sass/_variables.scss';
 .footer {
-    letter-spacing: 1px;
-
+  letter-spacing: 1px;
   background-color: $colour-uni;
-  h5 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+  .footer-content {
+    border-bottom: 1px solid;
+    h5 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .nav-link {
+      padding: 0.5rem 0;
+      font-size: 0.8rem;
+      color: $colour-sec;
+      display: inline-block;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
-  .nav-link {
-    padding: 0.5rem 0;
-    font-size: 0.8rem;
-    color: $colour-sec;
-    display: inline-block;
-    &:hover {
-      text-decoration: underline;
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 991px) {
+  .fx {
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .footer {
+    .footer-content {
+      h5 {
+        font-size: .8rem;
+      }
+      .nav-link {
+        font-size: .6rem;
+
+      }
     }
   }
 }

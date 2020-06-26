@@ -12,7 +12,7 @@
       <h1>Made for icons</h1>
       <p>Capturing all the glory of the 1971 original, the Stan Smith&nbsp;returns&nbsp;for the&nbsp;win.</p>
       <div class="hero-main-right-btn">
-        <a href="#">Shop</a>
+        <router-link to="/shop">Shop</router-link>
       </div>
     </div>
   </section>
