@@ -19,6 +19,15 @@ const testimonialSection = {
       avatar: images('./testimonial-avatar-2.jpg'),
       name: 'Jim Grey',
       title: 'Professional Photographer'
+    },
+    {
+      id: 3,
+      caption: "They've got perfect Sneakers",
+      testimony:
+        'Lorem ipsum dolor, adipisicing elit. Temporibus voluptatem, ab vitae laboriosam corporis veritatis eum, iste fuga minus voluptates at laudantium ad natus culpa consequuntur',
+      avatar: images('./testimonial-avatar-3.jpg'),
+      name: 'Jane Parker',
+      title: 'Professor'
     }
   ]
 };

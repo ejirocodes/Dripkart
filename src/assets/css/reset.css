@@ -172,6 +172,9 @@ html {
   -ms-text-size-adjust: 100%; /* 2 */
    scroll-behavior: smooth;
 }
+a {
+  text-decoration: none;
+}
 a:focus,
 button:focus,
 input:focus {
