@@ -1,8 +1,9 @@
 <template>
   <figure class="imghvr-push-right">
-    <img
+    <v-lazy-image
       class="product"
-      :src="product && product.src  "
+      :src="product && product.src"
+      src-placeholder="https://cdn.dribbble.com/users/148670/screenshots/5252136/dots.gif"
       :alt="product && product.title"
       :title="product && product.title"
     />
