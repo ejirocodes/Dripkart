@@ -16,10 +16,10 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <div class=" col-sm-offset-1 text-center">
+          <div class="col-sm-offset-1 text-center">
             <div class="contant_box_404">
               <p>The page you are looking for not avaible!</p>
-              <router-link to="/" class="link_404 cart-btn">Go to Home</router-link>
+              <router-link to="/shop" class="link_404 cart-btn">Go Shopping</router-link>
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@ h2 {
 }
 
 @media screen and (max-width: 425px) {
-  .page_404  {
+  .page_404 {
     h1 {
       font-size: 2rem;
     }

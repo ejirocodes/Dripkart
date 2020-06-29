@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer p-5 bg-pri text-light" id="footer">
+  <footer class="footer p-5 bg-pri text-light">
     <div class="row mb-4 pb-4 footer-content">
       <div class="col-6 col-lg">
         <h5>Information</h5>
@@ -93,11 +93,11 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-auto">
-        <c-link
-          class="dev-link"
-          href="https://twitter.com/EjiroCodes"
-          is-external
-        >Developed by E J I R O</c-link>
+        <c-link class="dev-link" href="https://twitter.com/EjiroCodes" is-external>
+          Developed by
+          <span style="display: none;">Ejiro Asiuhwu</span>
+          <span>Ejiro</span>
+        </c-link>
       </div>
     </div>
   </footer>
@@ -115,6 +115,7 @@ export default {
 <style scoped lang="scss">
 @import '../assets/sass/_variables.scss';
 .footer {
+  line-height: 1.5;
   margin-top: 2rem;
   letter-spacing: 1px;
   background-color: $colour-uni;
@@ -144,9 +145,14 @@ export default {
     }
   }
   .dev-link {
-    font-size: .8rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color: #fff;
+    span {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 5.5px;
+    }
   }
 }
 
@@ -158,7 +164,7 @@ export default {
 }
 @media screen and (max-width: 425px) {
   .footer {
-    padding: 2rem  2rem 3rem 2rem !important;
+    padding: 1.5rem 1.5rem 3rem 1.5rem !important;
   }
 }
 @media screen and (max-width: 375px) {
