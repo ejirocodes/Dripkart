@@ -22,6 +22,7 @@ import { Auth0Plugin } from './auth';
 import { VLazyImagePlugin } from 'v-lazy-image';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './registerServiceWorker'
 
 Vue.use(VueFormulate);
 
