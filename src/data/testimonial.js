@@ -4,7 +4,7 @@ const testimonialSection = {
   testimonial: [
     {
       id: 1,
-      caption: "Awesome engineered sneakers they've got",
+      caption: "Modern engineered sneakers",
       testimony:
         'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptatem, ab vitae laboriosam corporis veritatis eum, iste fuga minus voluptates at laudantium ad natus culpa consequuntur',
       avatar: images('./testimonial-avatar.jpg'),
