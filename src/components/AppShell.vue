@@ -65,7 +65,7 @@
         </g>
       </svg>
       <p class="icon-label">Cart</p>
-      <span v-if="cart.length">{{cart.length}}</span>
+      <span v-if="cart">{{cart}}</span>
     </router-link>
     <router-link exact to="/signup">
       <svg
@@ -147,7 +147,7 @@
 export default {
   computed: {
     cart() {
-      return this.$store.state.cart;
+      return this.$store.getters.itemsInCart;
     }
   }
 };
