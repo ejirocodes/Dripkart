@@ -12,43 +12,9 @@
         />
         <h2 class="shop-title">{{product.title}}</h2>
         <p class="shop-cost">&#36;{{product.cost}}</p>
-        <button class="add-to-cart" @click="addToCart()">
-          <svg
-            version="1.1"
-            id="Capa_1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 512 512"
-            style="enable-background:new 0 0 512 512;"
-            xml:space="preserve"
-          >
-            <g>
-              <g>
-                <path
-                  d="M492,236H276V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20s8.954,20,20,20h216
-			v216c0,11.046,8.954,20,20,20s20-8.954,20-20V276h216c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z"
-                />
-              </g>
-            </g>
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-          </svg>
-        </button>
+        <c-button class="add-to-cart" @click="addToCart()">
+          <CartIcon />
+        </c-button>
       </figure>
       <figure v-for="(product) in  featuredProducts" :key="product.slug">
         <v-lazy-image
@@ -61,41 +27,7 @@
         <h2 class="shop-title">{{product.title}}</h2>
         <p class="shop-cost">&#36;{{product.cost}}</p>
         <button class="add-to-cart" @click="addToCart()">
-          <svg
-            version="1.1"
-            id="Capa_1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 512 512"
-            style="enable-background:new 0 0 512 512;"
-            xml:space="preserve"
-          >
-            <g>
-              <g>
-                <path
-                  d="M492,236H276V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20s8.954,20,20,20h216
-			v216c0,11.046,8.954,20,20,20s20-8.954,20-20V276h216c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z"
-                />
-              </g>
-            </g>
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-            <g />
-          </svg>
+          <CartIcon />
         </button>
       </figure>
     </div>
@@ -103,6 +35,7 @@
 </template>
 
 <script>
+import CartIcon from '../assets/svg/plus.svg';
 import products from '../data/products';
 const featuredProducts = products.featured;
 const newArrival = products.newArrivals;
@@ -113,6 +46,9 @@ export default {
       featuredProducts,
       newArrival
     };
+  },
+  components: {
+    CartIcon
   },
   //   mounted() {
   //       let prodItem = this.featuredProducts.forEach(function(arrayItem) {
@@ -133,13 +69,6 @@ export default {
 
       this.$store.commit('addProductToCart', Object.assign({}, product));
       this.addedToCart = true;
-      //   this.$toast({
-      //     title: ` ${this.product.title} have been added to cart.`,
-      //     description: ` You have ${this.cart.length} items in cart`,
-      //     status: 'success',
-      //     duration: 1000,
-      //     position: 'top-right'
-      //   });
     }
   }
 };
@@ -161,7 +90,7 @@ export default {
   }
   .shop {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     grid-gap: 20px;
     align-items: stretch;
     padding: 2rem;
@@ -176,7 +105,7 @@ export default {
         padding: 0.5rem 0.6rem;
         border-radius: 1rem;
         svg {
-          width: 2rem;
+          width: 1.4rem;
           float: right;
           margin: 0;
           fill: #949494;
