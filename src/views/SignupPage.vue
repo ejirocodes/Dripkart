@@ -5,11 +5,14 @@
     </div>
     <div class="signup-main">
       <div class="signup-left">
-        <v-lazy-image
+        <!-- <v-lazy-image
           src-placeholder="https://cdn.dribbble.com/users/148670/screenshots/5252136/dots.gif"
           src="../assets/images/signup-img.png"
-          aria-hidden="true"
           alt
+        />-->
+        <v-lazy-image
+          src="https://cdn-images-1.medium.com/max/1600/1*xjGrvQSXvj72W4zD6IWzfg.jpeg"
+          src-placeholder="https://cdn-images-1.medium.com/max/80/1*xjGrvQSXvj72W4zD6IWzfg.jpeg"
         />
       </div>
       <div class="signup-right">
