@@ -166,4 +166,9 @@ button {
   left: 50%;
   margin-left: -90px;
 }
+@media all and (max-width: 1152px) and (min-width: 992px) {
+ button {
+left: 60%;
+}
+}
 </style>
