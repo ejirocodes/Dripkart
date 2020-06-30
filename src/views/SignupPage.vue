@@ -11,8 +11,8 @@
           alt
         />-->
         <v-lazy-image
-          src="https://cdn-images-1.medium.com/max/1600/1*xjGrvQSXvj72W4zD6IWzfg.jpeg"
-          src-placeholder="https://cdn-images-1.medium.com/max/80/1*xjGrvQSXvj72W4zD6IWzfg.jpeg"
+          src="../assets/images/signup-img.png"
+          src-placeholder="https://cdn.dribbble.com/users/148670/screenshots/5252136/dots.gif"
         />
       </div>
       <div class="signup-right">
