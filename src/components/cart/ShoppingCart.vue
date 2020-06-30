@@ -1,5 +1,5 @@
 <template>
-  <section class="cart-page">
+  <section class="cart-page" v-if="cart.length">
     <div class="cart-left-item">
       <div class="cart-left" v-for="(product, index) in cart" :key="index =+ 'new'">
         <div class="cart-img">
@@ -35,9 +35,17 @@
         <button class="checkout-btn">Check out</button>
       </div>
     </div>
-    <div v-else>
-      <p>Your cart is empty</p>
-      <router-link to="/shop">Go to shop</router-link>
+    <div v-else class="empty-cart">
+      <div>
+        <img
+          src="https://cdn.dribbble.com/users/2046015/screenshots/4591856/first_white_girl_drbl.gif"
+          alt="empty cart"
+        />
+      </div>
+      <div class="empty-cart-mesg">
+        <p>Your cart is empty</p>
+        <router-link to="/shop" class="cart-btn">Start Shopping</router-link>
+      </div>
     </div>
   </section>
 </template>
@@ -135,6 +143,15 @@ export default {
       border: none;
       background-color: $colour-pri;
       text-transform: uppercase;
+    }
+  }
+  .empty-cart {
+    text-align: center;
+    .empty-cart-mesg {
+      p {
+        font-weight: 600;
+        font-size: 1.4rem;
+      }
     }
   }
 }
