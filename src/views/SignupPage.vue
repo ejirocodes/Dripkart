@@ -10,9 +10,8 @@
           src="../assets/images/signup-img.png"
           alt
         />-->
-        <v-lazy-image
+        <img
           src="../assets/images/signup-img.png"
-          src-placeholder="https://cdn.dribbble.com/users/148670/screenshots/5252136/dots.gif"
         />
       </div>
       <div class="signup-right">
