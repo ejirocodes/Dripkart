@@ -1,5 +1,5 @@
 <template>
-  <!-- OlLD 404 PAGE -->
+  <!-- OLD 404 PAGE -->
   <!-- <section class="not-found">
     <h1>Lost in space?</h1>
     <div class="not-found-img">
@@ -44,8 +44,8 @@ export default {
   background: #fff;
 }
 
-h2 {
-  font-size: 3.5rem;
+h1 {
+  font-size: 2.5rem;
 }
 .page_404 img {
   width: 100%;
@@ -56,15 +56,6 @@ h2 {
   height: 400px;
   background-position: center;
 }
-
-.four_zero_four_bg h1 {
-  font-size: 80px;
-}
-
-.four_zero_four_bg h3 {
-  font-size: 80px;
-}
-
 .link_404 {
   display: inline-block;
 }
@@ -72,6 +63,7 @@ h2 {
   margin-top: -50px;
   p {
     font-size: 1.4rem;
+    margin-bottom: 1rem;
   }
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <section class="cart-page" v-if="cart.length">
+  <section class="cart-page">
     <div class="cart-left-item">
       <div class="cart-left" v-for="(product, index) in cart" :key="index =+ 'new'">
         <div class="cart-img">
@@ -152,6 +152,7 @@ export default {
         font-weight: 600;
         font-size: 1.4rem;
       }
+    
     }
   }
 }
