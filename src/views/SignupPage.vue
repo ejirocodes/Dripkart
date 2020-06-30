@@ -11,13 +11,6 @@
           aria-hidden="true"
           alt
         />
-        <v-lazy-image
-          class="product-img"
-          src-placeholder="https://cdn.dribbble.com/users/148670/screenshots/5252136/dots.gif"
-          :src="product.src"
-          :alt="product.title"
-          :title="product.title"
-        />
       </div>
       <div class="signup-right">
         <c-box class="c-box-container">
