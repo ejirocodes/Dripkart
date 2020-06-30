@@ -10,7 +10,7 @@
           src="../assets/images/signup-img.png"
           alt
         />-->
-        <img
+        <v-lazy-image 
           src="../assets/images/signup-img.png"
         />
       </div>
@@ -166,6 +166,8 @@
 </template>
 
 <script>
+import VLazyImage from "v-lazy-image";
+
 import {
   CBox,
   CTabs,
@@ -201,7 +203,8 @@ export default {
     CFormErrorMessage,
     CFormHelperText,
     CButton,
-    CLink
+    CLink,
+    VLazyImage
   },
   methods: {
     // Log the user in
