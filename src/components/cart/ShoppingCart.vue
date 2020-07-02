@@ -11,6 +11,7 @@
         </div>
         <div class="product-cost">
           <p>${{product.cost}}</p>
+          <button @click="deleteProduct(product)">Delete Car</button>
         </div>
       </div>
     </div>
@@ -58,8 +59,20 @@ export default {
       return this.$store.state.cart;
     }
   },
-  beforeCreate() {
-    console.log('from the cart', this.$store.state.cart);
+  methods: {
+    deleteProduct(product) {
+      const prodInCart = this.cart;
+      prodInCart.forEach(function(prod) {
+        return prod === product;
+      });
+      this.$store.commit('deleteProduct', product);
+
+      // const products = this.newArrival;
+      // products.forEach(function(prod) {
+      //   return prod === product;
+      // });
+      // this.$store.commit('addProductToCart', product);
+    }
   }
 };
 </script>
@@ -152,7 +165,6 @@ export default {
         font-weight: 600;
         font-size: 1.4rem;
       }
-    
     }
   }
 }

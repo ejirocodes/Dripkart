@@ -57,7 +57,6 @@ export default {
         return prod === product;
       });
       this.$store.commit('addProductToCart', product);
-      console.log(products);
     }
   }
 };
