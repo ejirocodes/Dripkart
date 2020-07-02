@@ -54,10 +54,10 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.use(VueDarkMode);
 
-if (process.env.NODE_ENV === 'development') {
-  const VueAxe = require('vue-axe').default;
-  Vue.use(VueAxe);
-}
+// if (process.env.NODE_ENV === 'development') {
+//   const VueAxe = require('vue-axe').default;
+//   Vue.use(VueAxe);
+// }
 
 Vue.config.productionTip = false;
 

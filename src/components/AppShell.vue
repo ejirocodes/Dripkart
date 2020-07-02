@@ -13,7 +13,7 @@
     <router-link class="cart-router-link" exact to="/cart">
       <CartSvg />
       <p class="icon-label">Cart</p>
-      <span v-if="cart">{{cart}}</span>
+      <span v-if="itemsInCart">{{itemsInCart}}</span>
     </router-link>
     <router-link exact to="/signup">
       <UserSvg />
@@ -27,6 +27,7 @@ import HomeSvg from '../assets/svg/browser.svg';
 import ShopSvg from '../assets/svg/store.svg';
 import CartSvg from '../assets/svg/basket.svg';
 import UserSvg from '../assets/svg/user.svg';
+import { mapGetters } from 'vuex';
 export default {
   components: {
     HomeSvg,
@@ -34,14 +35,9 @@ export default {
     CartSvg,
     UserSvg
   },
-  computed: {
-    cart() {
-      return this.$store.getters.itemsInCart;
-    }
-  }
+  computed: { ...mapGetters(['itemsInCart']) }
 };
 </script>
-pa
 <style lang="scss" scoped>
 @import '../assets/sass/_variables.scss';
 

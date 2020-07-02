@@ -2,7 +2,7 @@
   <section class="shop-container">
     <h1 class="shop-heading">{{title}}</h1>
     <div class="shop">
-      <figure v-for="(product) in  newArrival" :key="product.slug">
+      <figure v-for="(product) in  newArrival" :key="product.id">
         <v-lazy-image
           class="shop-img"
           src-placeholder="https://i0.wp.com/www.rankred.com/wp-content/uploads/2017/06/Loader.gif"
@@ -12,9 +12,9 @@
         />
         <h2 class="shop-title">{{product.title}}</h2>
         <p class="shop-cost">&#36;{{product.cost}}</p>
-        <c-button class="add-to-cart" @click="addToCart()">
+        <button class="add-to-cart" @click="addToCart(product)">
           <CartIcon />
-        </c-button>
+        </button>
       </figure>
       <figure v-for="(product) in  featuredProducts" :key="product.slug">
         <v-lazy-image
@@ -50,25 +50,14 @@ export default {
   components: {
     CartIcon
   },
-  //   mounted() {
-  //       let prodItem = this.featuredProducts.forEach(function(arrayItem) {
-  //         console.log( arrayItem);
-  //       }
-  //     );
-  //   },
   methods: {
-    addToCart() {
-      const product = this.featuredProducts.forEach(element => {
-        // console.log(element.title);
-        // console.log(index);
-        // console.log(array);
-        return element.cost;
+    addToCart(product) {
+      const products = this.newArrival;
+      products.forEach(function(prod) {
+        return prod === product;
       });
-      console.log(product);
-      //   const cost = product.cost;
-
-      this.$store.commit('addProductToCart', Object.assign({}, product));
-      this.addedToCart = true;
+      this.$store.commit('addProductToCart', product);
+      console.log(products);
     }
   }
 };
