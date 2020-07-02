@@ -54,7 +54,7 @@
 </template>
 
 <script>
-import DeleteBtn from '../../assets/svg/bin.svg';
+import DeleteBtn from '../../assets/svg/delete.svg';
 
 export default {
   name: 'Cart',
