@@ -47,7 +47,7 @@
       </div>
       <div class="empty-cart-mesg">
         <p>Your cart is empty</p>
-        <router-link to="/shop" class="cart-btn">Start Shopping</router-link>
+        <router-link to="/shop" class="cart-btn empty-cart-link">Start Shopping</router-link>
       </div>
     </div>
   </section>
@@ -130,6 +130,7 @@ export default {
         .delete-btn {
           width: 2rem;
           fill: $colour-pri;
+          margin: 0;
         }
       }
     }
@@ -186,6 +187,9 @@ export default {
         font-size: 1.4rem;
       }
     }
+    img {
+      width: 100%;
+    }
   }
 }
 
@@ -226,10 +230,25 @@ export default {
           width: 8rem;
         }
       }
+      .product-cost {
+        button {
+          .delete-btn {
+            width: 1.5rem;
+          }
+        }
+      }
     }
     .cart-left-bottom .checkout-btn {
       padding: 0.8rem 1.8rem;
       font-size: 0.8rem;
+    }
+    .empty-cart-mesg {
+      p {
+        font-size: 1rem !important;
+      }
+      .empty-cart-link {
+        font-size: .7rem;
+      }
     }
   }
 }

@@ -122,7 +122,7 @@ const products = {
       title: 'Nike Zoom Pegasus Turbo Shield',
       slug: 'Nike-Zoom-Pegasus-Turbo-Shield',
       src: images('./zoom-pegasus-turbo-shield-womens-running-shoe-TP4DR2.png'),
-      cost: 210.23,
+      cost: 210,
       category: "Women's Running Shoe"
     },
     {
