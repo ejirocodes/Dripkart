@@ -11,7 +11,9 @@
         </div>
         <div class="product-cost">
           <p>${{product.cost}}</p>
-          <c-button @click="deleteProduct(product)">X</c-button>
+          <button @click="deleteProduct(product)">
+            <DeleteBtn class="delete-btn" />
+          </button>
         </div>
       </div>
     </div>
@@ -52,7 +54,7 @@
 </template>
 
 <script>
-import { CButton } from '@chakra-ui/vue';
+import DeleteBtn from '../../assets/svg/bin.svg';
 
 export default {
   name: 'Cart',
@@ -61,7 +63,7 @@ export default {
       return this.$store.state.cart;
     }
   },
-  components: { CButton },
+  components: { DeleteBtn },
   methods: {
     deleteProduct(product) {
       const prodInCart = this.cart;
@@ -69,7 +71,7 @@ export default {
         return prod === product;
       });
       this.$store.commit('DELETE_PRODUCT', product);
-        console.log(prodInCart);
+      console.log(prodInCart);
       // notification on cart item removal
       const itemInCart = this.cart.length;
       let item = itemInCart <= 1 ? 'item' : 'items';
@@ -80,7 +82,6 @@ export default {
         duration: 1000,
         position: 'top-right'
       });
-      
     }
   }
 };
@@ -122,6 +123,15 @@ export default {
       font-size: 2rem;
       font-weight: 700;
       margin-left: auto;
+      button {
+        padding: 0;
+        border: 0;
+        background: none;
+        .delete-btn {
+          width: 2rem;
+          fill: $colour-pri;
+        }
+      }
     }
   }
   .cart-right {
@@ -240,8 +250,9 @@ export default {
 </style>
 
 <style lang="scss">
-  @import '../../assets/sass/_variables.scss';
-.css-1acfs8s, .css-1acfs8s {
+@import '../../assets/sass/_variables.scss';
+.css-1acfs8s,
+.css-1acfs8s {
   font-size: 2.4rem !important;
   background-color: $colour-pri !important;
 }
