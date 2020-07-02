@@ -80,7 +80,7 @@ export default {
       width: 20rem;
       margin-right: 4rem;
       img {
-        width: 100%;
+        width: 20rem;
       }
     }
     .product-title {

@@ -26,7 +26,7 @@
         />
         <h2 class="shop-title">{{product.title}}</h2>
         <p class="shop-cost">&#36;{{product.cost}}</p>
-        <button class="add-to-cart" @click="addToCart()">
+        <button class="add-to-cart"  @click="addToCart(product)">
           <CartIcon />
         </button>
       </figure>

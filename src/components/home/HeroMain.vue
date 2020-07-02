@@ -11,7 +11,7 @@
           Dripkart brings you to a new collection of next-generation
           <br />BattleKnit technology engineered shoes.
         </p>
-        <p class="price">&#36;899</p>
+        <p class="price">&#36;399</p>
         <div class="hero-main-left-btn">
           <router-link to="/shop">Shop</router-link>
           <a href="#prod-feature">Explore</a>
