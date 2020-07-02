@@ -1,7 +1,7 @@
 <template>
   <section class="cart-page">
     <div class="cart-left-item">
-      <div class="cart-left" v-for="(product, index) in cart" :key="index =+ 'new'">
+      <div class="cart-left" v-for="(product) in cart" :key="product.id">
         <div class="cart-img">
           <img :src="product.src" :alt="product.title" :title="product.title" />
         </div>
@@ -11,7 +11,7 @@
         </div>
         <div class="product-cost">
           <p>${{product.cost}}</p>
-          <button @click="deleteProduct(product)">Delete Car</button>
+          <c-button @click="deleteProduct(product)">X</c-button>
         </div>
       </div>
     </div>
@@ -52,6 +52,8 @@
 </template>
 
 <script>
+import { CButton } from '@chakra-ui/vue';
+
 export default {
   name: 'Cart',
   computed: {
@@ -59,19 +61,26 @@ export default {
       return this.$store.state.cart;
     }
   },
+  components: { CButton },
   methods: {
     deleteProduct(product) {
       const prodInCart = this.cart;
       prodInCart.forEach(function(prod) {
         return prod === product;
       });
-      this.$store.commit('deleteProduct', product);
-
-      // const products = this.newArrival;
-      // products.forEach(function(prod) {
-      //   return prod === product;
-      // });
-      // this.$store.commit('addProductToCart', product);
+      this.$store.commit('DELETE_PRODUCT', product);
+        console.log(prodInCart);
+      // notification on cart item removal
+      const itemInCart = this.cart.length;
+      let item = itemInCart <= 1 ? 'item' : 'items';
+      this.$toast({
+        title: ` Item has been removed from cart.`,
+        description: `You have ${itemInCart} ${item} in cart`,
+        status: 'success',
+        duration: 1000,
+        position: 'top-right'
+      });
+      
     }
   }
 };
@@ -112,6 +121,7 @@ export default {
     .product-cost {
       font-size: 2rem;
       font-weight: 700;
+      margin-left: auto;
     }
   }
   .cart-right {
@@ -226,5 +236,13 @@ export default {
       }
     }
   }
+}
+</style>
+
+<style lang="scss">
+  @import '../../assets/sass/_variables.scss';
+.css-1acfs8s, .css-1acfs8s {
+  font-size: 2.4rem !important;
+  background-color: $colour-pri !important;
 }
 </style>

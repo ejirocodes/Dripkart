@@ -28,7 +28,6 @@
     <!-- <button @click="NextProd()">Next</button> -->
     <!-- <button @click="PrevProd()">Prev</button> -->
     <router-link tag="div" class="more-link" to="/shop">Discover Everything</router-link>
-    <CBox />
   </section>
 </template>
 
@@ -37,7 +36,7 @@ import products from '../../data/products';
 const featuredProduct = products.featured;
 const newArrival = products.newArrivals;
 
-import { CBox, CButton } from '@chakra-ui/vue';
+import {  CButton } from '@chakra-ui/vue';
 
 function getPreviousValidIndex(index, length) {
   const deprecatedIndex = index - 1;
@@ -50,7 +49,7 @@ function getNextValidIndex(index, length) {
 
 export default {
   name: 'ProductDetails',
-  components: { CBox, CButton },
+  components: { CButton },
   data() {
     return {
       featuredProduct,
@@ -91,13 +90,12 @@ export default {
       const product = this.product;
       const cost = product.cost;
       this.$store.commit('addProductToCart', Object.assign({}, product, cost));
-      console.log(Object.assign({}, product, cost));
       this.addedToCart = true;
       this.$toast({
         title: ` ${this.product.title} have been added to cart.`,
         description: ` You have ${this.cart.length} items in cart`,
         status: 'success',
-        duration: 1000,
+        duration: 1400,
         position: 'top-right'
       });
     }

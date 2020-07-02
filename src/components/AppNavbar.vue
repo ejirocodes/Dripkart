@@ -96,9 +96,6 @@ export default {
       return this.$store.state.cart.length;
     }
   },
-  created() {
-    console.log(typeof this.cartLength.toString().toLowerCase());
-  }
 };
 import 'vue-navigation-bar/dist/vue-navigation-bar.css';
 </script>

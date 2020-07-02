@@ -54,7 +54,7 @@ const products = {
       category: "Women's Shoe"
     },
     {
-      id: 1,
+      id: 5,
       description:
         'Rise from the ashes with the new LeBron 15, engineered with next-generation BattleKnit technology for an unrivaled combination of flexibility and strength.',
       title: 'LeBron 17',
@@ -66,7 +66,7 @@ const products = {
   ],
   newArrivals: [
     {
-      id: 0,
+      id: 99,
       description:
         'The Nike React Phantom Run Flyknit 2 offers versatility for the everyday runner. Building on the foundation of its predecessor, the shoe expands on its laceless design by adding secure support that feels like it "disappears" on your foot. More foam means better cushioning, keeping you comfortable as you run.',
       title: 'Nike React Phantom Run Flyknit 2',
@@ -76,7 +76,7 @@ const products = {
       category: "Men's Running Shoe"
     },
     {
-      id: 1,
+      id: 100,
       description:
         'The Nike Zoom Pegasus Turbo 2 is updated with a featherlight upper, while innovative foam brings revolutionary responsiveness to your long distance training.',
       title: 'Nike Zoom Pegasus Turbo 2',
@@ -86,7 +86,7 @@ const products = {
       category: "Men's Running Shoe"
     },
     {
-      id: 2,
+      id: 101,
       description:
         'The Nike Joyride Run Flyknit is designed to help make running feel easier and give your legs a day off. Tiny foam beads underfoot conform to your foot for cushioning that',
       title: 'Nike Joyride Run Flyknit',
@@ -96,7 +96,7 @@ const products = {
       category: "Women's Running Shoe"
     },
     {
-      id: 3,
+      id: 102,
       description:
         'The Nike Wildhorse 6 keeps it stable, secure and lightweight on the trail. An updated outsole delivers the traction you need, while a foam midsole keeps you cushioned on your run.',
       title: 'Nike Wildhorse 6',
@@ -106,7 +106,7 @@ const products = {
       cost: 295
     },
     {
-      id: 4,
+      id: 103,
       description:
         'Inspired by the Vaporfly, the Nike Zoom Fly 3 gives distance runners race-day comfort and durability. The power of a carbon fiber plate keeps you in the running mile after mile.',
       title: 'Nike Zoom Fly 3',
@@ -116,7 +116,7 @@ const products = {
       category: "Men's Running Shoe"
     },
     {
-      id: 6,
+      id: 104,
       description:
         'The Nike Zoom Pegasus Turbo Shield delivers your favorite lightweight running shoe in a smart, weatherized design, so you can continue training in confidence despite those dark and rainy months.',
       title: 'Nike Zoom Pegasus Turbo Shield',
@@ -126,7 +126,7 @@ const products = {
       category: "Women's Running Shoe"
     },
     {
-      id: 7,
+      id: 105,
       description:
         "The Nike Air VaporMax Plus looks to the past to propel itself into the future. Nodding to the '98 Air Max Plus with its floating cage, cushioned upper and heel logo, it adds revolutionary VaporMax Air technology and colors inspired by skydiving and balloons to ramp up the comfort and modern look.",
       src: images('./air-vapormax-plus-mens-shoe-fPnNXW.png'),
@@ -135,75 +135,6 @@ const products = {
       cost: 389,
       category: "Men's Shoe"
     }
-    // ],
-    // torsos: [
-    //   {
-    //     id: 1,
-    //     description: 'A torso that can bend slightly at the waist and equiped with a heat guage.',
-    //     title: 'Flexible Gauged',
-    //     src: images('./torso-flexible-gauged.png'),
-    //     category: 'torsos',
-    //     cost: 1575
-    //   },
-    //   {
-    //     id: 2,
-    //     description: 'A less flexible torso with a battery gauge.',
-    //     title: 'Gauged',
-    //     src: images('./torso-gauged.png'),
-    //     category: 'torsos',
-    //     cost: 1385
-    //   },
-    //   {
-    //     id: 2,
-    //     description: 'A simple torso with a pouch for carrying items.',
-    //     title: 'Gauged',
-    //     src: images('./torso-pouch.png'),
-    //     category: 'torsos',
-    //     cost: 785,
-    //     onSale: true
-    //   }
-    // ],
-    // bases: [
-    //   {
-    //     id: 1,
-    //     description: 'A two wheeled base with an accelerometer for stability.',
-    //     title: 'Double Wheeled',
-    //     src: images('./base-double-wheel.png'),
-    //     category: 'bases',
-    //     cost: 895
-    //   },
-    //   {
-    //     id: 2,
-    //     description: 'A rocket base capable of high speed, controlled flight.',
-    //     title: 'Rocket',
-    //     src: images('./base-rocket.png'),
-    //     category: 'bases',
-    //     cost: 1520.5
-    //   },
-    //   {
-    //     id: 3,
-    //     description: 'A single-wheeled base with an accelerometer capable of higher speeds and navigating rougher terrain than the two-wheeled variety.',
-    //     title: 'Single Wheeled',
-    //     src: images('./base-single-wheel.png'),
-    //     category: 'bases',
-    //     cost: 1190.5
-    //   },
-    //   {
-    //     id: 4,
-    //     description: 'A spring base - great for reaching high places.',
-    //     title: 'Spring',
-    //     src: images('./base-spring.png'),
-    //     category: 'bases',
-    //     cost: 1190.5
-    //   },
-    //   {
-    //     id: 5,
-    //     description: 'An inexpensive three-wheeled base. only capable of slow speeds and can only function on smooth surfaces.',
-    //     title: 'Triple Wheeled',
-    //     src: images('./base-triple-wheel.png'),
-    //     category: 'bases',
-    //     cost: 700.5
-    //   }
   ],
   heroImage: [
     {

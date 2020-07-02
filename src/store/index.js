@@ -11,8 +11,8 @@ export default new Vuex.Store({
     addProductToCart(state, product) {
       state.cart.push(product);
     },
-    deleteProduct(state, product) {
-      let index = state.cart.findIndex(prod => prod.id == product.id);
+    DELETE_PRODUCT(state, product) {
+      let index = state.cart.findIndex(prod => prod.id === +product.id);
       state.cart.splice(index, 1);
     }
   },
