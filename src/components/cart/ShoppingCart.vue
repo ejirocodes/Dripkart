@@ -40,8 +40,9 @@
     </div>
     <div v-else class="empty-cart">
       <div>
-        <img
+        <v-lazy-image
           src="https://cdn.dribbble.com/users/2046015/screenshots/4591856/first_white_girl_drbl.gif"
+          src-placeholder="https://cdn.dribbble.com/users/148670/screenshots/5252136/dots.gif"
           alt="empty cart"
         />
       </div>
@@ -185,7 +186,7 @@ export default {
       p {
         font-weight: 600;
         font-size: 1.4rem;
-            margin-bottom: 1rem !important;
+        margin-bottom: 1rem !important;
       }
     }
     img {
@@ -248,7 +249,7 @@ export default {
         font-size: 1rem !important;
       }
       .empty-cart-link {
-        font-size: .7rem;
+        font-size: 0.7rem;
       }
     }
   }

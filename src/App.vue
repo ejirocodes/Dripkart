@@ -125,10 +125,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.css-1acfs8s {
-  font-size: 2.4rem !important;
-  background-color: $colour-pri !important;
-}
 :root {
   --bg: #fff;
   --color: #333333;
@@ -156,6 +152,17 @@ body,
 }
 svg {
   margin-right: 1rem;
+}
+.css-1acfs8s {
+  font-size: 2.4rem !important;
+  background-color: $colour-pri !important;
+}
+.v-lazy-image {
+  filter: blur(10px);
+  transition: filter 0.7s;
+}
+.v-lazy-image-loaded {
+  filter: blur(0);
 }
 </style>
 

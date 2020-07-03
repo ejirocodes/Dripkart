@@ -4,11 +4,11 @@
     <div class="shop">
       <figure v-for="(product) in  newArrival" :key="product.id">
         <v-lazy-image
-          class="shop-img"
-          src-placeholder="https://i0.wp.com/www.rankred.com/wp-content/uploads/2017/06/Loader.gif"
-          :src="product.src"
-          :alt="product.title"
-          :title="product.title"
+        class="shop-img"
+        src-placeholder="https://i0.wp.com/www.rankred.com/wp-content/uploads/2017/06/Loader.gif"
+        :src="product.src"
+        :alt="product.title"
+        :title="product.title"
         />
         <h2 class="shop-title">{{product.title}}</h2>
         <p class="shop-cost">&#36;{{product.cost}}</p>
@@ -26,7 +26,7 @@
         />
         <h2 class="shop-title">{{product.title}}</h2>
         <p class="shop-cost">&#36;{{product.cost}}</p>
-        <button class="add-to-cart"  @click="addToCart(product)">
+        <button class="add-to-cart" @click="addToCart(product)">
           <CartIcon />
         </button>
       </figure>
@@ -58,7 +58,7 @@ export default {
       });
       this.$store.commit('addProductToCart', product);
       this.$toast({
-         title: ` ${product.title} have been added to cart.`,
+        title: ` ${product.title} have been added to cart.`,
         description: ` You have ${this.$store.getters.itemsInCart} items in cart`,
         status: 'success',
         duration: 1400,
