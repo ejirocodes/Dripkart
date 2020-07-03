@@ -114,18 +114,21 @@ export default {
     Footer,
     AppShell,
     GoTop
-  },
+  }
 };
 </script>
 
 <style lang="scss">
+@import './assets/sass/_variables.scss';
 #app {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-</style>
-<style>
+.css-1acfs8s {
+  font-size: 2.4rem !important;
+  background-color: $colour-pri !important;
+}
 :root {
   --bg: #fff;
   --color: #333333;
@@ -151,9 +154,6 @@ body,
   justify-content: space-between;
   font-size: 0.8rem;
 }
-</style>
-
-<style  lang="scss">
 svg {
   margin-right: 1rem;
 }
@@ -167,8 +167,8 @@ button {
   margin-left: -90px;
 }
 @media all and (max-width: 1152px) and (min-width: 992px) {
- button {
-left: 60%;
-}
+  button {
+    left: 60%;
+  }
 }
 </style>

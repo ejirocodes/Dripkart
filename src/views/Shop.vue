@@ -57,6 +57,13 @@ export default {
         return prod === product;
       });
       this.$store.commit('addProductToCart', product);
+      this.$toast({
+         title: ` ${product.title} have been added to cart.`,
+        description: ` You have ${this.$store.getters.itemsInCart} items in cart`,
+        status: 'success',
+        duration: 1400,
+        position: 'top-right'
+      });
     }
   }
 };

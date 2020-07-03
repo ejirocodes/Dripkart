@@ -79,7 +79,7 @@ export default {
         title: ` Item has been removed from cart.`,
         description: `You have ${itemInCart} ${item} in cart`,
         status: 'success',
-        duration: 1000,
+        duration: 1400,
         position: 'top-right'
       });
     }
@@ -266,20 +266,5 @@ export default {
       }
     }
   }
-}
-</style>
-
-<style lang="scss">
-@import '../../assets/sass/_variables.scss';
-.css-1acfs8s,
-.css-1acfs8s {
-  font-size: 2.4rem !important;
-  background-color: $colour-pri !important;
-}
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
 }
 </style>
