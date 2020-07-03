@@ -185,6 +185,7 @@ export default {
       p {
         font-weight: 600;
         font-size: 1.4rem;
+            margin-bottom: 1rem !important;
       }
     }
     img {
@@ -274,5 +275,11 @@ export default {
 .css-1acfs8s {
   font-size: 2.4rem !important;
   background-color: $colour-pri !important;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
