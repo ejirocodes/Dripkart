@@ -22,7 +22,6 @@ import { VLazyImagePlugin } from 'v-lazy-image';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'imagehover.css/css/imagehover.min.css';
-import '../registerServiceWorker';
 
 Vue.use(VueFormulate);
 
