@@ -11,7 +11,6 @@ import VueNavigationBar from 'vue-navigation-bar';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import VueFormulate from '@braid/vue-formulate';
 import './assets/css/reset.css';
-import './assets/sass/_variables.scss';
 import '../node_modules/@braid/vue-formulate/themes/snow/snow.scss';
 import Chakra, { CThemeProvider } from '@chakra-ui/vue';
 import VueDarkMode from '@vue-a11y/dark-mode';
@@ -22,7 +21,8 @@ import { Auth0Plugin } from './auth';
 import { VLazyImagePlugin } from 'v-lazy-image';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './registerServiceWorker'
+import 'imagehover.css/css/imagehover.min.css';
+import './registerServiceWorker';
 
 Vue.use(VueFormulate);
 
