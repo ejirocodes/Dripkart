@@ -3,7 +3,12 @@
     <div class="cart-left-item">
       <div class="cart-left" v-for="(product) in cart" :key="product.id">
         <div class="cart-img">
-          <img :src="product.src" :alt="product.title" :title="product.title" />
+          <v-lazy-image
+            src-placeholder="https://i0.wp.com/www.rankred.com/wp-content/uploads/2017/06/Loader.gif"
+            :src="product.src"
+            :alt="product.title"
+            :title="product.title"
+          />
         </div>
         <div class="product-title">
           <h1>{{product.title}}</h1>
