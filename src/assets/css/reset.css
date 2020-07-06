@@ -105,12 +105,6 @@ section {
 }
 body {
   line-height: 1;
-  padding: 1rem;
-}
-@media screen and (max-width: 375px) {
-  body {
-    padding: 1rem;
-  }
 }
 ol,
 ul {

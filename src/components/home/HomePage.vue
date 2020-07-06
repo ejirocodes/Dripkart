@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="home">
     <HeroMain />
     <FeaturedProducts />
     <ProductInspiration />
@@ -29,3 +29,9 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+  #home {
+  padding: 1rem;
+  }
+</style>

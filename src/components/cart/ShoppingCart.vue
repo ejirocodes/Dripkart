@@ -99,6 +99,7 @@ export default {
   display: flex;
   justify-content: space-around;
   margin-bottom: 2rem;
+  padding: 1rem;
   .cart-left {
     display: flex;
     align-items: center;
