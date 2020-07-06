@@ -222,6 +222,7 @@ export default {
 @import '../assets/sass/_variables.scss';
 .signup {
   font-size: 5rem;
+  padding: 1rem;
   .signup-main {
     display: flex;
     align-items: center;

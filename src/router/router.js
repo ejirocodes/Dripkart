@@ -4,7 +4,7 @@ import { authGuard } from '../auth/authGuard';
 
 Vue.use(Router);
 
-import Homepage from '../components/home/HomePage.vue';
+import Homepage from '../views/HomePage.vue';
 
 const Signup = resolve => {
   require.ensure(['../views/SignupPage.vue'], () => {
