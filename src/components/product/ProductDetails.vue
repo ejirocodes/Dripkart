@@ -36,7 +36,7 @@ import products from '../../data/products';
 const featuredProduct = products.featured;
 const newArrival = products.newArrivals;
 
-import {  CButton } from '@chakra-ui/vue';
+import { CButton } from '@chakra-ui/vue';
 
 function getPreviousValidIndex(index, length) {
   const deprecatedIndex = index - 1;
@@ -114,6 +114,7 @@ h1 {
   align-items: center;
   justify-content: center;
   margin-top: 5rem;
+  padding: 1rem;
   .prod-det-right,
   .prod-det-left {
     width: 100%;
@@ -264,7 +265,8 @@ h1 {
 
 <style lang="scss">
 @import '../../assets/sass/_variables.scss';
-.css-1acfs8s, .css-1acfs8s {
+.css-1acfs8s,
+.css-1acfs8s {
   font-size: 2.4rem !important;
   background-color: $colour-pri !important;
 }
