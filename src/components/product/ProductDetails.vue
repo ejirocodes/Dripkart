@@ -16,14 +16,20 @@
         </c-button>
       </div>
       <div class="prod-det-right">
-        <v-lazy-image
+        <vue-picture-swipe
           class="product-img"
-          src-placeholder="https://cdn.dribbble.com/users/148670/screenshots/5252136/dots.gif"
-          :src="product.src"
-          :alt="product.title"
-          :title="product.title"
-        />
+          :items="[
+    {src: product.src,thumbnail: product.src,w: 600,h: 400, title: `${product.title}`, alt: product.title}
+  ]"
+        ></vue-picture-swipe>
       </div>
+      <!-- <vue-picture-swipe
+          src-placeholder="https://cdn.dribbble.com/users/148670/screenshots/5252136/dots.gif"
+        :items="[
+    {src: 'http://example.org/xl.jpg',thumbnail: 'http://example.org/sm1.jpg',w: 600,h: 400, title: 'Will be used for caption'},
+    {src: 'http://example.org/xxl.jpg',thumbnail: 'http://example.org/sm2.jpg',w: 1200,h: 900}
+  ]"
+      ></vue-picture-swipe>-->
     </div>
     <!-- <button @click="NextProd()">Next</button> -->
     <!-- <button @click="PrevProd()">Prev</button> -->
@@ -121,12 +127,12 @@ h1 {
   }
   .prod-det-right {
     transition: all cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s;
-    &:hover {
-      transform: rotate(-5deg);
-      filter: gray;
-      -webkit-filter: grayscale(1);
-      filter: grayscale(1);
-    }
+    // &:hover {
+    //   transform: rotate(-5deg);
+    //   filter: gray;
+    //   -webkit-filter: grayscale(1);
+    //   filter: grayscale(1);
+    // }
     .product-img {
       width: 100%;
     }
@@ -215,6 +221,7 @@ h1 {
   text-decoration: underline;
   cursor: pointer;
 }
+
 // MEDIA QUERIES
 
 @media screen and (max-width: 992px) {
@@ -269,5 +276,8 @@ h1 {
 .css-1acfs8s {
   font-size: 2.4rem !important;
   background-color: $colour-pri !important;
+}
+.pswp__img {
+  object-fit: contain !important;
 }
 </style>

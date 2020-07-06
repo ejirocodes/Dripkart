@@ -22,6 +22,8 @@ import { VLazyImagePlugin } from 'v-lazy-image';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'imagehover.css/css/imagehover.min.css';
+import VuePictureSwipe from 'vue-picture-swipe';
+
 
 Vue.use(VueFormulate);
 
@@ -32,6 +34,8 @@ Vue.use(Chakra);
 Vue.use(GoTop);
 
 Vue.use(VLazyImagePlugin);
+
+Vue.component('vue-picture-swipe', VuePictureSwipe);
 
 Vue.use(Auth0Plugin, {
   domain,
