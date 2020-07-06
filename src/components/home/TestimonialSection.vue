@@ -183,7 +183,6 @@ export default {
       }
       p {
         font-size: 1rem;
-        color: $colour-ter;
       }
     }
   }

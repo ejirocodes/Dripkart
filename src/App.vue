@@ -167,11 +167,13 @@ svg {
 </style>
 
 <style  scoped lang="scss">
+
 button {
   position: fixed;
   z-index: 300;
   left: 50%;
   margin-left: -90px;
+  padding: 1rem;
 }
 @media all and (max-width: 1152px) and (min-width: 992px) {
   button {

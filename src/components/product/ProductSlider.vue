@@ -105,7 +105,6 @@ export default {
     h4 {
       font-size: 1.2rem;
     }
-    color: $colour-uni;
     p:first-of-type {
       font-size: 0.8rem;
       margin-bottom: 0.6rem;
