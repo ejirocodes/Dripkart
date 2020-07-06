@@ -29,6 +29,13 @@ const Shop = resolve => {
     resolve(require('../views/Shop.vue'));
   });
 };
+
+const NikeLab = resolve => {
+  require.ensure(['../views/NikeLab.vue'], () => {
+    resolve(require('../views/NikeLab.vue'));
+  });
+};
+
 const NotFound = resolve => {
   require.ensure(['../views/NotFound.vue'], () => {
     resolve(require('../views/NotFound.vue'));
@@ -62,6 +69,11 @@ export default new Router({
       name: 'ProductDetails',
       component: ProductDetails,
       props: true
+    },
+    {
+      path: '/nike-lab',
+      name: 'NikeLab',
+      component: NikeLab,
     },
     {
       path: '*',
