@@ -36,6 +36,12 @@ const NikeLab = resolve => {
   });
 };
 
+const AdidasLab = resolve => {
+  require.ensure(['../views/AdidasLab.vue'], () => {
+    resolve(require('../views/AdidasLab.vue'));
+  });
+};
+
 const NotFound = resolve => {
   require.ensure(['../views/NotFound.vue'], () => {
     resolve(require('../views/NotFound.vue'));
@@ -73,7 +79,12 @@ export default new Router({
     {
       path: '/nike-lab',
       name: 'NikeLab',
-      component: NikeLab,
+      component: NikeLab
+    },
+    {
+      path: '/adidas-lab',
+      name: 'AdidasLab',
+      component: AdidasLab
     },
     {
       path: '*',

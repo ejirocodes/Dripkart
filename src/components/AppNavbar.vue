@@ -47,7 +47,7 @@ export default {
                 type: 'link',
                 text: 'Adidas Lab',
                 subText: 'The latest sneakers from addidas at your feet',
-                path: '/addidas-lab'
+                path: '/adidas-lab'
               }
             ]
           },
