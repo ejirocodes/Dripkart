@@ -133,10 +133,9 @@ h1 {
     //   -webkit-filter: grayscale(1);
     //   filter: grayscale(1);
     // }
-    .product-img {
-      width: 100%;
-    }
+    
   }
+  
   .prod-det-left {
     margin-right: 1rem;
     .cart-btn-2 {
@@ -280,4 +279,7 @@ h1 {
 .pswp__img {
   object-fit: contain !important;
 }
+img[itemprop="thumbnail"] {
+      width: 100% !important;
+    }
 </style>
