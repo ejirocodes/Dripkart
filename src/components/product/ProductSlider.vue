@@ -90,7 +90,7 @@ export default {
   figcaption {
     color: $colour-sec;
     h4 {
-      font-size: 1.8rem;
+    font-size: 1.8rem;
       margin-bottom: 0.8rem;
     }
     p {
@@ -115,7 +115,7 @@ export default {
     }
   }
   [class^='imghvr-'] figcaption {
-    background-color: $colour-pri;
+    background-color: $colour-uni;
     padding: 1rem;
   }
   .swiper-container {
