@@ -168,6 +168,11 @@ a {
   text-decoration: none;
   color: inherit !important;
 }
+[class*=' imghvr-'],
+[class^='imghvr-'] {
+  color: inherit !important;
+  color: #fff;
+}
 a:focus,
 button:focus,
 input:focus {
