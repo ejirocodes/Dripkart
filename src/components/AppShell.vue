@@ -35,7 +35,9 @@ export default {
     CartSvg,
     UserSvg
   },
-  computed: { ...mapGetters(['itemsInCart']) }
+  computed: { 
+    ...mapGetters(['itemsInCart']) 
+  }
 };
 </script>
 <style lang="scss" scoped>
