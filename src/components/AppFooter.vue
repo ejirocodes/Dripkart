@@ -93,7 +93,7 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-auto">
-        <c-link class="dev-link" href="https://twitter.com/EjiroCodes" is-external>
+        <c-link class="dev-link" href="https://twitter.com/ejirocodes" is-external>
           Developed by
           <span style="display: none;">Ejiro Asiuhwu</span>
           <span>Ejiro</span>
