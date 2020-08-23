@@ -87,7 +87,7 @@ export default {
     @include hvr-bounce-to-right;
     @include button-style;
     padding: 0.9rem 2.62rem;
-    color: #fff;
+    color: #fff !important;
     margin-right: $gutter-1;
     text-decoration: none;
     background-color: $colour-pri;
