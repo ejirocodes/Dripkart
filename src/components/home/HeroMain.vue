@@ -123,7 +123,7 @@ export default {
     user-select: none;
     &:nth-child(2) {
       margin-right: 0;
-      color: #fff;
+      color: #fff !important;
       background-color: $colour-pri;
     }
   }
