@@ -1,5 +1,8 @@
 # dripkart
 
+An Ecommerce application built with Vuejs
+
+
 ## Project setup
 ```
 npm install
