@@ -21,7 +21,7 @@
     "bootstrap": "^4.5.0",
     "core-js": "^3.6.4",
     "emotion": "^10.0.27",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "i": "^0.3.6",
     "imagehover.css": "^2.0.0",
     "jquery": "^3.5.1",
